@@ -130,7 +130,10 @@
           </rect>
          </property>
          <property name="text">
-          <string>Mostrar</string>
+          <string>Mostrar todo</string>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+A</string>
          </property>
         </widget>
        </widget>
@@ -150,7 +153,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMen">
@@ -174,17 +177,26 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionInsertar">
    <property name="text">
-    <string>Insertar</string>
+    <string>&amp;Insertar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
    </property>
   </action>
   <action name="actionEliminar">
    <property name="text">
-    <string>Eliminar</string>
+    <string>&amp;Eliminar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
   <action name="actionCerrar">
    <property name="text">
-    <string>Cerrar</string>
+    <string>&amp;Cerrar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+F4</string>
    </property>
   </action>
  </widget>
