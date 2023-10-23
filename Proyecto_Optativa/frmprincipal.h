@@ -12,10 +12,6 @@ public:
     explicit frmPrincipal(QWidget *parent = 0);
 
 private slots:
-    void on_actionCerrar_triggered();
-
-    void on_actionInsertar_triggered();
-
     void on_mnuActionInsertStudent_triggered();
 
 private:

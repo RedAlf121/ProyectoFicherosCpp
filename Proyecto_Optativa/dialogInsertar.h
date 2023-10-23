@@ -11,7 +11,7 @@ public:
     explicit dialogInsertar(QWidget *parent = 0);
 
 private slots:
-    void on_btnCancelar_clicked();
+
 
 private:
     Ui::dialogInsertar ui;

@@ -21,3 +21,4 @@ HEADERS  += frmprincipal.h \
 
 FORMS    += frmprincipal.ui \
     dialogInsertar.ui
+

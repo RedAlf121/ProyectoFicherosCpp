@@ -6,7 +6,3 @@ dialogInsertar::dialogInsertar(QWidget *parent) :
     ui.setupUi(this);
 }
 
-void dialogInsertar::on_btnCancelar_clicked()
-{
-    this->close();
-}

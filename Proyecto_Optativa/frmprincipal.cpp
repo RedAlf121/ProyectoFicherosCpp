@@ -5,17 +5,12 @@ frmPrincipal::frmPrincipal(QWidget *parent) :
     QMainWindow(parent)
 {
     ui.setupUi(this);
+//    connect(ui.mnuActionInsertStudent, SIGNAL(triggered()), this, SLOT(on_mnuActionInsertStudent_triggered()));
+
+//    No logre resolver al final que salieran dos dialoginsert en vex de uno :(
 }
 
-void frmPrincipal::on_actionCerrar_triggered()
-{
-    this->close();
-}
 
-void frmPrincipal::on_actionInsertar_triggered()
-{
-
-}
 
 
 
@@ -26,5 +21,4 @@ void frmPrincipal::on_mnuActionInsertStudent_triggered()
     dialoginsert->setModal(true);
     dialoginsert->show();
 
-    //    Hecho
 }
