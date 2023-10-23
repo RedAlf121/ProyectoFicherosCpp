@@ -41,7 +41,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QTabWidget" name="tabPrincipal">
+      <widget class="QTabWidget" name="tabMain">
        <property name="currentIndex">
         <number>0</number>
        </property>
@@ -49,7 +49,7 @@
         <attribute name="title">
          <string>Estudiantes</string>
         </attribute>
-        <widget class="QTableWidget" name="tableWidget">
+        <widget class="QTableWidget" name="tableStudents">
          <property name="geometry">
           <rect>
            <x>190</x>
@@ -107,7 +107,7 @@
           </property>
          </column>
         </widget>
-        <widget class="QLabel" name="lblTabla">
+        <widget class="QLabel" name="lblTBoard">
          <property name="geometry">
           <rect>
            <x>190</x>
@@ -120,7 +120,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Listado de Estudiantes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="btnMostrar">
+        <widget class="QPushButton" name="pshBtrShowEverything">
          <property name="geometry">
           <rect>
            <x>50</x>
@@ -153,16 +153,16 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMen">
     <property name="title">
      <string>Menú</string>
     </property>
-    <addaction name="actionInsertar"/>
-    <addaction name="actionEliminar"/>
-    <addaction name="actionCerrar"/>
+    <addaction name="mnuActionInsert"/>
+    <addaction name="mnuActionDelete"/>
+    <addaction name="mnuActionCerrar"/>
    </widget>
    <addaction name="menuMen"/>
   </widget>
@@ -175,23 +175,23 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionInsertar">
+  <action name="mnuActionInsert">
    <property name="text">
-    <string>&amp;Insertar</string>
+    <string>&amp;Insertar estudiante...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+I</string>
    </property>
   </action>
-  <action name="actionEliminar">
+  <action name="mnuActionDelete">
    <property name="text">
-    <string>&amp;Eliminar</string>
+    <string>&amp;Eliminar estudiante...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>
    </property>
   </action>
-  <action name="actionCerrar">
+  <action name="mnuActionCerrar">
    <property name="text">
     <string>&amp;Cerrar</string>
    </property>

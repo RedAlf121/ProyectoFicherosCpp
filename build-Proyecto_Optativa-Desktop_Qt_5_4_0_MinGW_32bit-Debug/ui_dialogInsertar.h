@@ -32,29 +32,29 @@ class Ui_dialogInsertar
 public:
     QVBoxLayout *verticalLayout;
     QGridLayout *gridLayout;
-    QGroupBox *gboxDatos;
+    QGroupBox *gboxData;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout_2;
-    QLineEdit *lineNombre;
-    QLineEdit *lineCI;
-    QLineEdit *lineApellidos;
+    QLineEdit *lineName;
+    QLineEdit *lineLastNames;
+    QLineEdit *lineID;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_3;
-    QLabel *lblNombres;
-    QLabel *lblApellidos;
-    QLabel *lblCI;
+    QLabel *lblNames;
+    QLabel *lblLastNames;
+    QLabel *lblID;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
-    QLabel *lblGrupo;
-    QSpinBox *spinBox_3;
+    QLabel *lblGroup;
+    QSpinBox *spinBox_group;
     QLabel *lblUJC;
-    QSpinBox *spinBox;
+    QSpinBox *spinBox_yearUJC;
     QLabel *lblDonation;
-    QSpinBox *spinBox_2;
+    QSpinBox *spinBox_yearFirstDonation;
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *btnAceptar;
-    QPushButton *btnCancelar;
+    QPushButton *pshBtrAccept;
+    QPushButton *pshBtrCancel;
 
     void setupUi(QDialog *dialogInsertar)
     {
@@ -65,110 +65,110 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        gboxDatos = new QGroupBox(dialogInsertar);
-        gboxDatos->setObjectName(QStringLiteral("gboxDatos"));
-        verticalLayoutWidget = new QWidget(gboxDatos);
+        gboxData = new QGroupBox(dialogInsertar);
+        gboxData->setObjectName(QStringLiteral("gboxData"));
+        verticalLayoutWidget = new QWidget(gboxData);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(210, 30, 271, 131));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        lineNombre = new QLineEdit(verticalLayoutWidget);
-        lineNombre->setObjectName(QStringLiteral("lineNombre"));
+        lineName = new QLineEdit(verticalLayoutWidget);
+        lineName->setObjectName(QStringLiteral("lineName"));
 
-        verticalLayout_2->addWidget(lineNombre);
+        verticalLayout_2->addWidget(lineName);
 
-        lineCI = new QLineEdit(verticalLayoutWidget);
-        lineCI->setObjectName(QStringLiteral("lineCI"));
+        lineLastNames = new QLineEdit(verticalLayoutWidget);
+        lineLastNames->setObjectName(QStringLiteral("lineLastNames"));
 
-        verticalLayout_2->addWidget(lineCI);
+        verticalLayout_2->addWidget(lineLastNames);
 
-        lineApellidos = new QLineEdit(verticalLayoutWidget);
-        lineApellidos->setObjectName(QStringLiteral("lineApellidos"));
+        lineID = new QLineEdit(verticalLayoutWidget);
+        lineID->setObjectName(QStringLiteral("lineID"));
 
-        verticalLayout_2->addWidget(lineApellidos);
+        verticalLayout_2->addWidget(lineID);
 
-        verticalLayoutWidget_2 = new QWidget(gboxDatos);
+        verticalLayoutWidget_2 = new QWidget(gboxData);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
         verticalLayoutWidget_2->setGeometry(QRect(40, 40, 160, 111));
         verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        lblNombres = new QLabel(verticalLayoutWidget_2);
-        lblNombres->setObjectName(QStringLiteral("lblNombres"));
+        lblNames = new QLabel(verticalLayoutWidget_2);
+        lblNames->setObjectName(QStringLiteral("lblNames"));
 
-        verticalLayout_3->addWidget(lblNombres);
+        verticalLayout_3->addWidget(lblNames);
 
-        lblApellidos = new QLabel(verticalLayoutWidget_2);
-        lblApellidos->setObjectName(QStringLiteral("lblApellidos"));
+        lblLastNames = new QLabel(verticalLayoutWidget_2);
+        lblLastNames->setObjectName(QStringLiteral("lblLastNames"));
 
-        verticalLayout_3->addWidget(lblApellidos);
+        verticalLayout_3->addWidget(lblLastNames);
 
-        lblCI = new QLabel(verticalLayoutWidget_2);
-        lblCI->setObjectName(QStringLiteral("lblCI"));
+        lblID = new QLabel(verticalLayoutWidget_2);
+        lblID->setObjectName(QStringLiteral("lblID"));
 
-        verticalLayout_3->addWidget(lblCI);
+        verticalLayout_3->addWidget(lblID);
 
-        horizontalLayoutWidget = new QWidget(gboxDatos);
+        horizontalLayoutWidget = new QWidget(gboxData);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
         horizontalLayoutWidget->setGeometry(QRect(20, 170, 480, 71));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        lblGrupo = new QLabel(horizontalLayoutWidget);
-        lblGrupo->setObjectName(QStringLiteral("lblGrupo"));
+        lblGroup = new QLabel(horizontalLayoutWidget);
+        lblGroup->setObjectName(QStringLiteral("lblGroup"));
 
-        horizontalLayout->addWidget(lblGrupo);
+        horizontalLayout->addWidget(lblGroup);
 
-        spinBox_3 = new QSpinBox(horizontalLayoutWidget);
-        spinBox_3->setObjectName(QStringLiteral("spinBox_3"));
-        spinBox_3->setMinimum(11);
-        spinBox_3->setMaximum(42);
+        spinBox_group = new QSpinBox(horizontalLayoutWidget);
+        spinBox_group->setObjectName(QStringLiteral("spinBox_group"));
+        spinBox_group->setMinimum(11);
+        spinBox_group->setMaximum(42);
 
-        horizontalLayout->addWidget(spinBox_3);
+        horizontalLayout->addWidget(spinBox_group);
 
         lblUJC = new QLabel(horizontalLayoutWidget);
         lblUJC->setObjectName(QStringLiteral("lblUJC"));
 
         horizontalLayout->addWidget(lblUJC);
 
-        spinBox = new QSpinBox(horizontalLayoutWidget);
-        spinBox->setObjectName(QStringLiteral("spinBox"));
-        spinBox->setMinimum(2000);
-        spinBox->setMaximum(2023);
+        spinBox_yearUJC = new QSpinBox(horizontalLayoutWidget);
+        spinBox_yearUJC->setObjectName(QStringLiteral("spinBox_yearUJC"));
+        spinBox_yearUJC->setMinimum(2000);
+        spinBox_yearUJC->setMaximum(2023);
 
-        horizontalLayout->addWidget(spinBox);
+        horizontalLayout->addWidget(spinBox_yearUJC);
 
         lblDonation = new QLabel(horizontalLayoutWidget);
         lblDonation->setObjectName(QStringLiteral("lblDonation"));
 
         horizontalLayout->addWidget(lblDonation);
 
-        spinBox_2 = new QSpinBox(horizontalLayoutWidget);
-        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
-        spinBox_2->setMinimum(2000);
-        spinBox_2->setMaximum(2023);
+        spinBox_yearFirstDonation = new QSpinBox(horizontalLayoutWidget);
+        spinBox_yearFirstDonation->setObjectName(QStringLiteral("spinBox_yearFirstDonation"));
+        spinBox_yearFirstDonation->setMinimum(2000);
+        spinBox_yearFirstDonation->setMaximum(2023);
 
-        horizontalLayout->addWidget(spinBox_2);
+        horizontalLayout->addWidget(spinBox_yearFirstDonation);
 
-        horizontalLayoutWidget_2 = new QWidget(gboxDatos);
+        horizontalLayoutWidget_2 = new QWidget(gboxData);
         horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(299, 270, 161, 80));
+        horizontalLayoutWidget_2->setGeometry(QRect(299, 270, 195, 80));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        btnAceptar = new QPushButton(horizontalLayoutWidget_2);
-        btnAceptar->setObjectName(QStringLiteral("btnAceptar"));
+        pshBtrAccept = new QPushButton(horizontalLayoutWidget_2);
+        pshBtrAccept->setObjectName(QStringLiteral("pshBtrAccept"));
 
-        horizontalLayout_2->addWidget(btnAceptar);
+        horizontalLayout_2->addWidget(pshBtrAccept);
 
-        btnCancelar = new QPushButton(horizontalLayoutWidget_2);
-        btnCancelar->setObjectName(QStringLiteral("btnCancelar"));
+        pshBtrCancel = new QPushButton(horizontalLayoutWidget_2);
+        pshBtrCancel->setObjectName(QStringLiteral("pshBtrCancel"));
 
-        horizontalLayout_2->addWidget(btnCancelar);
+        horizontalLayout_2->addWidget(pshBtrCancel);
 
 
-        gridLayout->addWidget(gboxDatos, 0, 0, 1, 1);
+        gridLayout->addWidget(gboxData, 0, 0, 1, 1);
 
 
         verticalLayout->addLayout(gridLayout);
@@ -182,15 +182,15 @@ public:
     void retranslateUi(QDialog *dialogInsertar)
     {
         dialogInsertar->setWindowTitle(QApplication::translate("dialogInsertar", "Dialog", 0));
-        gboxDatos->setTitle(QApplication::translate("dialogInsertar", "Introduzca los datos correspondientes", 0));
-        lblNombres->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Nombre(s):</p></body></html>", 0));
-        lblApellidos->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Apellidos:</p></body></html>", 0));
-        lblCI->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Carnet de Identidad:</p></body></html>", 0));
-        lblGrupo->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">IF-</p></body></html>", 0));
+        gboxData->setTitle(QApplication::translate("dialogInsertar", "Introduzca los datos correspondientes", 0));
+        lblNames->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Nombre(s):</p></body></html>", 0));
+        lblLastNames->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Apellidos:</p></body></html>", 0));
+        lblID->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Carnet de Identidad:</p></body></html>", 0));
+        lblGroup->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">IF-</p></body></html>", 0));
         lblUJC->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">A\303\261o Ingreso UJC:</p></body></html>", 0));
         lblDonation->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">A\303\261o Primera Donaci\303\263n:</p></body></html>", 0));
-        btnAceptar->setText(QApplication::translate("dialogInsertar", "&Aceptar", 0));
-        btnCancelar->setText(QApplication::translate("dialogInsertar", "&Cancelar", 0));
+        pshBtrAccept->setText(QApplication::translate("dialogInsertar", "&Aceptar", 0));
+        pshBtrCancel->setText(QApplication::translate("dialogInsertar", "&Cancelar", 0));
     } // retranslateUi
 
 };

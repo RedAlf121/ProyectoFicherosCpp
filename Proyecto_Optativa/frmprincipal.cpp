@@ -14,8 +14,11 @@ void frmPrincipal::on_actionCerrar_triggered()
 
 void frmPrincipal::on_actionInsertar_triggered()
 {
-    dialoginsert = new dialogInsertar(this);
-    dialoginsert->setModal(true);
-    dialoginsert->show();
-//    Hecho
+
 }
+
+
+//    dialoginsert = new dialogInsertar(this);
+//    dialoginsert->setModal(true);
+//    dialoginsert->show();
+//    Hecho

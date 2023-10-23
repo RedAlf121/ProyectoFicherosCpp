@@ -17,7 +17,7 @@
    <item>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QGroupBox" name="gboxDatos">
+      <widget class="QGroupBox" name="gboxData">
        <property name="title">
         <string>Introduzca los datos correspondientes</string>
        </property>
@@ -32,13 +32,13 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLineEdit" name="lineNombre"/>
+          <widget class="QLineEdit" name="lineName"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineCI"/>
+          <widget class="QLineEdit" name="lineLastNames"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineApellidos"/>
+          <widget class="QLineEdit" name="lineID"/>
          </item>
         </layout>
        </widget>
@@ -53,21 +53,21 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QLabel" name="lblNombres">
+          <widget class="QLabel" name="lblNames">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Nombre(s):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblApellidos">
+          <widget class="QLabel" name="lblLastNames">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Apellidos:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblCI">
+          <widget class="QLabel" name="lblID">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Carnet de Identidad:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -86,14 +86,14 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QLabel" name="lblGrupo">
+          <widget class="QLabel" name="lblGroup">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;IF-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_3">
+          <widget class="QSpinBox" name="spinBox_group">
            <property name="minimum">
             <number>11</number>
            </property>
@@ -110,7 +110,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox">
+          <widget class="QSpinBox" name="spinBox_yearUJC">
            <property name="minimum">
             <number>2000</number>
            </property>
@@ -127,7 +127,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_2">
+          <widget class="QSpinBox" name="spinBox_yearFirstDonation">
            <property name="minimum">
             <number>2000</number>
            </property>
@@ -143,20 +143,20 @@
          <rect>
           <x>299</x>
           <y>270</y>
-          <width>161</width>
+          <width>195</width>
           <height>80</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QPushButton" name="btnAceptar">
+          <widget class="QPushButton" name="pshBtrAccept">
            <property name="text">
             <string>&amp;Aceptar</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="btnCancelar">
+          <widget class="QPushButton" name="pshBtrCancel">
            <property name="text">
             <string>&amp;Cancelar</string>
            </property>

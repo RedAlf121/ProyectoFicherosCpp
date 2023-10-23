@@ -31,17 +31,17 @@ QT_BEGIN_NAMESPACE
 class Ui_frmPrincipal
 {
 public:
-    QAction *actionInsertar;
-    QAction *actionEliminar;
-    QAction *actionCerrar;
+    QAction *mnuActionInsert;
+    QAction *mnuActionDelete;
+    QAction *mnuActionCerrar;
     QWidget *centralWidget;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QTabWidget *tabPrincipal;
+    QTabWidget *tabMain;
     QWidget *tabEstudiantes;
-    QTableWidget *tableWidget;
-    QLabel *lblTabla;
-    QPushButton *btnMostrar;
+    QTableWidget *tableStudents;
+    QLabel *lblTBoard;
+    QPushButton *pshBtrShowEverything;
     QWidget *tabConsultas;
     QMenuBar *menuBar;
     QMenu *menuMen;
@@ -58,12 +58,12 @@ public:
         QIcon icon;
         icon.addFile(QStringLiteral("Resources/Screenshot 2023-10-21 155727~1.ico"), QSize(), QIcon::Normal, QIcon::Off);
         frmPrincipal->setWindowIcon(icon);
-        actionInsertar = new QAction(frmPrincipal);
-        actionInsertar->setObjectName(QStringLiteral("actionInsertar"));
-        actionEliminar = new QAction(frmPrincipal);
-        actionEliminar->setObjectName(QStringLiteral("actionEliminar"));
-        actionCerrar = new QAction(frmPrincipal);
-        actionCerrar->setObjectName(QStringLiteral("actionCerrar"));
+        mnuActionInsert = new QAction(frmPrincipal);
+        mnuActionInsert->setObjectName(QStringLiteral("mnuActionInsert"));
+        mnuActionDelete = new QAction(frmPrincipal);
+        mnuActionDelete->setObjectName(QStringLiteral("mnuActionDelete"));
+        mnuActionCerrar = new QAction(frmPrincipal);
+        mnuActionCerrar->setObjectName(QStringLiteral("mnuActionCerrar"));
         centralWidget = new QWidget(frmPrincipal);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayoutWidget = new QWidget(centralWidget);
@@ -74,50 +74,50 @@ public:
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        tabPrincipal = new QTabWidget(gridLayoutWidget);
-        tabPrincipal->setObjectName(QStringLiteral("tabPrincipal"));
+        tabMain = new QTabWidget(gridLayoutWidget);
+        tabMain->setObjectName(QStringLiteral("tabMain"));
         tabEstudiantes = new QWidget();
         tabEstudiantes->setObjectName(QStringLiteral("tabEstudiantes"));
-        tableWidget = new QTableWidget(tabEstudiantes);
-        if (tableWidget->columnCount() < 6)
-            tableWidget->setColumnCount(6);
+        tableStudents = new QTableWidget(tabEstudiantes);
+        if (tableStudents->columnCount() < 6)
+            tableStudents->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         __qtablewidgetitem->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        tableStudents->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         __qtablewidgetitem1->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        tableStudents->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         __qtablewidgetitem2->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        tableStudents->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         __qtablewidgetitem3->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        tableStudents->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
         __qtablewidgetitem4->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
+        tableStudents->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
         __qtablewidgetitem5->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(190, 40, 601, 461));
-        lblTabla = new QLabel(tabEstudiantes);
-        lblTabla->setObjectName(QStringLiteral("lblTabla"));
-        lblTabla->setGeometry(QRect(190, 10, 601, 21));
-        btnMostrar = new QPushButton(tabEstudiantes);
-        btnMostrar->setObjectName(QStringLiteral("btnMostrar"));
-        btnMostrar->setGeometry(QRect(50, 40, 93, 28));
-        tabPrincipal->addTab(tabEstudiantes, QString());
+        tableStudents->setHorizontalHeaderItem(5, __qtablewidgetitem5);
+        tableStudents->setObjectName(QStringLiteral("tableStudents"));
+        tableStudents->setGeometry(QRect(190, 40, 601, 461));
+        lblTBoard = new QLabel(tabEstudiantes);
+        lblTBoard->setObjectName(QStringLiteral("lblTBoard"));
+        lblTBoard->setGeometry(QRect(190, 10, 601, 21));
+        pshBtrShowEverything = new QPushButton(tabEstudiantes);
+        pshBtrShowEverything->setObjectName(QStringLiteral("pshBtrShowEverything"));
+        pshBtrShowEverything->setGeometry(QRect(50, 40, 93, 28));
+        tabMain->addTab(tabEstudiantes, QString());
         tabConsultas = new QWidget();
         tabConsultas->setObjectName(QStringLiteral("tabConsultas"));
-        tabPrincipal->addTab(tabConsultas, QString());
+        tabMain->addTab(tabConsultas, QString());
 
-        gridLayout->addWidget(tabPrincipal, 0, 0, 1, 1);
+        gridLayout->addWidget(tabMain, 0, 0, 1, 1);
 
         frmPrincipal->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(frmPrincipal);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 21));
+        menuBar->setGeometry(QRect(0, 0, 800, 26));
         menuMen = new QMenu(menuBar);
         menuMen->setObjectName(QStringLiteral("menuMen"));
         frmPrincipal->setMenuBar(menuBar);
@@ -129,13 +129,13 @@ public:
         frmPrincipal->setStatusBar(statusBar);
 
         menuBar->addAction(menuMen->menuAction());
-        menuMen->addAction(actionInsertar);
-        menuMen->addAction(actionEliminar);
-        menuMen->addAction(actionCerrar);
+        menuMen->addAction(mnuActionInsert);
+        menuMen->addAction(mnuActionDelete);
+        menuMen->addAction(mnuActionCerrar);
 
         retranslateUi(frmPrincipal);
 
-        tabPrincipal->setCurrentIndex(0);
+        tabMain->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(frmPrincipal);
@@ -144,29 +144,29 @@ public:
     void retranslateUi(QMainWindow *frmPrincipal)
     {
         frmPrincipal->setWindowTitle(QApplication::translate("frmPrincipal", "Universidad", 0));
-        actionInsertar->setText(QApplication::translate("frmPrincipal", "&Insertar", 0));
-        actionInsertar->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+I", 0));
-        actionEliminar->setText(QApplication::translate("frmPrincipal", "&Eliminar", 0));
-        actionEliminar->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+D", 0));
-        actionCerrar->setText(QApplication::translate("frmPrincipal", "&Cerrar", 0));
-        actionCerrar->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+Alt+F4", 0));
-        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        mnuActionInsert->setText(QApplication::translate("frmPrincipal", "&Insertar estudiante...", 0));
+        mnuActionInsert->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+I", 0));
+        mnuActionDelete->setText(QApplication::translate("frmPrincipal", "&Eliminar estudiante...", 0));
+        mnuActionDelete->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+D", 0));
+        mnuActionCerrar->setText(QApplication::translate("frmPrincipal", "&Cerrar", 0));
+        mnuActionCerrar->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+Alt+F4", 0));
+        QTableWidgetItem *___qtablewidgetitem = tableStudents->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("frmPrincipal", "CI", 0));
-        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        QTableWidgetItem *___qtablewidgetitem1 = tableStudents->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QApplication::translate("frmPrincipal", "Nombres ", 0));
-        QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
+        QTableWidgetItem *___qtablewidgetitem2 = tableStudents->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QApplication::translate("frmPrincipal", "Apellidos", 0));
-        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
+        QTableWidgetItem *___qtablewidgetitem3 = tableStudents->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("frmPrincipal", "Grupo", 0));
-        QTableWidgetItem *___qtablewidgetitem4 = tableWidget->horizontalHeaderItem(4);
+        QTableWidgetItem *___qtablewidgetitem4 = tableStudents->horizontalHeaderItem(4);
         ___qtablewidgetitem4->setText(QApplication::translate("frmPrincipal", "Ingreso UJC", 0));
-        QTableWidgetItem *___qtablewidgetitem5 = tableWidget->horizontalHeaderItem(5);
+        QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
         ___qtablewidgetitem5->setText(QApplication::translate("frmPrincipal", "Donante", 0));
-        lblTabla->setText(QApplication::translate("frmPrincipal", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Listado de Estudiantes</span></p></body></html>", 0));
-        btnMostrar->setText(QApplication::translate("frmPrincipal", "Mostrar todo", 0));
-        btnMostrar->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+A", 0));
-        tabPrincipal->setTabText(tabPrincipal->indexOf(tabEstudiantes), QApplication::translate("frmPrincipal", "Estudiantes", 0));
-        tabPrincipal->setTabText(tabPrincipal->indexOf(tabConsultas), QApplication::translate("frmPrincipal", "Consultas", 0));
+        lblTBoard->setText(QApplication::translate("frmPrincipal", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Listado de Estudiantes</span></p></body></html>", 0));
+        pshBtrShowEverything->setText(QApplication::translate("frmPrincipal", "Mostrar todo", 0));
+        pshBtrShowEverything->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+A", 0));
+        tabMain->setTabText(tabMain->indexOf(tabEstudiantes), QApplication::translate("frmPrincipal", "Estudiantes", 0));
+        tabMain->setTabText(tabMain->indexOf(tabConsultas), QApplication::translate("frmPrincipal", "Consultas", 0));
         menuMen->setTitle(QApplication::translate("frmPrincipal", "Men\303\272", 0));
     } // retranslateUi
 
