@@ -31,9 +31,9 @@ QT_BEGIN_NAMESPACE
 class Ui_frmPrincipal
 {
 public:
-    QAction *mnuActionInsert;
-    QAction *mnuActionDelete;
-    QAction *mnuActionCerrar;
+    QAction *mnuActionInsertStudent;
+    QAction *mnuActionDeleteStudent;
+    QAction *mnuActionClose;
     QWidget *centralWidget;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
@@ -58,12 +58,12 @@ public:
         QIcon icon;
         icon.addFile(QStringLiteral("Resources/Screenshot 2023-10-21 155727~1.ico"), QSize(), QIcon::Normal, QIcon::Off);
         frmPrincipal->setWindowIcon(icon);
-        mnuActionInsert = new QAction(frmPrincipal);
-        mnuActionInsert->setObjectName(QStringLiteral("mnuActionInsert"));
-        mnuActionDelete = new QAction(frmPrincipal);
-        mnuActionDelete->setObjectName(QStringLiteral("mnuActionDelete"));
-        mnuActionCerrar = new QAction(frmPrincipal);
-        mnuActionCerrar->setObjectName(QStringLiteral("mnuActionCerrar"));
+        mnuActionInsertStudent = new QAction(frmPrincipal);
+        mnuActionInsertStudent->setObjectName(QStringLiteral("mnuActionInsertStudent"));
+        mnuActionDeleteStudent = new QAction(frmPrincipal);
+        mnuActionDeleteStudent->setObjectName(QStringLiteral("mnuActionDeleteStudent"));
+        mnuActionClose = new QAction(frmPrincipal);
+        mnuActionClose->setObjectName(QStringLiteral("mnuActionClose"));
         centralWidget = new QWidget(frmPrincipal);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayoutWidget = new QWidget(centralWidget);
@@ -129,11 +129,12 @@ public:
         frmPrincipal->setStatusBar(statusBar);
 
         menuBar->addAction(menuMen->menuAction());
-        menuMen->addAction(mnuActionInsert);
-        menuMen->addAction(mnuActionDelete);
-        menuMen->addAction(mnuActionCerrar);
+        menuMen->addAction(mnuActionInsertStudent);
+        menuMen->addAction(mnuActionDeleteStudent);
+        menuMen->addAction(mnuActionClose);
 
         retranslateUi(frmPrincipal);
+        QObject::connect(mnuActionClose, SIGNAL(triggered()), frmPrincipal, SLOT(close()));
 
         tabMain->setCurrentIndex(0);
 
@@ -144,12 +145,12 @@ public:
     void retranslateUi(QMainWindow *frmPrincipal)
     {
         frmPrincipal->setWindowTitle(QApplication::translate("frmPrincipal", "Universidad", 0));
-        mnuActionInsert->setText(QApplication::translate("frmPrincipal", "&Insertar estudiante...", 0));
-        mnuActionInsert->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+I", 0));
-        mnuActionDelete->setText(QApplication::translate("frmPrincipal", "&Eliminar estudiante...", 0));
-        mnuActionDelete->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+D", 0));
-        mnuActionCerrar->setText(QApplication::translate("frmPrincipal", "&Cerrar", 0));
-        mnuActionCerrar->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+Alt+F4", 0));
+        mnuActionInsertStudent->setText(QApplication::translate("frmPrincipal", "&Insertar estudiante...", 0));
+        mnuActionInsertStudent->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+I", 0));
+        mnuActionDeleteStudent->setText(QApplication::translate("frmPrincipal", "&Eliminar estudiante...", 0));
+        mnuActionDeleteStudent->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+D", 0));
+        mnuActionClose->setText(QApplication::translate("frmPrincipal", "&Cerrar", 0));
+        mnuActionClose->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+Alt+F4", 0));
         QTableWidgetItem *___qtablewidgetitem = tableStudents->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("frmPrincipal", "CI", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableStudents->horizontalHeaderItem(1);

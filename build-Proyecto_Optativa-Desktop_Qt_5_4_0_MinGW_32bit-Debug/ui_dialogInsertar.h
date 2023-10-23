@@ -175,6 +175,7 @@ public:
 
 
         retranslateUi(dialogInsertar);
+        QObject::connect(pshBtrCancel, SIGNAL(clicked()), dialogInsertar, SLOT(close()));
 
         QMetaObject::connectSlotsByName(dialogInsertar);
     } // setupUi

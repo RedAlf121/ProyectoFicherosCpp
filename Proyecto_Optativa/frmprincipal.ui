@@ -160,9 +160,9 @@
     <property name="title">
      <string>Menú</string>
     </property>
-    <addaction name="mnuActionInsert"/>
-    <addaction name="mnuActionDelete"/>
-    <addaction name="mnuActionCerrar"/>
+    <addaction name="mnuActionInsertStudent"/>
+    <addaction name="mnuActionDeleteStudent"/>
+    <addaction name="mnuActionClose"/>
    </widget>
    <addaction name="menuMen"/>
   </widget>
@@ -175,7 +175,7 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="mnuActionInsert">
+  <action name="mnuActionInsertStudent">
    <property name="text">
     <string>&amp;Insertar estudiante...</string>
    </property>
@@ -183,7 +183,7 @@
     <string>Ctrl+I</string>
    </property>
   </action>
-  <action name="mnuActionDelete">
+  <action name="mnuActionDeleteStudent">
    <property name="text">
     <string>&amp;Eliminar estudiante...</string>
    </property>
@@ -191,7 +191,7 @@
     <string>Ctrl+D</string>
    </property>
   </action>
-  <action name="mnuActionCerrar">
+  <action name="mnuActionClose">
    <property name="text">
     <string>&amp;Cerrar</string>
    </property>
@@ -202,5 +202,22 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>mnuActionClose</sender>
+   <signal>triggered()</signal>
+   <receiver>frmPrincipal</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

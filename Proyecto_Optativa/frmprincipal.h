@@ -16,6 +16,8 @@ private slots:
 
     void on_actionInsertar_triggered();
 
+    void on_mnuActionInsertStudent_triggered();
+
 private:
     Ui::frmPrincipal ui;
     dialogInsertar *dialoginsert;

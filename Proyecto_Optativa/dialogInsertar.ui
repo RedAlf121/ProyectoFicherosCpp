@@ -171,5 +171,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pshBtrCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>dialogInsertar</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>458</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

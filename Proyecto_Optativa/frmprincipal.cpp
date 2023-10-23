@@ -18,7 +18,13 @@ void frmPrincipal::on_actionInsertar_triggered()
 }
 
 
-//    dialoginsert = new dialogInsertar(this);
-//    dialoginsert->setModal(true);
-//    dialoginsert->show();
-//    Hecho
+
+
+void frmPrincipal::on_mnuActionInsertStudent_triggered()
+{
+    dialoginsert = new dialogInsertar(this);
+    dialoginsert->setModal(true);
+    dialoginsert->show();
+
+    //    Hecho
+}
