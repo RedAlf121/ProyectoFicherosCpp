@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'frmprincipal.ui'
+** Form generated from reading UI file 'UfrmMain.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_FRMPRINCIPAL_H
-#define UI_FRMPRINCIPAL_H
+#ifndef UI_UFRMMAIN_H
+#define UI_UFRMMAIN_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -174,9 +174,9 @@ public:
 };
 
 namespace Ui {
-    class ufrmMain: public Ui_frmPrincipal {};
+    class frmPrincipal: public Ui_frmPrincipal {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_FRMPRINCIPAL_H
+#endif // UI_UFRMMAIN_H

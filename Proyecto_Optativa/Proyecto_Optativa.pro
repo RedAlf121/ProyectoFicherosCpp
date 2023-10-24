@@ -13,12 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        frmprincipal.cpp \
-    UfrmDialogInsert.cpp
+    UfrmDialogInsert.cpp \
+    UfrmMain.cpp
 
-HEADERS  += frmprincipal.h \
-    UfrmDialogInsert.h
+HEADERS  += \
+    UfrmDialogInsert.h \
+    UfrmMain.h
 
-FORMS    += frmprincipal.ui \
-    UfrmDialogInsert.ui
+FORMS    += \
+    UfrmDialogInsert.ui \
+    UfrmMain.ui
 

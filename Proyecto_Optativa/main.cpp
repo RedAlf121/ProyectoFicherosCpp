@@ -1,10 +1,10 @@
-#include "frmprincipal.h"
+#include "UfrmMain.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    frmPrincipal w;
+    UfrmMain w;
     w.show();
 
     return a.exec();

@@ -182,7 +182,7 @@ public:
 
     void retranslateUi(QDialog *dialogInsertar)
     {
-        dialogInsertar->setWindowTitle(QApplication::translate("dialogInsertar", "Dialog", 0));
+        dialogInsertar->setWindowTitle(QApplication::translate("dialogInsertar", "Insertar estudiante", 0));
         gboxData->setTitle(QApplication::translate("dialogInsertar", "Introduzca los datos correspondientes", 0));
         lblNames->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Nombre(s):</p></body></html>", 0));
         lblLastNames->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Apellidos:</p></body></html>", 0));
