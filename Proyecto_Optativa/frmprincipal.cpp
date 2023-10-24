@@ -1,5 +1,5 @@
 #include "frmprincipal.h"
-#include "dialogInsertar.h"
+#include "UfrmDialogInsert.h"
 
 frmPrincipal::frmPrincipal(QWidget *parent) :
     QMainWindow(parent)
@@ -17,7 +17,7 @@ frmPrincipal::frmPrincipal(QWidget *parent) :
 
 void frmPrincipal::on_mnuActionInsertStudent_triggered()
 {
-    dialoginsert = new dialogInsertar(this);
+    dialoginsert = new InsertDialog(this);
     dialoginsert->setModal(true);
     dialoginsert->show();
 

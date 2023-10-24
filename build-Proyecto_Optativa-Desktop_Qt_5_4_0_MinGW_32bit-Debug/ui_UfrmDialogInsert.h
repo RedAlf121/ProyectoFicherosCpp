@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'dialogInsertar.ui'
+** Form generated from reading UI file 'UfrmDialogInsert.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_DIALOGINSERTAR_H
-#define UI_DIALOGINSERTAR_H
+#ifndef UI_UFRMDIALOGINSERT_H
+#define UI_UFRMDIALOGINSERT_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -197,9 +197,9 @@ public:
 };
 
 namespace Ui {
-    class insertDialog: public Ui_dialogInsertar {};
+    class dialogInsertar: public Ui_dialogInsertar {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_DIALOGINSERTAR_H
+#endif // UI_UFRMDIALOGINSERT_H

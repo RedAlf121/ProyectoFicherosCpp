@@ -3,18 +3,18 @@
 
 #include "ui_dialogInsertar.h"
 
-class dialogInsertar : public QDialog
+class InsertDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit dialogInsertar(QWidget *parent = 0);
+    explicit InsertDialog(QWidget *parent = 0);
 
 private slots:
 
 
 private:
-    Ui::dialogInsertar ui;
+    Ui::insertDialog ui;
 };
 
 #endif // DIALOGINSERTAR_H

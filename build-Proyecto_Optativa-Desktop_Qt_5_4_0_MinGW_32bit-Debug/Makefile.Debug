@@ -45,18 +45,18 @@ OBJECTS_DIR   = debug
 
 SOURCES       = ..\Proyecto_Optativa\main.cpp \
 		..\Proyecto_Optativa\frmprincipal.cpp \
-		..\Proyecto_Optativa\dialogInsertar.cpp debug\moc_frmprincipal.cpp \
-		debug\moc_dialogInsertar.cpp
+		..\Proyecto_Optativa\UfrmDialogInsert.cpp debug\moc_frmprincipal.cpp \
+		debug\moc_UfrmDialogInsert.cpp
 OBJECTS       = debug/main.o \
 		debug/frmprincipal.o \
-		debug/dialogInsertar.o \
+		debug/UfrmDialogInsert.o \
 		debug/moc_frmprincipal.o \
-		debug/moc_dialogInsertar.o
+		debug/moc_UfrmDialogInsert.o
 
 DIST          =  ..\Proyecto_Optativa\frmprincipal.h \
-		..\Proyecto_Optativa\dialogInsertar.h ..\Proyecto_Optativa\main.cpp \
+		..\Proyecto_Optativa\UfrmDialogInsert.h ..\Proyecto_Optativa\main.cpp \
 		..\Proyecto_Optativa\frmprincipal.cpp \
-		..\Proyecto_Optativa\dialogInsertar.cpp
+		..\Proyecto_Optativa\UfrmDialogInsert.cpp
 QMAKE_TARGET  = Proyecto_Optativa
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = Proyecto_Optativa.exe
@@ -83,7 +83,7 @@ DESTDIR_TARGET = debug\Proyecto_Optativa.exe
 first: all
 all: Makefile.Debug  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_frmprincipal.h ui_dialogInsertar.h $(OBJECTS) 
+$(DESTDIR_TARGET): ui_frmprincipal.h ui_UfrmDialogInsert.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
 
 qmake: FORCE
@@ -95,7 +95,7 @@ dist:
 	$(ZIP) Proyecto_Optativa.zip $(SOURCES) $(DIST) ..\Proyecto_Optativa\Proyecto_Optativa.pro D:\QT\5.4\mingw491_32\mkspecs\features\spec_pre.prf D:\QT\5.4\mingw491_32\mkspecs\qdevice.pri D:\QT\5.4\mingw491_32\mkspecs\features\device_config.prf D:\QT\5.4\mingw491_32\mkspecs\common\shell-win32.conf D:\QT\5.4\mingw491_32\mkspecs\qconfig.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axbase.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axbase_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axcontainer.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axcontainer_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axserver.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axserver_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bluetooth.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bluetooth_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bootstrap_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_clucene_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_concurrent.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_concurrent_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_core.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_core_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_declarative.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_declarative_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designer.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designer_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designercomponents_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_enginio.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_enginio_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_gui.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_gui_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_help.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_help_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_location.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_location_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimedia.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimedia_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimediawidgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_network.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_network_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_nfc.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_nfc_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_opengl.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_opengl_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_openglextensions.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_openglextensions_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_platformsupport_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_positioning.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_positioning_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_printsupport.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_printsupport_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qml.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qml_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmltest.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmltest_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quick.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quick_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickparticles_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickwidgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_script.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_script_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_scripttools.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_scripttools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sensors.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sensors_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_serialport.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_serialport_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sql.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sql_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_svg.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_svg_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_testlib.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_testlib_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_uitools.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_uitools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webchannel.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webchannel_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkit.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkit_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkitwidgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_websockets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_websockets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webview.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webview_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_widgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_widgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_winextras.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_winextras_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xml.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xml_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xmlpatterns.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\QT\5.4\mingw491_32\mkspecs\features\qt_functions.prf D:\QT\5.4\mingw491_32\mkspecs\features\qt_config.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\qt_config.prf D:\QT\5.4\mingw491_32\mkspecs\win32-g++\qmake.conf D:\QT\5.4\mingw491_32\mkspecs\features\spec_post.prf D:\QT\5.4\mingw491_32\mkspecs\features\exclusive_builds.prf D:\QT\5.4\mingw491_32\mkspecs\features\default_pre.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\default_pre.prf D:\QT\5.4\mingw491_32\mkspecs\features\resolve_config.prf D:\QT\5.4\mingw491_32\mkspecs\features\exclusive_builds_post.prf D:\QT\5.4\mingw491_32\mkspecs\features\default_post.prf D:\QT\5.4\mingw491_32\mkspecs\features\build_pass.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\rtti.prf D:\QT\5.4\mingw491_32\mkspecs\features\precompile_header.prf D:\QT\5.4\mingw491_32\mkspecs\features\warn_on.prf D:\QT\5.4\mingw491_32\mkspecs\features\qt.prf D:\QT\5.4\mingw491_32\mkspecs\features\resources.prf D:\QT\5.4\mingw491_32\mkspecs\features\moc.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\opengl.prf D:\QT\5.4\mingw491_32\mkspecs\features\uic.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\windows.prf D:\QT\5.4\mingw491_32\mkspecs\features\testcase_targets.prf D:\QT\5.4\mingw491_32\mkspecs\features\exceptions.prf D:\QT\5.4\mingw491_32\mkspecs\features\yacc.prf D:\QT\5.4\mingw491_32\mkspecs\features\lex.prf ..\Proyecto_Optativa\Proyecto_Optativa.pro D:/QT/5.4/mingw491_32/lib/qtmaind.prl D:/QT/5.4/mingw491_32/lib/Qt5Cored.prl D:/QT/5.4/mingw491_32/lib/Qt5Widgetsd.prl D:/QT/5.4/mingw491_32/lib/Qt5Guid.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.o debug\frmprincipal.o debug\dialogInsertar.o debug\moc_frmprincipal.o debug\moc_dialogInsertar.o
+	-$(DEL_FILE) debug\main.o debug\frmprincipal.o debug\UfrmDialogInsert.o debug\moc_frmprincipal.o debug\moc_UfrmDialogInsert.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -111,9 +111,9 @@ compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: debug/moc_frmprincipal.cpp debug/moc_dialogInsertar.cpp
+compiler_moc_header_make_all: debug/moc_frmprincipal.cpp debug/moc_UfrmDialogInsert.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_frmprincipal.cpp debug\moc_dialogInsertar.cpp
+	-$(DEL_FILE) debug\moc_frmprincipal.cpp debug\moc_UfrmDialogInsert.cpp
 debug/moc_frmprincipal.cpp: ui_frmprincipal.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
@@ -273,7 +273,7 @@ debug/moc_frmprincipal.cpp: ui_frmprincipal.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QToolBar \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtoolbar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
-		../Proyecto_Optativa/dialogInsertar.h \
+		../Proyecto_Optativa/UfrmDialogInsert.h \
 		ui_dialogInsertar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
@@ -292,7 +292,7 @@ debug/moc_frmprincipal.cpp: ui_frmprincipal.h \
 		../Proyecto_Optativa/frmprincipal.h
 	D:\QT\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.4/mingw491_32/mkspecs/win32-g++ -I"D:/Universidad/2do semestre/C++ Avanzado/Proyecto Final/Final Project Repository/ProyectoFicherosCpp/Proyecto_Optativa" -ID:/QT/5.4/mingw491_32/include -ID:/QT/5.4/mingw491_32/include/QtWidgets -ID:/QT/5.4/mingw491_32/include/QtGui -ID:/QT/5.4/mingw491_32/include/QtCore -I. ..\Proyecto_Optativa\frmprincipal.h -o debug\moc_frmprincipal.cpp
 
-debug/moc_dialogInsertar.cpp: ui_dialogInsertar.h \
+debug/moc_UfrmDialogInsert.cpp: ui_dialogInsertar.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qatomic.h \
@@ -451,19 +451,19 @@ debug/moc_dialogInsertar.cpp: ui_dialogInsertar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
-		../Proyecto_Optativa/dialogInsertar.h
-	D:\QT\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.4/mingw491_32/mkspecs/win32-g++ -I"D:/Universidad/2do semestre/C++ Avanzado/Proyecto Final/Final Project Repository/ProyectoFicherosCpp/Proyecto_Optativa" -ID:/QT/5.4/mingw491_32/include -ID:/QT/5.4/mingw491_32/include/QtWidgets -ID:/QT/5.4/mingw491_32/include/QtGui -ID:/QT/5.4/mingw491_32/include/QtCore -I. ..\Proyecto_Optativa\dialogInsertar.h -o debug\moc_dialogInsertar.cpp
+		../Proyecto_Optativa/UfrmDialogInsert.h
+	D:\QT\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.4/mingw491_32/mkspecs/win32-g++ -I"D:/Universidad/2do semestre/C++ Avanzado/Proyecto Final/Final Project Repository/ProyectoFicherosCpp/Proyecto_Optativa" -ID:/QT/5.4/mingw491_32/include -ID:/QT/5.4/mingw491_32/include/QtWidgets -ID:/QT/5.4/mingw491_32/include/QtGui -ID:/QT/5.4/mingw491_32/include/QtCore -I. ..\Proyecto_Optativa\UfrmDialogInsert.h -o debug\moc_UfrmDialogInsert.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_frmprincipal.h ui_dialogInsertar.h
+compiler_uic_make_all: ui_frmprincipal.h ui_UfrmDialogInsert.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_frmprincipal.h ui_dialogInsertar.h
+	-$(DEL_FILE) ui_frmprincipal.h ui_UfrmDialogInsert.h
 ui_frmprincipal.h: ../Proyecto_Optativa/frmprincipal.ui
 	D:\QT\5.4\mingw491_32\bin\uic.exe ..\Proyecto_Optativa\frmprincipal.ui -o ui_frmprincipal.h
 
-ui_dialogInsertar.h: ../Proyecto_Optativa/dialogInsertar.ui
-	D:\QT\5.4\mingw491_32\bin\uic.exe ..\Proyecto_Optativa\dialogInsertar.ui -o ui_dialogInsertar.h
+ui_UfrmDialogInsert.h: ../Proyecto_Optativa/UfrmDialogInsert.ui
+	D:\QT\5.4\mingw491_32\bin\uic.exe ..\Proyecto_Optativa\UfrmDialogInsert.ui -o ui_UfrmDialogInsert.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -637,7 +637,7 @@ debug/main.o: ../Proyecto_Optativa/main.cpp ../Proyecto_Optativa/frmprincipal.h 
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QToolBar \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtoolbar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
-		../Proyecto_Optativa/dialogInsertar.h \
+		../Proyecto_Optativa/UfrmDialogInsert.h \
 		ui_dialogInsertar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
@@ -815,7 +815,7 @@ debug/frmprincipal.o: ../Proyecto_Optativa/frmprincipal.cpp ../Proyecto_Optativa
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QToolBar \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtoolbar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
-		../Proyecto_Optativa/dialogInsertar.h \
+		../Proyecto_Optativa/UfrmDialogInsert.h \
 		ui_dialogInsertar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
@@ -833,7 +833,7 @@ debug/frmprincipal.o: ../Proyecto_Optativa/frmprincipal.cpp ../Proyecto_Optativa
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\frmprincipal.o ..\Proyecto_Optativa\frmprincipal.cpp
 
-debug/dialogInsertar.o: ../Proyecto_Optativa/dialogInsertar.cpp ../Proyecto_Optativa/dialogInsertar.h \
+debug/UfrmDialogInsert.o: ../Proyecto_Optativa/UfrmDialogInsert.cpp ../Proyecto_Optativa/UfrmDialogInsert.h \
 		ui_dialogInsertar.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
@@ -993,13 +993,13 @@ debug/dialogInsertar.o: ../Proyecto_Optativa/dialogInsertar.cpp ../Proyecto_Opta
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dialogInsertar.o ..\Proyecto_Optativa\dialogInsertar.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UfrmDialogInsert.o ..\Proyecto_Optativa\UfrmDialogInsert.cpp
 
 debug/moc_frmprincipal.o: debug/moc_frmprincipal.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_frmprincipal.o debug\moc_frmprincipal.cpp
 
-debug/moc_dialogInsertar.o: debug/moc_dialogInsertar.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_dialogInsertar.o debug\moc_dialogInsertar.cpp
+debug/moc_UfrmDialogInsert.o: debug/moc_UfrmDialogInsert.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_UfrmDialogInsert.o debug\moc_UfrmDialogInsert.cpp
 
 ####### Install
 

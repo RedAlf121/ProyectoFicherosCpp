@@ -2,7 +2,7 @@
 #define FRMPRINCIPAL_H
 
 #include "ui_frmprincipal.h"
-#include "dialogInsertar.h"
+#include "UfrmDialogInsert.h"
 
 class frmPrincipal : public QMainWindow
 {
@@ -16,7 +16,7 @@ private slots:
 
 private:
     Ui::frmPrincipal ui;
-    dialogInsertar *dialoginsert;
+    InsertDialog *dialoginsert;
 
 };
 
