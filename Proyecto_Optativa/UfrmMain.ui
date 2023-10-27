@@ -29,6 +29,9 @@
    <iconset>
     <normaloff>Resources/Screenshot 2023-10-21 155727~1.ico</normaloff>Resources/Screenshot 2023-10-21 155727~1.ico</iconset>
   </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
@@ -241,7 +244,7 @@
           </rect>
          </property>
          <property name="title">
-          <string>Donate Sangre</string>
+          <string>Donante Sangre</string>
          </property>
          <property name="flat">
           <bool>false</bool>
