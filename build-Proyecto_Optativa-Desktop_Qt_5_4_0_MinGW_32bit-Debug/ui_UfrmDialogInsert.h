@@ -27,7 +27,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_dialogInsertar
+class Ui_insertDialog
 {
 public:
     QVBoxLayout *verticalLayout;
@@ -56,16 +56,16 @@ public:
     QPushButton *pshBtrAccept;
     QPushButton *pshBtrCancel;
 
-    void setupUi(QDialog *dialogInsertar)
+    void setupUi(QDialog *insertDialog)
     {
-        if (dialogInsertar->objectName().isEmpty())
-            dialogInsertar->setObjectName(QStringLiteral("dialogInsertar"));
-        dialogInsertar->resize(546, 376);
-        verticalLayout = new QVBoxLayout(dialogInsertar);
+        if (insertDialog->objectName().isEmpty())
+            insertDialog->setObjectName(QStringLiteral("insertDialog"));
+        insertDialog->resize(546, 376);
+        verticalLayout = new QVBoxLayout(insertDialog);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        gboxData = new QGroupBox(dialogInsertar);
+        gboxData = new QGroupBox(insertDialog);
         gboxData->setObjectName(QStringLiteral("gboxData"));
         verticalLayoutWidget = new QWidget(gboxData);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
@@ -174,30 +174,30 @@ public:
         verticalLayout->addLayout(gridLayout);
 
 
-        retranslateUi(dialogInsertar);
-        QObject::connect(pshBtrCancel, SIGNAL(clicked()), dialogInsertar, SLOT(close()));
+        retranslateUi(insertDialog);
+        QObject::connect(pshBtrCancel, SIGNAL(clicked()), insertDialog, SLOT(close()));
 
-        QMetaObject::connectSlotsByName(dialogInsertar);
+        QMetaObject::connectSlotsByName(insertDialog);
     } // setupUi
 
-    void retranslateUi(QDialog *dialogInsertar)
+    void retranslateUi(QDialog *insertDialog)
     {
-        dialogInsertar->setWindowTitle(QApplication::translate("dialogInsertar", "Insertar estudiante", 0));
-        gboxData->setTitle(QApplication::translate("dialogInsertar", "Introduzca los datos correspondientes", 0));
-        lblNames->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Nombre(s):</p></body></html>", 0));
-        lblLastNames->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Apellidos:</p></body></html>", 0));
-        lblID->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">Carnet de Identidad:</p></body></html>", 0));
-        lblGroup->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">IF-</p></body></html>", 0));
-        lblUJC->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">A\303\261o Ingreso UJC:</p></body></html>", 0));
-        lblDonation->setText(QApplication::translate("dialogInsertar", "<html><head/><body><p align=\"right\">A\303\261o Primera Donaci\303\263n:</p></body></html>", 0));
-        pshBtrAccept->setText(QApplication::translate("dialogInsertar", "&Aceptar", 0));
-        pshBtrCancel->setText(QApplication::translate("dialogInsertar", "&Cancelar", 0));
+        insertDialog->setWindowTitle(QApplication::translate("insertDialog", "Insertar estudiante", 0));
+        gboxData->setTitle(QApplication::translate("insertDialog", "Introduzca los datos correspondientes", 0));
+        lblNames->setText(QApplication::translate("insertDialog", "<html><head/><body><p align=\"right\">Nombre(s):</p></body></html>", 0));
+        lblLastNames->setText(QApplication::translate("insertDialog", "<html><head/><body><p align=\"right\">Apellidos:</p></body></html>", 0));
+        lblID->setText(QApplication::translate("insertDialog", "<html><head/><body><p align=\"right\">Carnet de Identidad:</p></body></html>", 0));
+        lblGroup->setText(QApplication::translate("insertDialog", "<html><head/><body><p align=\"right\">IF-</p></body></html>", 0));
+        lblUJC->setText(QApplication::translate("insertDialog", "<html><head/><body><p align=\"right\">A\303\261o Ingreso UJC:</p></body></html>", 0));
+        lblDonation->setText(QApplication::translate("insertDialog", "<html><head/><body><p align=\"right\">A\303\261o Primera Donaci\303\263n:</p></body></html>", 0));
+        pshBtrAccept->setText(QApplication::translate("insertDialog", "&Aceptar", 0));
+        pshBtrCancel->setText(QApplication::translate("insertDialog", "&Cancelar", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class dialogInsertar: public Ui_dialogInsertar {};
+    class insertDialog: public Ui_insertDialog {};
 } // namespace Ui
 
 QT_END_NAMESPACE

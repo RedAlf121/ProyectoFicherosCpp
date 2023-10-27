@@ -1,7 +1,7 @@
-#ifndef FRMPRINCIPAL_H
-#define FRMPRINCIPAL_H
+#ifndef UFRMMAIN_H
+#define UFRMMAIN_H
 
-#include "ui_frmprincipal.h"
+#include "ui_UfrmMain.h"
 #include "UfrmDialogInsert.h"
 
 class UfrmMain : public QMainWindow
@@ -20,4 +20,4 @@ private:
 
 };
 
-#endif // FRMPRINCIPAL_H
+#endif // UFRMMAIN_H

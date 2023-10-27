@@ -28,7 +28,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_frmPrincipal
+class Ui_ufrmMain
 {
 public:
     QAction *mnuActionInsertStudent;
@@ -48,23 +48,23 @@ public:
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
-    void setupUi(QMainWindow *frmPrincipal)
+    void setupUi(QMainWindow *ufrmMain)
     {
-        if (frmPrincipal->objectName().isEmpty())
-            frmPrincipal->setObjectName(QStringLiteral("frmPrincipal"));
-        frmPrincipal->resize(800, 600);
-        frmPrincipal->setMinimumSize(QSize(800, 600));
-        frmPrincipal->setMaximumSize(QSize(1920, 1080));
+        if (ufrmMain->objectName().isEmpty())
+            ufrmMain->setObjectName(QStringLiteral("ufrmMain"));
+        ufrmMain->resize(800, 600);
+        ufrmMain->setMinimumSize(QSize(800, 600));
+        ufrmMain->setMaximumSize(QSize(1920, 1080));
         QIcon icon;
         icon.addFile(QStringLiteral("Resources/Screenshot 2023-10-21 155727~1.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        frmPrincipal->setWindowIcon(icon);
-        mnuActionInsertStudent = new QAction(frmPrincipal);
+        ufrmMain->setWindowIcon(icon);
+        mnuActionInsertStudent = new QAction(ufrmMain);
         mnuActionInsertStudent->setObjectName(QStringLiteral("mnuActionInsertStudent"));
-        mnuActionDeleteStudent = new QAction(frmPrincipal);
+        mnuActionDeleteStudent = new QAction(ufrmMain);
         mnuActionDeleteStudent->setObjectName(QStringLiteral("mnuActionDeleteStudent"));
-        mnuActionClose = new QAction(frmPrincipal);
+        mnuActionClose = new QAction(ufrmMain);
         mnuActionClose->setObjectName(QStringLiteral("mnuActionClose"));
-        centralWidget = new QWidget(frmPrincipal);
+        centralWidget = new QWidget(ufrmMain);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayoutWidget = new QWidget(centralWidget);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
@@ -114,67 +114,67 @@ public:
 
         gridLayout->addWidget(tabMain, 0, 0, 1, 1);
 
-        frmPrincipal->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(frmPrincipal);
+        ufrmMain->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(ufrmMain);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 800, 26));
         menuMen = new QMenu(menuBar);
         menuMen->setObjectName(QStringLiteral("menuMen"));
-        frmPrincipal->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(frmPrincipal);
+        ufrmMain->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(ufrmMain);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        frmPrincipal->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(frmPrincipal);
+        ufrmMain->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        statusBar = new QStatusBar(ufrmMain);
         statusBar->setObjectName(QStringLiteral("statusBar"));
-        frmPrincipal->setStatusBar(statusBar);
+        ufrmMain->setStatusBar(statusBar);
 
         menuBar->addAction(menuMen->menuAction());
         menuMen->addAction(mnuActionInsertStudent);
         menuMen->addAction(mnuActionDeleteStudent);
         menuMen->addAction(mnuActionClose);
 
-        retranslateUi(frmPrincipal);
-        QObject::connect(mnuActionClose, SIGNAL(triggered()), frmPrincipal, SLOT(close()));
+        retranslateUi(ufrmMain);
+        QObject::connect(mnuActionClose, SIGNAL(triggered()), ufrmMain, SLOT(close()));
 
         tabMain->setCurrentIndex(0);
 
 
-        QMetaObject::connectSlotsByName(frmPrincipal);
+        QMetaObject::connectSlotsByName(ufrmMain);
     } // setupUi
 
-    void retranslateUi(QMainWindow *frmPrincipal)
+    void retranslateUi(QMainWindow *ufrmMain)
     {
-        frmPrincipal->setWindowTitle(QApplication::translate("frmPrincipal", "Universidad", 0));
-        mnuActionInsertStudent->setText(QApplication::translate("frmPrincipal", "&Insertar estudiante...", 0));
-        mnuActionInsertStudent->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+I", 0));
-        mnuActionDeleteStudent->setText(QApplication::translate("frmPrincipal", "&Eliminar estudiante...", 0));
-        mnuActionDeleteStudent->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+D", 0));
-        mnuActionClose->setText(QApplication::translate("frmPrincipal", "&Cerrar", 0));
-        mnuActionClose->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+Alt+F4", 0));
+        ufrmMain->setWindowTitle(QApplication::translate("ufrmMain", "Universidad", 0));
+        mnuActionInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar estudiante...", 0));
+        mnuActionInsertStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+I", 0));
+        mnuActionDeleteStudent->setText(QApplication::translate("ufrmMain", "&Eliminar estudiante...", 0));
+        mnuActionDeleteStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+D", 0));
+        mnuActionClose->setText(QApplication::translate("ufrmMain", "&Cerrar", 0));
+        mnuActionClose->setShortcut(QApplication::translate("ufrmMain", "Ctrl+Alt+F4", 0));
         QTableWidgetItem *___qtablewidgetitem = tableStudents->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("frmPrincipal", "CI", 0));
+        ___qtablewidgetitem->setText(QApplication::translate("ufrmMain", "CI", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableStudents->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("frmPrincipal", "Nombres ", 0));
+        ___qtablewidgetitem1->setText(QApplication::translate("ufrmMain", "Nombres ", 0));
         QTableWidgetItem *___qtablewidgetitem2 = tableStudents->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("frmPrincipal", "Apellidos", 0));
+        ___qtablewidgetitem2->setText(QApplication::translate("ufrmMain", "Apellidos", 0));
         QTableWidgetItem *___qtablewidgetitem3 = tableStudents->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("frmPrincipal", "Grupo", 0));
+        ___qtablewidgetitem3->setText(QApplication::translate("ufrmMain", "Grupo", 0));
         QTableWidgetItem *___qtablewidgetitem4 = tableStudents->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QApplication::translate("frmPrincipal", "Ingreso UJC", 0));
+        ___qtablewidgetitem4->setText(QApplication::translate("ufrmMain", "Ingreso UJC", 0));
         QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
-        ___qtablewidgetitem5->setText(QApplication::translate("frmPrincipal", "Donante", 0));
-        lblTBoard->setText(QApplication::translate("frmPrincipal", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Listado de Estudiantes</span></p></body></html>", 0));
-        pshBtrShowEverything->setText(QApplication::translate("frmPrincipal", "Mostrar todo", 0));
-        pshBtrShowEverything->setShortcut(QApplication::translate("frmPrincipal", "Ctrl+A", 0));
-        tabMain->setTabText(tabMain->indexOf(tabEstudiantes), QApplication::translate("frmPrincipal", "Estudiantes", 0));
-        tabMain->setTabText(tabMain->indexOf(tabConsultas), QApplication::translate("frmPrincipal", "Consultas", 0));
-        menuMen->setTitle(QApplication::translate("frmPrincipal", "Men\303\272", 0));
+        ___qtablewidgetitem5->setText(QApplication::translate("ufrmMain", "Donante", 0));
+        lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Listado de Estudiantes</span></p></body></html>", 0));
+        pshBtrShowEverything->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
+        pshBtrShowEverything->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
+        tabMain->setTabText(tabMain->indexOf(tabEstudiantes), QApplication::translate("ufrmMain", "Estudiantes", 0));
+        tabMain->setTabText(tabMain->indexOf(tabConsultas), QApplication::translate("ufrmMain", "Consultas", 0));
+        menuMen->setTitle(QApplication::translate("ufrmMain", "Men\303\272", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class frmPrincipal: public Ui_frmPrincipal {};
+    class ufrmMain: public Ui_ufrmMain {};
 } // namespace Ui
 
 QT_END_NAMESPACE

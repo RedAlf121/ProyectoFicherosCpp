@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>frmPrincipal</class>
- <widget class="QMainWindow" name="frmPrincipal">
+ <class>ufrmMain</class>
+ <widget class="QMainWindow" name="ufrmMain">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -206,7 +206,7 @@
   <connection>
    <sender>mnuActionClose</sender>
    <signal>triggered()</signal>
-   <receiver>frmPrincipal</receiver>
+   <receiver>ufrmMain</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">

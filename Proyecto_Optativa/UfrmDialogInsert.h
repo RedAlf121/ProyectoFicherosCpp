@@ -1,7 +1,7 @@
-#ifndef DIALOGINSERTAR_H
-#define DIALOGINSERTAR_H
+#ifndef UFRMDIALOGINSERT_H
+#define UFRMDIALOGINSERT_H
 
-#include "ui_dialogInsertar.h"
+#include "ui_UfrmDialogInsert.h"
 
 class InsertDialog : public QDialog
 {
@@ -17,4 +17,4 @@ private:
     Ui::insertDialog ui;
 };
 
-#endif // DIALOGINSERTAR_H
+#endif // UFRMDIALOGINSERT_H
