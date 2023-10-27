@@ -42,8 +42,17 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabMain">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Triangular</enum>
+       </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="tabEstudiantes">
         <attribute name="title">
@@ -141,6 +150,171 @@
         <attribute name="title">
          <string>Consultas</string>
         </attribute>
+        <widget class="QGroupBox" name="gboxUJC">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>50</y>
+           <width>421</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>UJC Estudiante 3er Año</string>
+         </property>
+         <widget class="QLabel" name="lblCI">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Carnet Identidad:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblYear">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>80</y>
+            <width>81</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Año Ingreso:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxYear">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>80</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="minimum">
+           <number>2000</number>
+          </property>
+          <property name="maximum">
+           <number>2023</number>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineCI">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>40</y>
+            <width>191</width>
+            <height>22</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pshBtrModify">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>130</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Modificar</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="gboxDonante">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>300</y>
+           <width>421</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Donate Sangre</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <widget class="QLabel" name="lblCI_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Carnet Identidad:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblYear_2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>80</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Año Donación:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxYear_2">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>80</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="minimum">
+           <number>2000</number>
+          </property>
+          <property name="maximum">
+           <number>2023</number>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineCI_2">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>40</y>
+            <width>191</width>
+            <height>22</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pshBtrModify_2">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>130</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Modificar</string>
+          </property>
+         </widget>
+        </widget>
        </widget>
       </widget>
      </item>
