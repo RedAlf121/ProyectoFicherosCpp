@@ -14,12 +14,15 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableWidget>
@@ -43,6 +46,18 @@ public:
     QLabel *lblTBoard;
     QPushButton *pshBtrShowEverything;
     QWidget *tabConsultas;
+    QGroupBox *gboxUJC;
+    QLabel *lblCI;
+    QLabel *lblYear;
+    QSpinBox *spinBoxYear;
+    QLineEdit *lineCI;
+    QPushButton *pshBtrModify;
+    QGroupBox *gboxDonante;
+    QLabel *lblCI_2;
+    QLabel *lblYear_2;
+    QSpinBox *spinBoxYear_2;
+    QLineEdit *lineCI_2;
+    QPushButton *pshBtrModify_2;
     QMenuBar *menuBar;
     QMenu *menuMen;
     QToolBar *mainToolBar;
@@ -58,6 +73,7 @@ public:
         QIcon icon;
         icon.addFile(QStringLiteral("Resources/Screenshot 2023-10-21 155727~1.ico"), QSize(), QIcon::Normal, QIcon::Off);
         ufrmMain->setWindowIcon(icon);
+        ufrmMain->setWindowOpacity(1);
         mnuActionInsertStudent = new QAction(ufrmMain);
         mnuActionInsertStudent->setObjectName(QStringLiteral("mnuActionInsertStudent"));
         mnuActionDeleteStudent = new QAction(ufrmMain);
@@ -76,6 +92,9 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         tabMain = new QTabWidget(gridLayoutWidget);
         tabMain->setObjectName(QStringLiteral("tabMain"));
+        tabMain->setEnabled(true);
+        tabMain->setAutoFillBackground(false);
+        tabMain->setTabShape(QTabWidget::Triangular);
         tabEstudiantes = new QWidget();
         tabEstudiantes->setObjectName(QStringLiteral("tabEstudiantes"));
         tableStudents = new QTableWidget(tabEstudiantes);
@@ -110,6 +129,49 @@ public:
         tabMain->addTab(tabEstudiantes, QString());
         tabConsultas = new QWidget();
         tabConsultas->setObjectName(QStringLiteral("tabConsultas"));
+        gboxUJC = new QGroupBox(tabConsultas);
+        gboxUJC->setObjectName(QStringLiteral("gboxUJC"));
+        gboxUJC->setEnabled(true);
+        gboxUJC->setGeometry(QRect(180, 50, 421, 171));
+        lblCI = new QLabel(gboxUJC);
+        lblCI->setObjectName(QStringLiteral("lblCI"));
+        lblCI->setGeometry(QRect(40, 40, 101, 16));
+        lblYear = new QLabel(gboxUJC);
+        lblYear->setObjectName(QStringLiteral("lblYear"));
+        lblYear->setGeometry(QRect(60, 80, 81, 16));
+        spinBoxYear = new QSpinBox(gboxUJC);
+        spinBoxYear->setObjectName(QStringLiteral("spinBoxYear"));
+        spinBoxYear->setGeometry(QRect(150, 80, 51, 22));
+        spinBoxYear->setMinimum(2000);
+        spinBoxYear->setMaximum(2023);
+        lineCI = new QLineEdit(gboxUJC);
+        lineCI->setObjectName(QStringLiteral("lineCI"));
+        lineCI->setGeometry(QRect(150, 40, 191, 22));
+        pshBtrModify = new QPushButton(gboxUJC);
+        pshBtrModify->setObjectName(QStringLiteral("pshBtrModify"));
+        pshBtrModify->setGeometry(QRect(290, 130, 93, 28));
+        gboxDonante = new QGroupBox(tabConsultas);
+        gboxDonante->setObjectName(QStringLiteral("gboxDonante"));
+        gboxDonante->setGeometry(QRect(180, 300, 421, 171));
+        gboxDonante->setFlat(false);
+        gboxDonante->setCheckable(false);
+        lblCI_2 = new QLabel(gboxDonante);
+        lblCI_2->setObjectName(QStringLiteral("lblCI_2"));
+        lblCI_2->setGeometry(QRect(40, 40, 101, 16));
+        lblYear_2 = new QLabel(gboxDonante);
+        lblYear_2->setObjectName(QStringLiteral("lblYear_2"));
+        lblYear_2->setGeometry(QRect(50, 80, 91, 20));
+        spinBoxYear_2 = new QSpinBox(gboxDonante);
+        spinBoxYear_2->setObjectName(QStringLiteral("spinBoxYear_2"));
+        spinBoxYear_2->setGeometry(QRect(150, 80, 51, 22));
+        spinBoxYear_2->setMinimum(2000);
+        spinBoxYear_2->setMaximum(2023);
+        lineCI_2 = new QLineEdit(gboxDonante);
+        lineCI_2->setObjectName(QStringLiteral("lineCI_2"));
+        lineCI_2->setGeometry(QRect(150, 40, 191, 22));
+        pshBtrModify_2 = new QPushButton(gboxDonante);
+        pshBtrModify_2->setObjectName(QStringLiteral("pshBtrModify_2"));
+        pshBtrModify_2->setGeometry(QRect(290, 130, 93, 28));
         tabMain->addTab(tabConsultas, QString());
 
         gridLayout->addWidget(tabMain, 0, 0, 1, 1);
@@ -136,7 +198,7 @@ public:
         retranslateUi(ufrmMain);
         QObject::connect(mnuActionClose, SIGNAL(triggered()), ufrmMain, SLOT(close()));
 
-        tabMain->setCurrentIndex(0);
+        tabMain->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(ufrmMain);
@@ -167,6 +229,14 @@ public:
         pshBtrShowEverything->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
         pshBtrShowEverything->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tabEstudiantes), QApplication::translate("ufrmMain", "Estudiantes", 0));
+        gboxUJC->setTitle(QApplication::translate("ufrmMain", "UJC Estudiante 3er A\303\261o", 0));
+        lblCI->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">Carnet Identidad:</p></body></html>", 0));
+        lblYear->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">A\303\261o Ingreso:</p></body></html>", 0));
+        pshBtrModify->setText(QApplication::translate("ufrmMain", "Modificar", 0));
+        gboxDonante->setTitle(QApplication::translate("ufrmMain", "Donante Sangre", 0));
+        lblCI_2->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">Carnet Identidad:</p></body></html>", 0));
+        lblYear_2->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">A\303\261o Donaci\303\263n:</p></body></html>", 0));
+        pshBtrModify_2->setText(QApplication::translate("ufrmMain", "Modificar", 0));
         tabMain->setTabText(tabMain->indexOf(tabConsultas), QApplication::translate("ufrmMain", "Consultas", 0));
         menuMen->setTitle(QApplication::translate("ufrmMain", "Men\303\272", 0));
     } // retranslateUi
