@@ -14,6 +14,8 @@ public:
 private slots:
     void on_mnuActionInsertStudent_triggered();
 
+    void on_pshBtrInsertStudent_clicked();
+
 private:
     Ui::ufrmMain ui;
     InsertDialog *dialoginsert;

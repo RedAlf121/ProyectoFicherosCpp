@@ -23,3 +23,10 @@ void UfrmMain::on_mnuActionInsertStudent_triggered()
     dialoginsert->show();
 
 }
+
+void UfrmMain::on_pshBtrInsertStudent_clicked()
+{
+    dialoginsert = new InsertDialog(this);
+    dialoginsert->setModal(true);
+    dialoginsert->show();
+}

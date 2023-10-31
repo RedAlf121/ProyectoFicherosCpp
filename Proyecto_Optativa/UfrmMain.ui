@@ -135,96 +135,90 @@
          <item>
           <widget class="QTabWidget" name="tabMain">
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="tab_students">
             <attribute name="title">
-             <string>Estudiantes</string>
+             <string>&amp;Estudiantes</string>
             </attribute>
-            <widget class="QPushButton" name="pshBtrDeleteStudent">
+            <widget class="QWidget" name="verticalLayoutWidget">
              <property name="geometry">
               <rect>
-               <x>40</x>
-               <y>400</y>
-               <width>93</width>
-               <height>24</height>
+               <x>33</x>
+               <y>-1</y>
+               <width>111</width>
+               <height>521</height>
               </rect>
              </property>
-             <property name="text">
-              <string>Eliminar</string>
-             </property>
-             <property name="shortcut">
-              <string>Ctrl+A</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pshBtrShowEverything">
-             <property name="geometry">
-              <rect>
-               <x>40</x>
-               <y>70</y>
-               <width>93</width>
-               <height>24</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Mostrar todo</string>
-             </property>
-             <property name="shortcut">
-              <string>Ctrl+A</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pshBtrInsertStudent">
-             <property name="geometry">
-              <rect>
-               <x>40</x>
-               <y>100</y>
-               <width>93</width>
-               <height>24</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Insertar</string>
-             </property>
-             <property name="shortcut">
-              <string>Ctrl+A</string>
-             </property>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QPushButton" name="pshBtrShowEverything">
+                <property name="text">
+                 <string>Mostrar todo</string>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+A</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pshBtrInsertStudent">
+                <property name="text">
+                 <string>&amp;Insertar</string>
+                </property>
+                <property name="shortcut">
+                 <string>Alt+I</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pshBtrDeleteStudent">
+                <property name="text">
+                 <string>Eliminar</string>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+A</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </widget>
            <widget class="QWidget" name="tab_queries">
             <attribute name="title">
-             <string>Consultas</string>
+             <string>&amp;Consultas</string>
             </attribute>
-            <widget class="QPushButton" name="pshBtrShowEverything_2">
+            <widget class="QWidget" name="verticalLayoutWidget_2">
              <property name="geometry">
               <rect>
-               <x>40</x>
-               <y>70</y>
-               <width>93</width>
-               <height>24</height>
+               <x>33</x>
+               <y>-1</y>
+               <width>111</width>
+               <height>521</height>
               </rect>
              </property>
-             <property name="text">
-              <string>Mostrar todo</string>
-             </property>
-             <property name="shortcut">
-              <string>Ctrl+A</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pshBtrShowSelectQuery">
-             <property name="geometry">
-              <rect>
-               <x>40</x>
-               <y>100</y>
-               <width>93</width>
-               <height>24</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Consulta</string>
-             </property>
-             <property name="shortcut">
-              <string>Ctrl+A</string>
-             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QPushButton" name="pshBtrShowSelectQuery">
+                <property name="text">
+                 <string>Consulta</string>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+A</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pshBtrShowEverything_2">
+                <property name="text">
+                 <string>Mostrar todo</string>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+A</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </widget>
           </widget>
@@ -235,9 +229,6 @@
      </item>
     </layout>
    </widget>
-   <zorder>gridLayoutWidget</zorder>
-   <zorder>tabMain</zorder>
-   <zorder>tabWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
