@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmMain.ui'
 **
-** Created by: Qt User Interface Compiler version 5.3.0
+** Created by: Qt User Interface Compiler version 5.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -13,20 +13,18 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableWidget>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -40,27 +38,21 @@ public:
     QWidget *centralWidget;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QTabWidget *tabMain;
-    QWidget *tabEstudiantes;
+    QFrame *tabWidget;
     QTableWidget *tableStudents;
     QLabel *lblTBoard;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QTabWidget *tabMain;
+    QWidget *tab_students;
+    QPushButton *pshBtrDeleteStudent;
     QPushButton *pshBtrShowEverything;
-    QWidget *tabConsultas;
-    QGroupBox *gboxUJC;
-    QLabel *lblCI;
-    QLabel *lblYear;
-    QSpinBox *spinBoxYear;
-    QLineEdit *lineCI;
-    QPushButton *pshBtrModify;
-    QGroupBox *gboxDonante;
-    QLabel *lblCI_2;
-    QLabel *lblYear_2;
-    QSpinBox *spinBoxYear_2;
-    QLineEdit *lineCI_2;
-    QPushButton *pshBtrModify_2;
+    QPushButton *pshBtrInsertStudent;
+    QWidget *tab_queries;
+    QPushButton *pshBtrShowEverything_2;
+    QPushButton *pshBtrShowSelectQuery;
     QMenuBar *menuBar;
     QMenu *menuMen;
-    QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *ufrmMain)
@@ -84,20 +76,17 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayoutWidget = new QWidget(centralWidget);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(-1, -1, 801, 561));
+        gridLayoutWidget->setGeometry(QRect(-1, -1, 801, 541));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        tabMain = new QTabWidget(gridLayoutWidget);
-        tabMain->setObjectName(QStringLiteral("tabMain"));
-        tabMain->setEnabled(true);
-        tabMain->setAutoFillBackground(false);
-        tabMain->setTabShape(QTabWidget::Triangular);
-        tabEstudiantes = new QWidget();
-        tabEstudiantes->setObjectName(QStringLiteral("tabEstudiantes"));
-        tableStudents = new QTableWidget(tabEstudiantes);
+        tabWidget = new QFrame(gridLayoutWidget);
+        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setEnabled(true);
+        tabWidget->setAutoFillBackground(false);
+        tableStudents = new QTableWidget(tabWidget);
         if (tableStudents->columnCount() < 6)
             tableStudents->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
@@ -119,73 +108,57 @@ public:
         __qtablewidgetitem5->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
         tableStudents->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         tableStudents->setObjectName(QStringLiteral("tableStudents"));
-        tableStudents->setGeometry(QRect(190, 40, 601, 461));
-        lblTBoard = new QLabel(tabEstudiantes);
+        tableStudents->setGeometry(QRect(190, 40, 601, 501));
+        lblTBoard = new QLabel(tabWidget);
         lblTBoard->setObjectName(QStringLiteral("lblTBoard"));
-        lblTBoard->setGeometry(QRect(190, 10, 601, 21));
-        pshBtrShowEverything = new QPushButton(tabEstudiantes);
+        lblTBoard->setGeometry(QRect(200, 10, 581, 21));
+        horizontalLayoutWidget = new QWidget(tabWidget);
+        horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(0, 0, 181, 541));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        tabMain = new QTabWidget(horizontalLayoutWidget);
+        tabMain->setObjectName(QStringLiteral("tabMain"));
+        tab_students = new QWidget();
+        tab_students->setObjectName(QStringLiteral("tab_students"));
+        pshBtrDeleteStudent = new QPushButton(tab_students);
+        pshBtrDeleteStudent->setObjectName(QStringLiteral("pshBtrDeleteStudent"));
+        pshBtrDeleteStudent->setGeometry(QRect(40, 400, 93, 24));
+        pshBtrShowEverything = new QPushButton(tab_students);
         pshBtrShowEverything->setObjectName(QStringLiteral("pshBtrShowEverything"));
-        pshBtrShowEverything->setGeometry(QRect(50, 40, 93, 28));
-        tabMain->addTab(tabEstudiantes, QString());
-        tabConsultas = new QWidget();
-        tabConsultas->setObjectName(QStringLiteral("tabConsultas"));
-        gboxUJC = new QGroupBox(tabConsultas);
-        gboxUJC->setObjectName(QStringLiteral("gboxUJC"));
-        gboxUJC->setEnabled(true);
-        gboxUJC->setGeometry(QRect(180, 50, 421, 171));
-        lblCI = new QLabel(gboxUJC);
-        lblCI->setObjectName(QStringLiteral("lblCI"));
-        lblCI->setGeometry(QRect(40, 40, 101, 16));
-        lblYear = new QLabel(gboxUJC);
-        lblYear->setObjectName(QStringLiteral("lblYear"));
-        lblYear->setGeometry(QRect(60, 80, 81, 16));
-        spinBoxYear = new QSpinBox(gboxUJC);
-        spinBoxYear->setObjectName(QStringLiteral("spinBoxYear"));
-        spinBoxYear->setGeometry(QRect(150, 80, 51, 22));
-        spinBoxYear->setMinimum(2000);
-        spinBoxYear->setMaximum(2023);
-        lineCI = new QLineEdit(gboxUJC);
-        lineCI->setObjectName(QStringLiteral("lineCI"));
-        lineCI->setGeometry(QRect(150, 40, 191, 22));
-        pshBtrModify = new QPushButton(gboxUJC);
-        pshBtrModify->setObjectName(QStringLiteral("pshBtrModify"));
-        pshBtrModify->setGeometry(QRect(290, 130, 93, 28));
-        gboxDonante = new QGroupBox(tabConsultas);
-        gboxDonante->setObjectName(QStringLiteral("gboxDonante"));
-        gboxDonante->setGeometry(QRect(180, 300, 421, 171));
-        gboxDonante->setFlat(false);
-        gboxDonante->setCheckable(false);
-        lblCI_2 = new QLabel(gboxDonante);
-        lblCI_2->setObjectName(QStringLiteral("lblCI_2"));
-        lblCI_2->setGeometry(QRect(40, 40, 101, 16));
-        lblYear_2 = new QLabel(gboxDonante);
-        lblYear_2->setObjectName(QStringLiteral("lblYear_2"));
-        lblYear_2->setGeometry(QRect(50, 80, 91, 20));
-        spinBoxYear_2 = new QSpinBox(gboxDonante);
-        spinBoxYear_2->setObjectName(QStringLiteral("spinBoxYear_2"));
-        spinBoxYear_2->setGeometry(QRect(150, 80, 51, 22));
-        spinBoxYear_2->setMinimum(2000);
-        spinBoxYear_2->setMaximum(2023);
-        lineCI_2 = new QLineEdit(gboxDonante);
-        lineCI_2->setObjectName(QStringLiteral("lineCI_2"));
-        lineCI_2->setGeometry(QRect(150, 40, 191, 22));
-        pshBtrModify_2 = new QPushButton(gboxDonante);
-        pshBtrModify_2->setObjectName(QStringLiteral("pshBtrModify_2"));
-        pshBtrModify_2->setGeometry(QRect(290, 130, 93, 28));
-        tabMain->addTab(tabConsultas, QString());
+        pshBtrShowEverything->setGeometry(QRect(40, 70, 93, 24));
+        pshBtrInsertStudent = new QPushButton(tab_students);
+        pshBtrInsertStudent->setObjectName(QStringLiteral("pshBtrInsertStudent"));
+        pshBtrInsertStudent->setGeometry(QRect(40, 100, 93, 24));
+        tabMain->addTab(tab_students, QString());
+        tab_queries = new QWidget();
+        tab_queries->setObjectName(QStringLiteral("tab_queries"));
+        pshBtrShowEverything_2 = new QPushButton(tab_queries);
+        pshBtrShowEverything_2->setObjectName(QStringLiteral("pshBtrShowEverything_2"));
+        pshBtrShowEverything_2->setGeometry(QRect(40, 70, 93, 24));
+        pshBtrShowSelectQuery = new QPushButton(tab_queries);
+        pshBtrShowSelectQuery->setObjectName(QStringLiteral("pshBtrShowSelectQuery"));
+        pshBtrShowSelectQuery->setGeometry(QRect(40, 100, 93, 24));
+        tabMain->addTab(tab_queries, QString());
 
-        gridLayout->addWidget(tabMain, 0, 0, 1, 1);
+        horizontalLayout->addWidget(tabMain);
+
+
+        gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
         ufrmMain->setCentralWidget(centralWidget);
+        gridLayoutWidget->raise();
+        tabMain->raise();
+        tabWidget->raise();
         menuBar = new QMenuBar(ufrmMain);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 800, 26));
         menuMen = new QMenu(menuBar);
         menuMen->setObjectName(QStringLiteral("menuMen"));
         ufrmMain->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(ufrmMain);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        ufrmMain->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(ufrmMain);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         ufrmMain->setStatusBar(statusBar);
@@ -198,7 +171,7 @@ public:
         retranslateUi(ufrmMain);
         QObject::connect(mnuActionClose, SIGNAL(triggered()), ufrmMain, SLOT(close()));
 
-        tabMain->setCurrentIndex(1);
+        tabMain->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ufrmMain);
@@ -226,18 +199,18 @@ public:
         QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
         ___qtablewidgetitem5->setText(QApplication::translate("ufrmMain", "Donante", 0));
         lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Listado de Estudiantes</span></p></body></html>", 0));
+        pshBtrDeleteStudent->setText(QApplication::translate("ufrmMain", "Eliminar", 0));
+        pshBtrDeleteStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         pshBtrShowEverything->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
         pshBtrShowEverything->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        tabMain->setTabText(tabMain->indexOf(tabEstudiantes), QApplication::translate("ufrmMain", "Estudiantes", 0));
-        gboxUJC->setTitle(QApplication::translate("ufrmMain", "UJC Estudiante 3er A\303\261o", 0));
-        lblCI->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">Carnet Identidad:</p></body></html>", 0));
-        lblYear->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">A\303\261o Ingreso:</p></body></html>", 0));
-        pshBtrModify->setText(QApplication::translate("ufrmMain", "Modificar", 0));
-        gboxDonante->setTitle(QApplication::translate("ufrmMain", "Donante Sangre", 0));
-        lblCI_2->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">Carnet Identidad:</p></body></html>", 0));
-        lblYear_2->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"right\">A\303\261o Donaci\303\263n:</p></body></html>", 0));
-        pshBtrModify_2->setText(QApplication::translate("ufrmMain", "Modificar", 0));
-        tabMain->setTabText(tabMain->indexOf(tabConsultas), QApplication::translate("ufrmMain", "Consultas", 0));
+        pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "Insertar", 0));
+        pshBtrInsertStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
+        tabMain->setTabText(tabMain->indexOf(tab_students), QApplication::translate("ufrmMain", "Estudiantes", 0));
+        pshBtrShowEverything_2->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
+        pshBtrShowEverything_2->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
+        pshBtrShowSelectQuery->setText(QApplication::translate("ufrmMain", "Consulta", 0));
+        pshBtrShowSelectQuery->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
+        tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "Consultas", 0));
         menuMen->setTitle(QApplication::translate("ufrmMain", "Men\303\272", 0));
     } // retranslateUi
 
