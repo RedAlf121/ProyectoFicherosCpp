@@ -75,7 +75,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Accept</string>
+    <string>&amp;Accept</string>
    </property>
    <property name="icon">
     <iconset>
@@ -98,7 +98,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Decline</string>
+    <string>&amp;Decline</string>
    </property>
    <property name="icon">
     <iconset>

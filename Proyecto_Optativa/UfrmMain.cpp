@@ -8,6 +8,7 @@ UfrmMain::UfrmMain(QWidget *parent) :
     ui.setupUi(this);
     dialoginsert = NULL;
     dialogyear = NULL;
+    ui.tabMain->setCurrentIndex(0);
     this->setFixedSize(QSize(948, 600));
 }
 

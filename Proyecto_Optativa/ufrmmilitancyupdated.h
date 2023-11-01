@@ -10,7 +10,8 @@ class UfrmMilitancyUpdated;
 class UfrmMilitancyUpdated : public QMainWindow
 {
     Q_OBJECT
-
+protected slots:
+    void on_pushAcceptMilitancy_clicked();
 public:
     explicit UfrmMilitancyUpdated(QWidget *parent = 0);
     ~UfrmMilitancyUpdated();

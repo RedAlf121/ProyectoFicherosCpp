@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmMilitancyUpdated.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -48,6 +48,9 @@ public:
         font.setFamily(QStringLiteral("Verdana"));
         font.setPointSize(12);
         UfrmMilitancyUpdated->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral("Resources/militant_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        UfrmMilitancyUpdated->setWindowIcon(icon);
         centralwidget = new QWidget(UfrmMilitancyUpdated);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         labelMinorYearsMilitancy = new QLabel(centralwidget);
@@ -133,7 +136,11 @@ public:
         labelTotalElderMilitancy->setGeometry(QRect(890, 570, 71, 21));
         pushAcceptMilitancy = new QPushButton(centralwidget);
         pushAcceptMilitancy->setObjectName(QStringLiteral("pushAcceptMilitancy"));
-        pushAcceptMilitancy->setGeometry(QRect(610, 620, 101, 31));
+        pushAcceptMilitancy->setGeometry(QRect(610, 620, 121, 41));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("Resources/accept_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushAcceptMilitancy->setIcon(icon1);
+        pushAcceptMilitancy->setIconSize(QSize(32, 32));
         UfrmMilitancyUpdated->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(UfrmMilitancyUpdated);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -146,7 +153,7 @@ public:
 
     void retranslateUi(QMainWindow *UfrmMilitancyUpdated)
     {
-        UfrmMilitancyUpdated->setWindowTitle(QApplication::translate("UfrmMilitancyUpdated", "MainWindow", 0));
+        UfrmMilitancyUpdated->setWindowTitle(QApplication::translate("UfrmMilitancyUpdated", "Ingreso militancia", 0));
         labelMinorYearsMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es anterior al especificado", 0));
         labelSameYearMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es igual al especificado", 0));
         labelElderYearsMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es posterior al especificado", 0));
@@ -180,7 +187,7 @@ public:
         labelTotalMinorMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
         labelTotalSameMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
         labelTotalElderMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
-        pushAcceptMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Aceptar", 0));
+        pushAcceptMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "&Aceptar", 0));
     } // retranslateUi
 
 };

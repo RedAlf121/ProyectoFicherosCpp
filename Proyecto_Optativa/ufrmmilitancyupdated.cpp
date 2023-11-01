@@ -13,3 +13,8 @@ UfrmMilitancyUpdated::~UfrmMilitancyUpdated()
 {
     delete ui;
 }
+
+void UfrmMilitancyUpdated::on_pushAcceptMilitancy_clicked()
+{
+  close();
+}

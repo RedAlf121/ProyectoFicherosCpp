@@ -13,3 +13,8 @@ UfrmDonationUpdated::~UfrmDonationUpdated()
 {
     delete ui;
 }
+
+void UfrmDonationUpdated::on_pushAcceptDonation_clicked()
+{
+  close();
+}

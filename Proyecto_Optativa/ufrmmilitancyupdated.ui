@@ -17,7 +17,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Ingreso militancia</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Resources/militant_32.png</normaloff>Resources/militant_32.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="labelMinorYearsMilitancy">
@@ -277,12 +281,22 @@ UJC</string>
      <rect>
       <x>610</x>
       <y>620</y>
-      <width>101</width>
-      <height>31</height>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Aceptar</string>
+     <string>&amp;Aceptar</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Resources/accept_32.png</normaloff>Resources/accept_32.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
     </property>
    </widget>
   </widget>

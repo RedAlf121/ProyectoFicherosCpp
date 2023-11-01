@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmDonationUpdated.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -45,11 +45,19 @@ public:
         font.setFamily(QStringLiteral("Verdana"));
         font.setPointSize(12);
         UfrmDonationUpdated->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral("Resources/donation_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        UfrmDonationUpdated->setWindowIcon(icon);
         centralwidget = new QWidget(UfrmDonationUpdated);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         pushAcceptDonation = new QPushButton(centralwidget);
         pushAcceptDonation->setObjectName(QStringLiteral("pushAcceptDonation"));
-        pushAcceptDonation->setGeometry(QRect(390, 620, 111, 31));
+        pushAcceptDonation->setGeometry(QRect(390, 620, 111, 41));
+        pushAcceptDonation->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("Resources/accept_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushAcceptDonation->setIcon(icon1);
+        pushAcceptDonation->setIconSize(QSize(32, 32));
         labelTotalMinorDonation = new QLabel(centralwidget);
         labelTotalMinorDonation->setObjectName(QStringLiteral("labelTotalMinorDonation"));
         labelTotalMinorDonation->setGeometry(QRect(30, 570, 71, 21));
@@ -82,7 +90,7 @@ public:
         labelMinorYearsDonation->setAlignment(Qt::AlignCenter);
         labelElderYearsDonation = new QLabel(centralwidget);
         labelElderYearsDonation->setObjectName(QStringLiteral("labelElderYearsDonation"));
-        labelElderYearsDonation->setGeometry(QRect(464, 10, 391, 20));
+        labelElderYearsDonation->setGeometry(QRect(464, 10, 411, 20));
         labelElderYearsDonation->setFont(font1);
         labelElderYearsDonation->setAlignment(Qt::AlignCenter);
         tableStudentsElderMilitancy = new QTableWidget(centralwidget);
@@ -118,8 +126,8 @@ public:
 
     void retranslateUi(QMainWindow *UfrmDonationUpdated)
     {
-        UfrmDonationUpdated->setWindowTitle(QApplication::translate("UfrmDonationUpdated", "MainWindow", 0));
-        pushAcceptDonation->setText(QApplication::translate("UfrmDonationUpdated", "Aceptar", 0));
+        UfrmDonationUpdated->setWindowTitle(QApplication::translate("UfrmDonationUpdated", "Primera Donaci\303\263n", 0));
+        pushAcceptDonation->setText(QApplication::translate("UfrmDonationUpdated", "&Aceptar", 0));
         labelTotalMinorDonation->setText(QApplication::translate("UfrmDonationUpdated", "Total: ", 0));
         QTableWidgetItem *___qtablewidgetitem = tableStudentsMinorMilitancy->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("UfrmDonationUpdated", "CI", 0));
@@ -128,8 +136,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem2 = tableStudentsMinorMilitancy->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QApplication::translate("UfrmDonationUpdated", "Apellidos", 0));
         QTableWidgetItem *___qtablewidgetitem3 = tableStudentsMinorMilitancy->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("UfrmDonationUpdated", "Ingreso\n"
-"UJC", 0));
+        ___qtablewidgetitem3->setText(QApplication::translate("UfrmDonationUpdated", "Donante", 0));
         labelMinorYearsDonation->setText(QApplication::translate("UfrmDonationUpdated", "Estudiantes cuyo a\303\261o de ingreso es anterior al especificado", 0));
         labelElderYearsDonation->setText(QApplication::translate("UfrmDonationUpdated", "Estudiantes cuyo a\303\261o de ingreso es posterior al especificado", 0));
         QTableWidgetItem *___qtablewidgetitem4 = tableStudentsElderMilitancy->horizontalHeaderItem(0);
@@ -139,8 +146,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem6 = tableStudentsElderMilitancy->horizontalHeaderItem(2);
         ___qtablewidgetitem6->setText(QApplication::translate("UfrmDonationUpdated", "Apellidos", 0));
         QTableWidgetItem *___qtablewidgetitem7 = tableStudentsElderMilitancy->horizontalHeaderItem(3);
-        ___qtablewidgetitem7->setText(QApplication::translate("UfrmDonationUpdated", "Ingreso\n"
-"UJC", 0));
+        ___qtablewidgetitem7->setText(QApplication::translate("UfrmDonationUpdated", "Donante", 0));
         labelTotalElderDonation->setText(QApplication::translate("UfrmDonationUpdated", "Total: ", 0));
     } // retranslateUi
 
