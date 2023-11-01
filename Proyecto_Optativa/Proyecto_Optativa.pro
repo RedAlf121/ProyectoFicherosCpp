@@ -15,16 +15,19 @@ TEMPLATE = app
 SOURCES += main.cpp\
     UfrmDialogInsert.cpp \
     UfrmMain.cpp \
-    UfrmMilitancyUpdated.cpp
+    UfrmMilitancyUpdated.cpp \
+    UfrmDonationUpdated.cpp
 
 HEADERS  += \
     UfrmDialogInsert.h \
     UfrmMain.h \
-    UfrmMilitancyUpdated.h
+    UfrmMilitancyUpdated.h \
+    UfrmDonationUpdated.h
 
 FORMS    += \
     UfrmDialogInsert.ui \
     UfrmMain.ui \
-    UfrmMilitancyUpdated.ui
+    UfrmMilitancyUpdated.ui \
+    UfrmDonationUpdated.ui
 
 

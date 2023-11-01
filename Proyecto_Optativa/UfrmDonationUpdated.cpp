@@ -6,6 +6,7 @@ UfrmDonationUpdated::UfrmDonationUpdated(QWidget *parent) :
     ui(new Ui::UfrmDonationUpdated)
 {
     ui->setupUi(this);
+    this->setFixedSize(QSize(892, 691));
 }
 
 UfrmDonationUpdated::~UfrmDonationUpdated()

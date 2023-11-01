@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1322</width>
-    <height>686</height>
+    <height>691</height>
    </rect>
   </property>
   <property name="font">
@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="labelMinorYears">
+   <widget class="QLabel" name="labelMinorYearsMilitancy">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -38,8 +38,11 @@
     <property name="text">
      <string>Estudiantes cuyo año de ingreso es anterior al especificado</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="labelSameYear">
+   <widget class="QLabel" name="labelSameYearMilitancy">
     <property name="geometry">
      <rect>
       <x>464</x>
@@ -57,8 +60,11 @@
     <property name="text">
      <string>Estudiantes cuyo año de ingreso es igual al especificado</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="labelElderYears">
+   <widget class="QLabel" name="labelElderYearsMilitancy">
     <property name="geometry">
      <rect>
       <x>894</x>
@@ -76,8 +82,11 @@
     <property name="text">
      <string>Estudiantes cuyo año de ingreso es posterior al especificado</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QTableWidget" name="tableStudents">
+   <widget class="QTableWidget" name="tableStudentsMinorMilitancy">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -126,7 +135,7 @@ UJC</string>
      </property>
     </column>
    </widget>
-   <widget class="QTableWidget" name="tableStudents_2">
+   <widget class="QTableWidget" name="tableStudentsSameMilitancy">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -175,7 +184,7 @@ UJC</string>
      </property>
     </column>
    </widget>
-   <widget class="QTableWidget" name="tableStudents_3">
+   <widget class="QTableWidget" name="tableStudentsElderMilitancy">
     <property name="geometry">
      <rect>
       <x>890</x>
@@ -224,7 +233,7 @@ UJC</string>
      </property>
     </column>
    </widget>
-   <widget class="QLabel" name="labelTotalMinor">
+   <widget class="QLabel" name="labelTotalMinorMilitancy">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -237,7 +246,7 @@ UJC</string>
      <string>Total: </string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTotalSame">
+   <widget class="QLabel" name="labelTotalSameMilitancy">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -250,7 +259,7 @@ UJC</string>
      <string>Total: </string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTotalElder">
+   <widget class="QLabel" name="labelTotalElderMilitancy">
     <property name="geometry">
      <rect>
       <x>890</x>
@@ -263,12 +272,12 @@ UJC</string>
      <string>Total: </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pshBtrMilitancyAccept">
+   <widget class="QPushButton" name="pushAcceptMilitancy">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>610</y>
-      <width>121</width>
+      <x>610</x>
+      <y>620</y>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
