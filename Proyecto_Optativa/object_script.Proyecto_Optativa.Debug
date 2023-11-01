@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\UfrmDialogInsert.o
+./debug\UfrmMain.o
+./debug\UfrmMilitancyUpdated.o
+./debug\UfrmDonationUpdated.o
+./debug\UfrmDialogYear.o
+./debug\UYearDonation.o
+./debug\UYearMilitancy.o
+./debug\moc_UfrmDialogInsert.o
+./debug\moc_UfrmMain.o
+./debug\moc_UfrmMilitancyUpdated.o
+./debug\moc_UfrmDonationUpdated.o
+./debug\moc_UfrmDialogYear.o
+);

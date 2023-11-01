@@ -1,0 +1,10 @@
+#ifndef UFMRDIALOGYEARDONATION_H
+#define UFMRDIALOGYEARDONATION_H
+#include "UfrmDialogYear.h"
+class UfmrDialogYearDonation : YearDialog
+{
+public:
+  UfmrDialogYearDonation();
+};
+
+#endif // UFMRDIALOGYEARDONATION_H

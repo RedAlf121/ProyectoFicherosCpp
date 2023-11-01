@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\UfrmDialogInsert.o
+./release\UfrmMain.o
+./release\UfrmMilitancyUpdated.o
+./release\UfrmDonationUpdated.o
+./release\UfrmDialogYear.o
+./release\UYearDonation.o
+./release\UYearMilitancy.o
+./release\moc_UfrmDialogInsert.o
+./release\moc_UfrmMain.o
+./release\moc_UfrmMilitancyUpdated.o
+./release\moc_UfrmDonationUpdated.o
+./release\moc_UfrmDialogYear.o
+);
