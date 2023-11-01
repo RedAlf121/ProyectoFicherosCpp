@@ -12,8 +12,6 @@ public:
     explicit UfrmMain(QWidget *parent = 0);
 
 private slots:
-    void on_mnuActionInsertStudent_triggered();
-
     void on_pshBtrInsertStudent_clicked();
 
 private:

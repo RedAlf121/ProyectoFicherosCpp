@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmMain.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -19,8 +19,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
@@ -56,17 +54,19 @@ public:
     QVBoxLayout *verticalLayout_2;
     QPushButton *pshBtrShowSelectQuery;
     QPushButton *pshBtrShowEverything_2;
-    QMenuBar *menuBar;
-    QMenu *menuMen;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *ufrmMain)
     {
         if (ufrmMain->objectName().isEmpty())
             ufrmMain->setObjectName(QStringLiteral("ufrmMain"));
-        ufrmMain->resize(800, 600);
+        ufrmMain->resize(948, 600);
         ufrmMain->setMinimumSize(QSize(800, 600));
         ufrmMain->setMaximumSize(QSize(1920, 1080));
+        QFont font;
+        font.setFamily(QStringLiteral("Verdana"));
+        font.setPointSize(12);
+        ufrmMain->setFont(font);
         QIcon icon;
         icon.addFile(QStringLiteral("Resources/Screenshot 2023-10-21 155727~1.ico"), QSize(), QIcon::Normal, QIcon::Off);
         ufrmMain->setWindowIcon(icon);
@@ -79,9 +79,10 @@ public:
         mnuActionClose->setObjectName(QStringLiteral("mnuActionClose"));
         centralWidget = new QWidget(ufrmMain);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        centralWidget->setFont(font);
         gridLayoutWidget = new QWidget(centralWidget);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(-1, -1, 801, 541));
+        gridLayoutWidget->setGeometry(QRect(-1, -1, 941, 541));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -113,13 +114,18 @@ public:
         __qtablewidgetitem5->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
         tableStudents->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         tableStudents->setObjectName(QStringLiteral("tableStudents"));
-        tableStudents->setGeometry(QRect(190, 40, 601, 501));
+        tableStudents->setGeometry(QRect(330, 40, 591, 501));
+        tableStudents->setFont(font);
         lblTBoard = new QLabel(tabWidget);
         lblTBoard->setObjectName(QStringLiteral("lblTBoard"));
-        lblTBoard->setGeometry(QRect(200, 10, 581, 21));
+        lblTBoard->setGeometry(QRect(260, 0, 581, 31));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Verdana"));
+        font1.setPointSize(28);
+        lblTBoard->setFont(font1);
         horizontalLayoutWidget = new QWidget(tabWidget);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(0, 0, 181, 541));
+        horizontalLayoutWidget->setGeometry(QRect(0, 0, 311, 541));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -127,11 +133,13 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         tabMain = new QTabWidget(horizontalLayoutWidget);
         tabMain->setObjectName(QStringLiteral("tabMain"));
+        tabMain->setFont(font);
+        tabMain->setIconSize(QSize(32, 32));
         tab_students = new QWidget();
         tab_students->setObjectName(QStringLiteral("tab_students"));
         verticalLayoutWidget = new QWidget(tab_students);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(33, -1, 111, 521));
+        verticalLayoutWidget->setGeometry(QRect(3, -1, 291, 521));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -139,25 +147,48 @@ public:
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         pshBtrShowEverything = new QPushButton(verticalLayoutWidget);
         pshBtrShowEverything->setObjectName(QStringLiteral("pshBtrShowEverything"));
+        pshBtrShowEverything->setMinimumSize(QSize(0, 64));
+        pshBtrShowEverything->setFont(font);
+        pshBtrShowEverything->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("Resources/show_all_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrShowEverything->setIcon(icon1);
+        pshBtrShowEverything->setIconSize(QSize(32, 32));
 
         verticalLayout->addWidget(pshBtrShowEverything);
 
         pshBtrInsertStudent = new QPushButton(verticalLayoutWidget);
         pshBtrInsertStudent->setObjectName(QStringLiteral("pshBtrInsertStudent"));
+        pshBtrInsertStudent->setMinimumSize(QSize(0, 64));
+        pshBtrInsertStudent->setFont(font);
+        pshBtrInsertStudent->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral("Resources/student_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrInsertStudent->setIcon(icon2);
+        pshBtrInsertStudent->setIconSize(QSize(32, 32));
 
         verticalLayout->addWidget(pshBtrInsertStudent);
 
         pshBtrDeleteStudent = new QPushButton(verticalLayoutWidget);
         pshBtrDeleteStudent->setObjectName(QStringLiteral("pshBtrDeleteStudent"));
+        pshBtrDeleteStudent->setMinimumSize(QSize(0, 64));
+        pshBtrDeleteStudent->setFont(font);
+        pshBtrDeleteStudent->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon3;
+        icon3.addFile(QStringLiteral("Resources/delete_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrDeleteStudent->setIcon(icon3);
+        pshBtrDeleteStudent->setIconSize(QSize(32, 32));
 
         verticalLayout->addWidget(pshBtrDeleteStudent);
 
-        tabMain->addTab(tab_students, QString());
+        QIcon icon4;
+        icon4.addFile(QStringLiteral("Resources/studentTab_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tabMain->addTab(tab_students, icon4, QString());
         tab_queries = new QWidget();
         tab_queries->setObjectName(QStringLiteral("tab_queries"));
         verticalLayoutWidget_2 = new QWidget(tab_queries);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(33, -1, 111, 521));
+        verticalLayoutWidget_2->setGeometry(QRect(13, -1, 271, 521));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -165,15 +196,23 @@ public:
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         pshBtrShowSelectQuery = new QPushButton(verticalLayoutWidget_2);
         pshBtrShowSelectQuery->setObjectName(QStringLiteral("pshBtrShowSelectQuery"));
+        pshBtrShowSelectQuery->setMinimumSize(QSize(0, 64));
+        pshBtrShowSelectQuery->setFont(font);
+        pshBtrShowSelectQuery->setCursor(QCursor(Qt::PointingHandCursor));
 
         verticalLayout_2->addWidget(pshBtrShowSelectQuery);
 
         pshBtrShowEverything_2 = new QPushButton(verticalLayoutWidget_2);
         pshBtrShowEverything_2->setObjectName(QStringLiteral("pshBtrShowEverything_2"));
+        pshBtrShowEverything_2->setMinimumSize(QSize(0, 64));
+        pshBtrShowEverything_2->setFont(font);
+        pshBtrShowEverything_2->setCursor(QCursor(Qt::PointingHandCursor));
 
         verticalLayout_2->addWidget(pshBtrShowEverything_2);
 
-        tabMain->addTab(tab_queries, QString());
+        QIcon icon5;
+        icon5.addFile(QStringLiteral("Resources/query_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tabMain->addTab(tab_queries, icon5, QString());
 
         horizontalLayout->addWidget(tabMain);
 
@@ -181,25 +220,13 @@ public:
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
         ufrmMain->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(ufrmMain);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 26));
-        menuMen = new QMenu(menuBar);
-        menuMen->setObjectName(QStringLiteral("menuMen"));
-        ufrmMain->setMenuBar(menuBar);
         statusBar = new QStatusBar(ufrmMain);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         ufrmMain->setStatusBar(statusBar);
 
-        menuBar->addAction(menuMen->menuAction());
-        menuMen->addAction(mnuActionInsertStudent);
-        menuMen->addAction(mnuActionDeleteStudent);
-        menuMen->addAction(mnuActionClose);
-
         retranslateUi(ufrmMain);
-        QObject::connect(mnuActionClose, SIGNAL(triggered()), ufrmMain, SLOT(close()));
 
-        tabMain->setCurrentIndex(1);
+        tabMain->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ufrmMain);
@@ -223,10 +250,11 @@ public:
         QTableWidgetItem *___qtablewidgetitem3 = tableStudents->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("ufrmMain", "Grupo", 0));
         QTableWidgetItem *___qtablewidgetitem4 = tableStudents->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QApplication::translate("ufrmMain", "Ingreso UJC", 0));
+        ___qtablewidgetitem4->setText(QApplication::translate("ufrmMain", "Ingreso\n"
+"UJC", 0));
         QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
         ___qtablewidgetitem5->setText(QApplication::translate("ufrmMain", "Donante", 0));
-        lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Listado de Estudiantes</span></p></body></html>", 0));
+        lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt;\">Listado de Estudiantes</span></p></body></html>", 0));
         pshBtrShowEverything->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
         pshBtrShowEverything->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar", 0));
@@ -239,7 +267,6 @@ public:
         pshBtrShowEverything_2->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
         pshBtrShowEverything_2->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Consultas", 0));
-        menuMen->setTitle(QApplication::translate("ufrmMain", "Men\303\272", 0));
     } // retranslateUi
 
 };

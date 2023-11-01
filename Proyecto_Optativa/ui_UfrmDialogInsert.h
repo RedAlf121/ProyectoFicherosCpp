@@ -60,7 +60,14 @@ public:
     {
         if (insertDialog->objectName().isEmpty())
             insertDialog->setObjectName(QStringLiteral("insertDialog"));
-        insertDialog->resize(546, 376);
+        insertDialog->resize(618, 376);
+        QFont font;
+        font.setFamily(QStringLiteral("Verdana"));
+        font.setPointSize(12);
+        insertDialog->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral("Resources/student_add_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        insertDialog->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(insertDialog);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         gridLayout = new QGridLayout();
@@ -69,7 +76,7 @@ public:
         gboxData->setObjectName(QStringLiteral("gboxData"));
         verticalLayoutWidget = new QWidget(gboxData);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(210, 30, 271, 131));
+        verticalLayoutWidget->setGeometry(QRect(310, 30, 271, 131));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -90,7 +97,7 @@ public:
 
         verticalLayoutWidget_2 = new QWidget(gboxData);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(40, 40, 160, 111));
+        verticalLayoutWidget_2->setGeometry(QRect(100, 40, 201, 111));
         verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -111,7 +118,7 @@ public:
 
         horizontalLayoutWidget = new QWidget(gboxData);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(20, 170, 480, 71));
+        horizontalLayoutWidget->setGeometry(QRect(0, 170, 581, 91));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -153,17 +160,25 @@ public:
 
         horizontalLayoutWidget_2 = new QWidget(gboxData);
         horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(299, 270, 195, 80));
+        horizontalLayoutWidget_2->setGeometry(QRect(350, 270, 230, 80));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         pshBtrAccept = new QPushButton(horizontalLayoutWidget_2);
         pshBtrAccept->setObjectName(QStringLiteral("pshBtrAccept"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("Resources/add_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrAccept->setIcon(icon1);
+        pshBtrAccept->setIconSize(QSize(32, 32));
 
         horizontalLayout_2->addWidget(pshBtrAccept);
 
         pshBtrCancel = new QPushButton(horizontalLayoutWidget_2);
         pshBtrCancel->setObjectName(QStringLiteral("pshBtrCancel"));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral("Resources/cancel_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrCancel->setIcon(icon2);
+        pshBtrCancel->setIconSize(QSize(32, 32));
 
         horizontalLayout_2->addWidget(pshBtrCancel);
 
