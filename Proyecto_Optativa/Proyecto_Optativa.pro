@@ -18,6 +18,8 @@ SOURCES += main.cpp\
     UfrmDialogYear.cpp \
     UYearDonation.cpp \
     UYearMilitancy.cpp
+    UfrmMilitancyUpdated.cpp \
+    UfrmDonationUpdated.cpp
 
 HEADERS  += \
     UfrmDialogInsert.h \
@@ -26,10 +28,14 @@ HEADERS  += \
     utils.h \
     UYearMilitancy.h \
     UYearDonation.h
+    UfrmMilitancyUpdated.h \
+    UfrmDonationUpdated.h
 
 FORMS    += \
     UfrmDialogInsert.ui \
     UfrmMain.ui \
     UfrmDialogYear.ui
+    UfrmMilitancyUpdated.ui \
+    UfrmDonationUpdated.ui
 
 
