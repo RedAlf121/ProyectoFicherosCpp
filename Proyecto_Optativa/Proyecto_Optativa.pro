@@ -14,14 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     UfrmDialogInsert.cpp \
-    UfrmMain.cpp
+    UfrmMain.cpp \
+    UfrmDialogYear.cpp
 
 HEADERS  += \
     UfrmDialogInsert.h \
-    UfrmMain.h
+    UfrmMain.h \
+    UfrmDialogYear.h
 
 FORMS    += \
     UfrmDialogInsert.ui \
-    UfrmMain.ui
+    UfrmMain.ui \
+    UfrmDialogYear.ui
 
 
