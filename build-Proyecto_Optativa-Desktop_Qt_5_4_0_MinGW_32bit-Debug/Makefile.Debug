@@ -114,7 +114,7 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: debug/moc_UfrmDialogInsert.cpp debug/moc_UfrmMain.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) debug\moc_UfrmDialogInsert.cpp debug\moc_UfrmMain.cpp
-debug/moc_UfrmDialogInsert.cpp: ui_dialogInsertar.h \
+debug/moc_UfrmDialogInsert.cpp: ../Proyecto_Optativa/ui_UfrmDialogInsert.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qatomic.h \
@@ -276,7 +276,7 @@ debug/moc_UfrmDialogInsert.cpp: ui_dialogInsertar.h \
 		../Proyecto_Optativa/UfrmDialogInsert.h
 	D:\QT\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.4/mingw491_32/mkspecs/win32-g++ -I"D:/Universidad/2do semestre/C++ Avanzado/Proyecto Final/Final Project Repository/ProyectoFicherosCpp/Proyecto_Optativa" -ID:/QT/5.4/mingw491_32/include -ID:/QT/5.4/mingw491_32/include/QtWidgets -ID:/QT/5.4/mingw491_32/include/QtGui -ID:/QT/5.4/mingw491_32/include/QtCore -I. ..\Proyecto_Optativa\UfrmDialogInsert.h -o debug\moc_UfrmDialogInsert.cpp
 
-debug/moc_UfrmMain.cpp: ui_frmprincipal.h \
+debug/moc_UfrmMain.cpp: ../Proyecto_Optativa/ui_UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qatomic.h \
@@ -392,16 +392,18 @@ debug/moc_UfrmMain.cpp: ui_frmprincipal.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qinputmethod.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QButtonGroup \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QFrame \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qframe.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QGridLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qgridlayout.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlayout.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlayoutitem.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qboxlayout.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QHBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QHeaderView \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qheaderview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractitemview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractscrollarea.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qframe.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qabstractitemmodel.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qitemselectionmodel.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -419,10 +421,6 @@ debug/moc_UfrmMain.cpp: ui_frmprincipal.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlabel.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QMainWindow \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qmainwindow.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QMenu \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qmenu.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QMenuBar \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qmenubar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QPushButton \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qpushbutton.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractbutton.h \
@@ -432,16 +430,14 @@ debug/moc_UfrmMain.cpp: ui_frmprincipal.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QTableWidget \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtablewidget.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtableview.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QToolBar \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qtoolbar.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
 		../Proyecto_Optativa/UfrmDialogInsert.h \
-		ui_dialogInsertar.h \
+		../Proyecto_Optativa/ui_UfrmDialogInsert.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QGroupBox \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qgroupbox.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QHBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QLineEdit \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlineedit.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qtextcursor.h \
@@ -450,7 +446,6 @@ debug/moc_UfrmMain.cpp: ui_frmprincipal.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qtextoption.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		../Proyecto_Optativa/UfrmMain.h
 	D:\QT\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.4/mingw491_32/mkspecs/win32-g++ -I"D:/Universidad/2do semestre/C++ Avanzado/Proyecto Final/Final Project Repository/ProyectoFicherosCpp/Proyecto_Optativa" -ID:/QT/5.4/mingw491_32/include -ID:/QT/5.4/mingw491_32/include/QtWidgets -ID:/QT/5.4/mingw491_32/include/QtGui -ID:/QT/5.4/mingw491_32/include/QtCore -I. ..\Proyecto_Optativa\UfrmMain.h -o debug\moc_UfrmMain.cpp
 
@@ -478,7 +473,7 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 debug/main.o: ../Proyecto_Optativa/main.cpp ../Proyecto_Optativa/UfrmMain.h \
-		ui_frmprincipal.h \
+		../Proyecto_Optativa/ui_UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qatomic.h \
@@ -594,16 +589,18 @@ debug/main.o: ../Proyecto_Optativa/main.cpp ../Proyecto_Optativa/UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qinputmethod.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QButtonGroup \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QFrame \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qframe.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QGridLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qgridlayout.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlayout.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlayoutitem.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qboxlayout.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QHBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QHeaderView \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qheaderview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractitemview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractscrollarea.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qframe.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qabstractitemmodel.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qitemselectionmodel.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -621,10 +618,6 @@ debug/main.o: ../Proyecto_Optativa/main.cpp ../Proyecto_Optativa/UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlabel.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QMainWindow \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qmainwindow.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QMenu \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qmenu.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QMenuBar \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qmenubar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QPushButton \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qpushbutton.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractbutton.h \
@@ -634,16 +627,14 @@ debug/main.o: ../Proyecto_Optativa/main.cpp ../Proyecto_Optativa/UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QTableWidget \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtablewidget.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtableview.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QToolBar \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qtoolbar.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
 		../Proyecto_Optativa/UfrmDialogInsert.h \
-		ui_dialogInsertar.h \
+		../Proyecto_Optativa/ui_UfrmDialogInsert.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QGroupBox \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qgroupbox.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QHBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QLineEdit \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlineedit.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qtextcursor.h \
@@ -651,12 +642,11 @@ debug/main.o: ../Proyecto_Optativa/main.cpp ../Proyecto_Optativa/UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qpen.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qtextoption.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\Proyecto_Optativa\main.cpp
 
 debug/UfrmDialogInsert.o: ../Proyecto_Optativa/UfrmDialogInsert.cpp ../Proyecto_Optativa/UfrmDialogInsert.h \
-		ui_dialogInsertar.h \
+		../Proyecto_Optativa/ui_UfrmDialogInsert.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qatomic.h \
@@ -818,7 +808,7 @@ debug/UfrmDialogInsert.o: ../Proyecto_Optativa/UfrmDialogInsert.cpp ../Proyecto_
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UfrmDialogInsert.o ..\Proyecto_Optativa\UfrmDialogInsert.cpp
 
 debug/UfrmMain.o: ../Proyecto_Optativa/UfrmMain.cpp ../Proyecto_Optativa/UfrmMain.h \
-		ui_frmprincipal.h \
+		../Proyecto_Optativa/ui_UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/QVariant \
 		D:/QT/5.4/mingw491_32/include/QtCore/qvariant.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qatomic.h \
@@ -934,16 +924,18 @@ debug/UfrmMain.o: ../Proyecto_Optativa/UfrmMain.cpp ../Proyecto_Optativa/UfrmMai
 		D:/QT/5.4/mingw491_32/include/QtGui/qinputmethod.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QButtonGroup \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QFrame \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qframe.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QGridLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qgridlayout.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlayout.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlayoutitem.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qboxlayout.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QHBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QHeaderView \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qheaderview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractitemview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractscrollarea.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qframe.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qabstractitemmodel.h \
 		D:/QT/5.4/mingw491_32/include/QtCore/qitemselectionmodel.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -961,10 +953,6 @@ debug/UfrmMain.o: ../Proyecto_Optativa/UfrmMain.cpp ../Proyecto_Optativa/UfrmMai
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlabel.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QMainWindow \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qmainwindow.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QMenu \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qmenu.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QMenuBar \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qmenubar.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QPushButton \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qpushbutton.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractbutton.h \
@@ -974,16 +962,14 @@ debug/UfrmMain.o: ../Proyecto_Optativa/UfrmMain.cpp ../Proyecto_Optativa/UfrmMai
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QTableWidget \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtablewidget.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtableview.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QToolBar \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qtoolbar.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
 		../Proyecto_Optativa/UfrmDialogInsert.h \
-		ui_dialogInsertar.h \
+		../Proyecto_Optativa/ui_UfrmDialogInsert.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QGroupBox \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qgroupbox.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QHBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QLineEdit \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qlineedit.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qtextcursor.h \
@@ -991,8 +977,7 @@ debug/UfrmMain.o: ../Proyecto_Optativa/UfrmMain.cpp ../Proyecto_Optativa/UfrmMai
 		D:/QT/5.4/mingw491_32/include/QtGui/qpen.h \
 		D:/QT/5.4/mingw491_32/include/QtGui/qtextoption.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UfrmMain.o ..\Proyecto_Optativa\UfrmMain.cpp
 
 debug/moc_UfrmDialogInsert.o: debug/moc_UfrmDialogInsert.cpp 

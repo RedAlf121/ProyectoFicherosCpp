@@ -5,6 +5,7 @@ UfrmMain::UfrmMain(QWidget *parent) :
     QMainWindow(parent)
 {
     ui.setupUi(this);
+    this->setFixedSize(QSize(948, 600));
 }
 
 void UfrmMain::on_pshBtrInsertStudent_clicked()

@@ -22,6 +22,6 @@ HEADERS  += \
 
 FORMS    += \
     UfrmDialogInsert.ui \
-    UfrmMain.ui \
-    UfrmChooseYear.ui
+    UfrmMain.ui
+
 

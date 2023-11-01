@@ -5,5 +5,6 @@ InsertDialog::InsertDialog(QWidget *parent) :
 {
     ui.setupUi(this);
     this->setWindowTitle("Insertar estudiante");
+    this->setFixedSize(QSize(618, 376));
 }
 
