@@ -1,12 +1,13 @@
 #include "UfrmMain.h"
 #include "UfrmDialogInsert.h"
-
+#include "UYearDonation.h"
+#include "UYearMilitancy.h"
 UfrmMain::UfrmMain(QWidget *parent) :
     QMainWindow(parent)
 {
     ui.setupUi(this);
-    dialoginsert = nullptr;
-    dialogyear = nullptr;
+    dialoginsert = NULL;
+    dialogyear = NULL;
     this->setFixedSize(QSize(948, 600));
 }
 
@@ -18,18 +19,21 @@ void UfrmMain::on_pshBtrInsertStudent_clicked()
 }
 void UfrmMain::on_pshBtrMilitancy_clicked()
 {
-    createYearDialog(MILITANCY);
+    YearDialog *y = new UYearMilitancy(this);
+    createYearDialog(y);
+    //createYearDialog(new UYearMilitancy(this));
 }
 
 void UfrmMain::on_pshBtrDonation_clicked()
 {
-    createYearDialog(DONANT);
+  YearDialog *y = new UYearDonation(this);
+  createYearDialog(y);
 }
 
-void UfrmMain::createYearDialog(int choose)
+void UfrmMain::createYearDialog(YearDialog *newDialog)
 {
   delete dialogyear;
-  dialogyear = new YearDialog(choose,this);
+  dialogyear = newDialog;
   dialogyear->setModal(true);
   dialogyear->show();
 }

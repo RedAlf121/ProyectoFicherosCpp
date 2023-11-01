@@ -10,7 +10,6 @@ class InsertDialog : public QDialog
 public:
     explicit InsertDialog(QWidget *parent = 0);
 
-    ~InsertDialog(){}
 private slots:
 
 

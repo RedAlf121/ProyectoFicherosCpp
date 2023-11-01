@@ -51,8 +51,8 @@ public:
     QWidget *tab_queries;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *pshBtrShowSelectQuery;
-    QPushButton *pshBtrShowEverything_2;
+    QPushButton *pshBtrMilitancy;
+    QPushButton *pshBtrDonation;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *ufrmMain)
@@ -181,29 +181,29 @@ public:
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pshBtrShowSelectQuery = new QPushButton(verticalLayoutWidget_2);
-        pshBtrShowSelectQuery->setObjectName(QStringLiteral("pshBtrShowSelectQuery"));
-        pshBtrShowSelectQuery->setMinimumSize(QSize(0, 64));
-        pshBtrShowSelectQuery->setFont(font);
-        pshBtrShowSelectQuery->setCursor(QCursor(Qt::PointingHandCursor));
+        pshBtrMilitancy = new QPushButton(verticalLayoutWidget_2);
+        pshBtrMilitancy->setObjectName(QStringLiteral("pshBtrMilitancy"));
+        pshBtrMilitancy->setMinimumSize(QSize(0, 64));
+        pshBtrMilitancy->setFont(font);
+        pshBtrMilitancy->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon4;
         icon4.addFile(QStringLiteral("Resources/militant_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pshBtrShowSelectQuery->setIcon(icon4);
-        pshBtrShowSelectQuery->setIconSize(QSize(32, 32));
+        pshBtrMilitancy->setIcon(icon4);
+        pshBtrMilitancy->setIconSize(QSize(32, 32));
 
-        verticalLayout_2->addWidget(pshBtrShowSelectQuery);
+        verticalLayout_2->addWidget(pshBtrMilitancy);
 
-        pshBtrShowEverything_2 = new QPushButton(verticalLayoutWidget_2);
-        pshBtrShowEverything_2->setObjectName(QStringLiteral("pshBtrShowEverything_2"));
-        pshBtrShowEverything_2->setMinimumSize(QSize(0, 64));
-        pshBtrShowEverything_2->setFont(font);
-        pshBtrShowEverything_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pshBtrDonation = new QPushButton(verticalLayoutWidget_2);
+        pshBtrDonation->setObjectName(QStringLiteral("pshBtrDonation"));
+        pshBtrDonation->setMinimumSize(QSize(0, 64));
+        pshBtrDonation->setFont(font);
+        pshBtrDonation->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon5;
         icon5.addFile(QStringLiteral("Resources/donation_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pshBtrShowEverything_2->setIcon(icon5);
-        pshBtrShowEverything_2->setIconSize(QSize(32, 32));
+        pshBtrDonation->setIcon(icon5);
+        pshBtrDonation->setIconSize(QSize(32, 32));
 
-        verticalLayout_2->addWidget(pshBtrShowEverything_2);
+        verticalLayout_2->addWidget(pshBtrDonation);
 
         QIcon icon6;
         icon6.addFile(QStringLiteral("Resources/update.ico"), QSize(), QIcon::Normal, QIcon::Off);
@@ -211,10 +211,6 @@ public:
 
         horizontalLayout->addWidget(tabMain);
 
-        tableStudents->raise();
-        lblTBoard->raise();
-        horizontalLayoutWidget->raise();
-        pshBtrShowSelectQuery->raise();
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -225,7 +221,7 @@ public:
 
         retranslateUi(ufrmMain);
 
-        tabMain->setCurrentIndex(1);
+        tabMain->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ufrmMain);
@@ -259,10 +255,10 @@ public:
         pshBtrDeleteStudent->setText(QApplication::translate("ufrmMain", "Eliminar", 0));
         pshBtrDeleteStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_students), QApplication::translate("ufrmMain", "&Estudiantes", 0));
-        pshBtrShowSelectQuery->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia", 0));
-        pshBtrShowSelectQuery->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        pshBtrShowEverything_2->setText(QApplication::translate("ufrmMain", "Actualizar 1era donaci\303\263n", 0));
-        pshBtrShowEverything_2->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
+        pshBtrMilitancy->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia", 0));
+        pshBtrMilitancy->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
+        pshBtrDonation->setText(QApplication::translate("ufrmMain", "Actualizar 1era donaci\303\263n", 0));
+        pshBtrDonation->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Modificar", 0));
     } // retranslateUi
 

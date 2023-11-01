@@ -284,7 +284,7 @@ UJC</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2">
               <item>
-               <widget class="QPushButton" name="pshBtrShowSelectQuery">
+               <widget class="QPushButton" name="pshBtrMilitancy">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -319,7 +319,7 @@ UJC</string>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pshBtrShowEverything_2">
+               <widget class="QPushButton" name="pshBtrDonation">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -360,10 +360,6 @@ UJC</string>
          </item>
         </layout>
        </widget>
-       <zorder>tableStudents</zorder>
-       <zorder>lblTBoard</zorder>
-       <zorder>horizontalLayoutWidget</zorder>
-       <zorder>pshBtrShowSelectQuery</zorder>
       </widget>
      </item>
     </layout>

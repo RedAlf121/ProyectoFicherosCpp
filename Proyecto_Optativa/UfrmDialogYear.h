@@ -2,26 +2,22 @@
 #define DIALOG_H
 
 #include <QDialog>
+#include "ui_UfrmDialogYear.h"
 #include "utils.h"
-
-namespace Ui {
-class Dialog;
-}
 
 class YearDialog : public QDialog
 {
     Q_OBJECT
-
+//
 public:
-    explicit YearDialog(QWidget *parent = 0);
-    explicit YearDialog(int whichForm, QWidget *parent = 0);
+    YearDialog(QWidget *parent = 0);
+
 
     ~YearDialog();
-
-private:
-    Ui::Dialog *ui;
-    int whichForm;
-    QWidget selectedForm;
+protected slots:
+  virtual void on_pshBtrAccept_clicked() = 0;
+protected:
+    Ui::Dialog *ui;   
 };
 
 #endif // DIALOG_H

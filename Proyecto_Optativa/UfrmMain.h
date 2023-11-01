@@ -22,7 +22,7 @@ private:
     InsertDialog *dialoginsert;
     YearDialog *dialogyear;
     
-    void createYearDialog(int);
+    void createYearDialog(YearDialog *);
 };
 
 #endif // UFRMMAIN_H
