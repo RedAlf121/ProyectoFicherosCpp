@@ -46,7 +46,6 @@ public:
     QWidget *tab_students;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QPushButton *pshBtrShowEverything;
     QPushButton *pshBtrInsertStudent;
     QPushButton *pshBtrDeleteStudent;
     QWidget *tab_queries;
@@ -145,26 +144,14 @@ public:
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pshBtrShowEverything = new QPushButton(verticalLayoutWidget);
-        pshBtrShowEverything->setObjectName(QStringLiteral("pshBtrShowEverything"));
-        pshBtrShowEverything->setMinimumSize(QSize(0, 64));
-        pshBtrShowEverything->setFont(font);
-        pshBtrShowEverything->setCursor(QCursor(Qt::PointingHandCursor));
-        QIcon icon1;
-        icon1.addFile(QStringLiteral("Resources/show_all_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pshBtrShowEverything->setIcon(icon1);
-        pshBtrShowEverything->setIconSize(QSize(32, 32));
-
-        verticalLayout->addWidget(pshBtrShowEverything);
-
         pshBtrInsertStudent = new QPushButton(verticalLayoutWidget);
         pshBtrInsertStudent->setObjectName(QStringLiteral("pshBtrInsertStudent"));
         pshBtrInsertStudent->setMinimumSize(QSize(0, 64));
         pshBtrInsertStudent->setFont(font);
         pshBtrInsertStudent->setCursor(QCursor(Qt::PointingHandCursor));
-        QIcon icon2;
-        icon2.addFile(QStringLiteral("Resources/student_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pshBtrInsertStudent->setIcon(icon2);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("Resources/student_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrInsertStudent->setIcon(icon1);
         pshBtrInsertStudent->setIconSize(QSize(32, 32));
 
         verticalLayout->addWidget(pshBtrInsertStudent);
@@ -174,21 +161,21 @@ public:
         pshBtrDeleteStudent->setMinimumSize(QSize(0, 64));
         pshBtrDeleteStudent->setFont(font);
         pshBtrDeleteStudent->setCursor(QCursor(Qt::PointingHandCursor));
-        QIcon icon3;
-        icon3.addFile(QStringLiteral("Resources/delete_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pshBtrDeleteStudent->setIcon(icon3);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral("Resources/delete_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrDeleteStudent->setIcon(icon2);
         pshBtrDeleteStudent->setIconSize(QSize(32, 32));
 
         verticalLayout->addWidget(pshBtrDeleteStudent);
 
-        QIcon icon4;
-        icon4.addFile(QStringLiteral("Resources/studentTab_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        tabMain->addTab(tab_students, icon4, QString());
+        QIcon icon3;
+        icon3.addFile(QStringLiteral("Resources/studentTab_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tabMain->addTab(tab_students, icon3, QString());
         tab_queries = new QWidget();
         tab_queries->setObjectName(QStringLiteral("tab_queries"));
         verticalLayoutWidget_2 = new QWidget(tab_queries);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(13, -1, 271, 521));
+        verticalLayoutWidget_2->setGeometry(QRect(13, -1, 286, 521));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -199,6 +186,10 @@ public:
         pshBtrShowSelectQuery->setMinimumSize(QSize(0, 64));
         pshBtrShowSelectQuery->setFont(font);
         pshBtrShowSelectQuery->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon4;
+        icon4.addFile(QStringLiteral("Resources/militant_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrShowSelectQuery->setIcon(icon4);
+        pshBtrShowSelectQuery->setIconSize(QSize(32, 32));
 
         verticalLayout_2->addWidget(pshBtrShowSelectQuery);
 
@@ -207,15 +198,23 @@ public:
         pshBtrShowEverything_2->setMinimumSize(QSize(0, 64));
         pshBtrShowEverything_2->setFont(font);
         pshBtrShowEverything_2->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon5;
+        icon5.addFile(QStringLiteral("Resources/donation_32.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pshBtrShowEverything_2->setIcon(icon5);
+        pshBtrShowEverything_2->setIconSize(QSize(32, 32));
 
         verticalLayout_2->addWidget(pshBtrShowEverything_2);
 
-        QIcon icon5;
-        icon5.addFile(QStringLiteral("Resources/query_32.png"), QSize(), QIcon::Normal, QIcon::Off);
-        tabMain->addTab(tab_queries, icon5, QString());
+        QIcon icon6;
+        icon6.addFile(QStringLiteral("Resources/update.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        tabMain->addTab(tab_queries, icon6, QString());
 
         horizontalLayout->addWidget(tabMain);
 
+        tableStudents->raise();
+        lblTBoard->raise();
+        horizontalLayoutWidget->raise();
+        pshBtrShowSelectQuery->raise();
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -226,7 +225,7 @@ public:
 
         retranslateUi(ufrmMain);
 
-        tabMain->setCurrentIndex(0);
+        tabMain->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(ufrmMain);
@@ -255,18 +254,16 @@ public:
         QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
         ___qtablewidgetitem5->setText(QApplication::translate("ufrmMain", "Donante", 0));
         lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt;\">Listado de Estudiantes</span></p></body></html>", 0));
-        pshBtrShowEverything->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
-        pshBtrShowEverything->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar", 0));
         pshBtrInsertStudent->setShortcut(QApplication::translate("ufrmMain", "Alt+I", 0));
         pshBtrDeleteStudent->setText(QApplication::translate("ufrmMain", "Eliminar", 0));
         pshBtrDeleteStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_students), QApplication::translate("ufrmMain", "&Estudiantes", 0));
-        pshBtrShowSelectQuery->setText(QApplication::translate("ufrmMain", "Consulta", 0));
+        pshBtrShowSelectQuery->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia", 0));
         pshBtrShowSelectQuery->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        pshBtrShowEverything_2->setText(QApplication::translate("ufrmMain", "Mostrar todo", 0));
+        pshBtrShowEverything_2->setText(QApplication::translate("ufrmMain", "Actualizar 1era donaci\303\263n", 0));
         pshBtrShowEverything_2->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Consultas", 0));
+        tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Modificar", 0));
     } // retranslateUi
 
 };

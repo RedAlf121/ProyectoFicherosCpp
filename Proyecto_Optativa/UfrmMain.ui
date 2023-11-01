@@ -166,7 +166,7 @@ UJC</string>
             </font>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <property name="iconSize">
             <size>
@@ -192,41 +192,6 @@ UJC</string>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout">
-              <item>
-               <widget class="QPushButton" name="pshBtrShowEverything">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>64</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Verdana</family>
-                  <pointsize>12</pointsize>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string>Mostrar todo</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>Resources/show_all_32.png</normaloff>Resources/show_all_32.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>32</width>
-                  <height>32</height>
-                 </size>
-                </property>
-                <property name="shortcut">
-                 <string>Ctrl+A</string>
-                </property>
-               </widget>
-              </item>
               <item>
                <widget class="QPushButton" name="pshBtrInsertStudent">
                 <property name="minimumSize">
@@ -303,17 +268,17 @@ UJC</string>
            <widget class="QWidget" name="tab_queries">
             <attribute name="icon">
              <iconset>
-              <normaloff>Resources/query_32.png</normaloff>Resources/query_32.png</iconset>
+              <normaloff>Resources/update.ico</normaloff>Resources/update.ico</iconset>
             </attribute>
             <attribute name="title">
-             <string>&amp;Consultas</string>
+             <string>&amp;Modificar</string>
             </attribute>
             <widget class="QWidget" name="verticalLayoutWidget_2">
              <property name="geometry">
               <rect>
                <x>13</x>
                <y>-1</y>
-               <width>271</width>
+               <width>286</width>
                <height>521</height>
               </rect>
              </property>
@@ -336,7 +301,17 @@ UJC</string>
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string>Consulta</string>
+                 <string> Actualizar ingreso militancia</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>Resources/militant_32.png</normaloff>Resources/militant_32.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
                 </property>
                 <property name="shortcut">
                  <string>Ctrl+A</string>
@@ -361,7 +336,17 @@ UJC</string>
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string>Mostrar todo</string>
+                 <string>Actualizar 1era donación</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>Resources/donation_32.png</normaloff>Resources/donation_32.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
                 </property>
                 <property name="shortcut">
                  <string>Ctrl+A</string>
@@ -375,6 +360,10 @@ UJC</string>
          </item>
         </layout>
        </widget>
+       <zorder>tableStudents</zorder>
+       <zorder>lblTBoard</zorder>
+       <zorder>horizontalLayoutWidget</zorder>
+       <zorder>pshBtrShowSelectQuery</zorder>
       </widget>
      </item>
     </layout>
