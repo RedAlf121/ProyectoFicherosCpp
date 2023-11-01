@@ -1,6 +1,6 @@
 #include "UfrmDialogInsert.h"
 
-InsertDialog::InsertDialog(QWidget *parent) :
+InsertDialog::InsertDialog(string, QWidget *parent) :
     QDialog(parent)
 {
     ui.setupUi(this);

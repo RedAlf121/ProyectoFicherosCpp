@@ -3,6 +3,7 @@
 
 #include "ui_UfrmMain.h"
 #include "UfrmDialogInsert.h"
+#include "UfrmDialogYear.h"
 
 
 class UfrmMain : public QMainWindow
@@ -19,7 +20,9 @@ private slots:
 private:
     Ui::ufrmMain ui;
     InsertDialog *dialoginsert;
-
+    YearDialog *dialogyear;
+    
+    void createYearDialog(int);
 };
 
 #endif // UFRMMAIN_H

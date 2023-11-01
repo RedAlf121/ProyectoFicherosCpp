@@ -20,7 +20,8 @@ SOURCES += main.cpp\
 HEADERS  += \
     UfrmDialogInsert.h \
     UfrmMain.h \
-    UfrmDialogYear.h
+    UfrmDialogYear.h \
+    utils.h
 
 FORMS    += \
     UfrmDialogInsert.ui \

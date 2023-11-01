@@ -2,21 +2,26 @@
 #define DIALOG_H
 
 #include <QDialog>
+#include "utils.h"
 
 namespace Ui {
 class Dialog;
 }
 
-class Dialog : public QDialog
+class YearDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Dialog(QWidget *parent = 0);
-    ~Dialog();
+    explicit YearDialog(QWidget *parent = 0);
+    explicit YearDialog(int whichForm, QWidget *parent = 0);
+
+    ~YearDialog();
 
 private:
     Ui::Dialog *ui;
+    int whichForm;
+    QWidget selectedForm;
 };
 
 #endif // DIALOG_H
