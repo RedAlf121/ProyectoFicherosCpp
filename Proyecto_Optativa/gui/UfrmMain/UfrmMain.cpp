@@ -1,7 +1,7 @@
 #include "UfrmMain.h"
-#include "UfrmDialogInsert.h"
-#include "UYearDonation.h"
-#include "UYearMilitancy.h"
+#include "gui/UfrmDialogInsert/UfrmDialogInsert.h"
+#include "gui/UfrmDialogYear/UYearDonation.h"
+#include "gui/UfrmDialogYear/UYearMilitancy.h"
 UfrmMain::UfrmMain(QWidget *parent) :
     QMainWindow(parent)
 {

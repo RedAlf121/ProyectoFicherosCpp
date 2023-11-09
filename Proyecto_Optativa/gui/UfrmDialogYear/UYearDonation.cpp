@@ -1,5 +1,5 @@
 #include "UYearDonation.h"
-#include "UfrmDonationUpdated.h"
+#include "gui/UfrmDonationUpdated/UfrmDonationUpdated.h"
 #include <iostream>
 UYearDonation::UYearDonation(QWidget *parent) : YearDialog(parent)
 {

@@ -1,5 +1,5 @@
 #include "UYearMilitancy.h"
-#include "UfrmMilitancyUpdated.h"
+#include "gui/UfrmMilitancyUpdated/UfrmMilitancyUpdated.h"
 #include <iostream>
 UYearMilitancy::UYearMilitancy(QWidget *parent = 0) : YearDialog(parent)
 {
