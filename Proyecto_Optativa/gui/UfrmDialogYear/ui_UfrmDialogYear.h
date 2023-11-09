@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmDialogYear.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -71,6 +71,7 @@ public:
         retranslateUi(Dialog);
 
         QMetaObject::connectSlotsByName(Dialog);
+        QObject::connect(pshBtrDecline, SIGNAL(clicked()), Dialog, SLOT(close()));
     } // setupUi
 
     void retranslateUi(QDialog *Dialog)
@@ -78,8 +79,8 @@ public:
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
         label_init->setText(QApplication::translate("Dialog", "Ingrese el a\303\261o de", 0));
         label_dynamic->setText(QApplication::translate("Dialog", "militancia:", 0));
-        pshBtrAccept->setText(QApplication::translate("Dialog", "&Accept", 0));
-        pshBtrDecline->setText(QApplication::translate("Dialog", "&Decline", 0));
+        pshBtrAccept->setText(QApplication::translate("Dialog", "Accept", 0));
+        pshBtrDecline->setText(QApplication::translate("Dialog", "Decline", 0));
     } // retranslateUi
 
 };
