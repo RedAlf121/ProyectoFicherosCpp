@@ -7,6 +7,11 @@ INPUT(
 ./debug\UfrmDialogYear.o
 ./debug\UYearDonation.o
 ./debug\UYearMilitancy.o
+./debug\student.o
+./debug\referencestudent.o
+./debug\identitycard.o
+./debug\donationyearaux.o
+./debug\militancyaux.o
 ./debug\moc_UfrmDialogInsert.o
 ./debug\moc_UfrmMain.o
 ./debug\moc_UfrmMilitancyUpdated.o

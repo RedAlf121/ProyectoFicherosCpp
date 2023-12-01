@@ -19,7 +19,12 @@ SOURCES += main.cpp\
     gui/UfrmDonationUpdated/UfrmDonationUpdated.cpp \
     gui/UfrmDialogYear/UfrmDialogYear.cpp \
     gui/UfrmDialogYear/UYearDonation.cpp \
-    gui/UfrmDialogYear/UYearMilitancy.cpp
+    gui/UfrmDialogYear/UYearMilitancy.cpp \
+    logic/classes/student.cpp \
+    logic/classes/referencestudent.cpp \
+    logic/classes/identitycard.cpp \
+    logic/auxClasses/donationyearaux.cpp \
+    logic/auxClasses/militancyaux.cpp
 
 HEADERS  += \
     gui/UfrmDialogInsert/UfrmDialogInsert.h \
@@ -29,7 +34,12 @@ HEADERS  += \
     gui/UfrmDialogYear/UfrmDialogYear.h \
     gui/UfrmDialogYear/utils.h \
     gui/UfrmDialogYear/UYearDonation.h \
-    gui/UfrmDialogYear/UYearMilitancy.h
+    gui/UfrmDialogYear/UYearMilitancy.h \
+    logic/classes/student.h \
+    logic/classes/referencestudent.h \
+    logic/classes/identitycard.h \
+    logic/auxClasses/donationyearaux.h \
+    logic/auxClasses/militancyaux.h
 
 FORMS    += \
     gui/UfrmDialogInsert/UfrmDialogInsert.ui \

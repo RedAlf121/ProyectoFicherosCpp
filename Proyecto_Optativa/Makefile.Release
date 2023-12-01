@@ -50,7 +50,12 @@ SOURCES       = main.cpp \
 		gui\UfrmDonationUpdated\UfrmDonationUpdated.cpp \
 		gui\UfrmDialogYear\UfrmDialogYear.cpp \
 		gui\UfrmDialogYear\UYearDonation.cpp \
-		gui\UfrmDialogYear\UYearMilitancy.cpp release\moc_UfrmDialogInsert.cpp \
+		gui\UfrmDialogYear\UYearMilitancy.cpp \
+		logic\classes\student.cpp \
+		logic\classes\referencestudent.cpp \
+		logic\classes\identitycard.cpp \
+		logic\auxClasses\donationyearaux.cpp \
+		logic\auxClasses\militancyaux.cpp release\moc_UfrmDialogInsert.cpp \
 		release\moc_UfrmMain.cpp \
 		release\moc_UfrmMilitancyUpdated.cpp \
 		release\moc_UfrmDonationUpdated.cpp \
@@ -63,6 +68,11 @@ OBJECTS       = release/main.o \
 		release/UfrmDialogYear.o \
 		release/UYearDonation.o \
 		release/UYearMilitancy.o \
+		release/student.o \
+		release/referencestudent.o \
+		release/identitycard.o \
+		release/donationyearaux.o \
+		release/militancyaux.o \
 		release/moc_UfrmDialogInsert.o \
 		release/moc_UfrmMain.o \
 		release/moc_UfrmMilitancyUpdated.o \
@@ -76,14 +86,24 @@ DIST          =  gui\UfrmDialogInsert\UfrmDialogInsert.h \
 		gui\UfrmDialogYear\UfrmDialogYear.h \
 		gui\UfrmDialogYear\utils.h \
 		gui\UfrmDialogYear\UYearDonation.h \
-		gui\UfrmDialogYear\UYearMilitancy.h main.cpp \
+		gui\UfrmDialogYear\UYearMilitancy.h \
+		logic\classes\student.h \
+		logic\classes\referencestudent.h \
+		logic\classes\identitycard.h \
+		logic\auxClasses\donationyearaux.h \
+		logic\auxClasses\militancyaux.h main.cpp \
 		gui\UfrmDialogInsert\UfrmDialogInsert.cpp \
 		gui\UfrmMain\UfrmMain.cpp \
 		gui\UfrmMilitancyUpdated\UfrmMilitancyUpdated.cpp \
 		gui\UfrmDonationUpdated\UfrmDonationUpdated.cpp \
 		gui\UfrmDialogYear\UfrmDialogYear.cpp \
 		gui\UfrmDialogYear\UYearDonation.cpp \
-		gui\UfrmDialogYear\UYearMilitancy.cpp
+		gui\UfrmDialogYear\UYearMilitancy.cpp \
+		logic\classes\student.cpp \
+		logic\classes\referencestudent.cpp \
+		logic\classes\identitycard.cpp \
+		logic\auxClasses\donationyearaux.cpp \
+		logic\auxClasses\militancyaux.cpp
 QMAKE_TARGET  = Proyecto_Optativa
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Proyecto_Optativa.exe
@@ -122,7 +142,7 @@ dist:
 	$(ZIP) Proyecto_Optativa.zip $(SOURCES) $(DIST) Proyecto_Optativa.pro D:\QT\5.4\mingw491_32\mkspecs\features\spec_pre.prf D:\QT\5.4\mingw491_32\mkspecs\qdevice.pri D:\QT\5.4\mingw491_32\mkspecs\features\device_config.prf D:\QT\5.4\mingw491_32\mkspecs\common\shell-win32.conf D:\QT\5.4\mingw491_32\mkspecs\qconfig.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axbase.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axbase_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axcontainer.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axcontainer_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axserver.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axserver_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bluetooth.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bluetooth_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bootstrap_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_clucene_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_concurrent.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_concurrent_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_core.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_core_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_declarative.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_declarative_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designer.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designer_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designercomponents_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_enginio.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_enginio_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_gui.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_gui_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_help.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_help_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_location.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_location_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimedia.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimedia_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimediawidgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_network.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_network_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_nfc.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_nfc_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_opengl.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_opengl_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_openglextensions.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_openglextensions_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_platformsupport_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_positioning.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_positioning_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_printsupport.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_printsupport_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qml.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qml_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmltest.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmltest_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quick.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quick_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickparticles_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickwidgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_script.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_script_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_scripttools.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_scripttools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sensors.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sensors_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_serialport.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_serialport_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sql.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sql_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_svg.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_svg_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_testlib.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_testlib_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_uitools.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_uitools_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webchannel.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webchannel_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkit.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkit_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkitwidgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_websockets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_websockets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webview.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webview_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_widgets.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_widgets_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_winextras.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_winextras_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xml.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xml_private.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xmlpatterns.pri D:\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\QT\5.4\mingw491_32\mkspecs\features\qt_functions.prf D:\QT\5.4\mingw491_32\mkspecs\features\qt_config.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\qt_config.prf D:\QT\5.4\mingw491_32\mkspecs\win32-g++\qmake.conf D:\QT\5.4\mingw491_32\mkspecs\features\spec_post.prf D:\QT\5.4\mingw491_32\mkspecs\features\exclusive_builds.prf D:\QT\5.4\mingw491_32\mkspecs\features\default_pre.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\default_pre.prf D:\QT\5.4\mingw491_32\mkspecs\features\resolve_config.prf D:\QT\5.4\mingw491_32\mkspecs\features\exclusive_builds_post.prf D:\QT\5.4\mingw491_32\mkspecs\features\default_post.prf D:\QT\5.4\mingw491_32\mkspecs\features\build_pass.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\rtti.prf D:\QT\5.4\mingw491_32\mkspecs\features\precompile_header.prf D:\QT\5.4\mingw491_32\mkspecs\features\warn_on.prf D:\QT\5.4\mingw491_32\mkspecs\features\qt.prf D:\QT\5.4\mingw491_32\mkspecs\features\resources.prf D:\QT\5.4\mingw491_32\mkspecs\features\moc.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\opengl.prf D:\QT\5.4\mingw491_32\mkspecs\features\uic.prf D:\QT\5.4\mingw491_32\mkspecs\features\win32\windows.prf D:\QT\5.4\mingw491_32\mkspecs\features\testcase_targets.prf D:\QT\5.4\mingw491_32\mkspecs\features\exceptions.prf D:\QT\5.4\mingw491_32\mkspecs\features\yacc.prf D:\QT\5.4\mingw491_32\mkspecs\features\lex.prf Proyecto_Optativa.pro D:/QT/5.4/mingw491_32/lib/qtmain.prl D:/QT/5.4/mingw491_32/lib/Qt5Core.prl D:/QT/5.4/mingw491_32/lib/Qt5Widgets.prl D:/QT/5.4/mingw491_32/lib/Qt5Gui.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\UfrmDialogInsert.o release\UfrmMain.o release\UfrmMilitancyUpdated.o release\UfrmDonationUpdated.o release\UfrmDialogYear.o release\UYearDonation.o release\UYearMilitancy.o release\moc_UfrmDialogInsert.o release\moc_UfrmMain.o release\moc_UfrmMilitancyUpdated.o release\moc_UfrmDonationUpdated.o release\moc_UfrmDialogYear.o
+	-$(DEL_FILE) release\main.o release\UfrmDialogInsert.o release\UfrmMain.o release\UfrmMilitancyUpdated.o release\UfrmDonationUpdated.o release\UfrmDialogYear.o release\UYearDonation.o release\UYearMilitancy.o release\student.o release\referencestudent.o release\identitycard.o release\donationyearaux.o release\militancyaux.o release\moc_UfrmDialogInsert.o release\moc_UfrmMain.o release\moc_UfrmMilitancyUpdated.o release\moc_UfrmDonationUpdated.o release\moc_UfrmDialogYear.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -459,6 +479,23 @@ release/moc_UfrmMain.cpp: gui/UfrmMain/ui_UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtableview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
+		gui/UfrmDialogInsert/UfrmDialogInsert.h \
+		gui/UfrmDialogInsert/ui_UfrmDialogInsert.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QGroupBox \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qgroupbox.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QLineEdit \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qlineedit.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qtextcursor.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qtextformat.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qpen.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qtextoption.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
+		gui/UfrmDialogYear/UfrmDialogYear.h \
+		gui/UfrmDialogYear/ui_UfrmDialogYear.h \
+		gui/UfrmDialogYear/utils.h \
 		gui/UfrmMain/UfrmMain.h
 	D:\QT\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.4/mingw491_32/mkspecs/win32-g++ -I"D:/Universidad/2do semestre/C++ Avanzado/Proyecto Final/Final Project Repository/ProyectoFicherosCpp/Proyecto_Optativa" -ID:/QT/5.4/mingw491_32/include -ID:/QT/5.4/mingw491_32/include/QtWidgets -ID:/QT/5.4/mingw491_32/include/QtGui -ID:/QT/5.4/mingw491_32/include/QtCore gui\UfrmMain\UfrmMain.h -o release\moc_UfrmMain.cpp
 
@@ -1287,7 +1324,26 @@ release/UfrmMain.o: gui/UfrmMain/UfrmMain.cpp gui/UfrmMain/UfrmMain.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtablewidget.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qtableview.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
-		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QWidget \
+		gui/UfrmDialogInsert/UfrmDialogInsert.h \
+		gui/UfrmDialogInsert/ui_UfrmDialogInsert.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QDialog \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qdialog.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QGroupBox \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qgroupbox.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QLineEdit \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qlineedit.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qtextcursor.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qtextformat.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qpen.h \
+		D:/QT/5.4/mingw491_32/include/QtGui/qtextoption.h \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
+		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
+		gui/UfrmDialogYear/UfrmDialogYear.h \
+		gui/UfrmDialogYear/ui_UfrmDialogYear.h \
+		gui/UfrmDialogYear/utils.h \
+		gui/UfrmDialogYear/UYearDonation.h \
+		gui/UfrmDialogYear/UYearMilitancy.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\UfrmMain.o gui\UfrmMain\UfrmMain.cpp
 
 release/UfrmMilitancyUpdated.o: gui/UfrmMilitancyUpdated/UfrmMilitancyUpdated.cpp gui/UfrmMilitancyUpdated/UfrmMilitancyUpdated.h \
@@ -1886,7 +1942,8 @@ release/UYearDonation.o: gui/UfrmDialogYear/UYearDonation.cpp gui/UfrmDialogYear
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractbutton.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
-		gui/UfrmDialogYear/utils.h
+		gui/UfrmDialogYear/utils.h \
+		gui/UfrmDonationUpdated/UfrmDonationUpdated.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\UYearDonation.o gui\UfrmDialogYear\UYearDonation.cpp
 
 release/UYearMilitancy.o: gui/UfrmDialogYear/UYearMilitancy.cpp gui/UfrmDialogYear/UYearMilitancy.h \
@@ -2036,8 +2093,24 @@ release/UYearMilitancy.o: gui/UfrmDialogYear/UYearMilitancy.cpp gui/UfrmDialogYe
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qabstractbutton.h \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/QSpinBox \
 		D:/QT/5.4/mingw491_32/include/QtWidgets/qspinbox.h \
-		gui/UfrmDialogYear/utils.h
+		gui/UfrmDialogYear/utils.h \
+		gui/UfrmMilitancyUpdated/UfrmMilitancyUpdated.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\UYearMilitancy.o gui\UfrmDialogYear\UYearMilitancy.cpp
+
+release/student.o: logic/classes/student.cpp logic/classes/student.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\student.o logic\classes\student.cpp
+
+release/referencestudent.o: logic/classes/referencestudent.cpp logic/classes/referencestudent.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\referencestudent.o logic\classes\referencestudent.cpp
+
+release/identitycard.o: logic/classes/identitycard.cpp logic/classes/identitycard.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\identitycard.o logic\classes\identitycard.cpp
+
+release/donationyearaux.o: logic/auxClasses/donationyearaux.cpp logic/auxClasses/donationyearaux.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\donationyearaux.o logic\auxClasses\donationyearaux.cpp
+
+release/militancyaux.o: logic/auxClasses/militancyaux.cpp logic/auxClasses/militancyaux.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\militancyaux.o logic\auxClasses\militancyaux.cpp
 
 release/moc_UfrmDialogInsert.o: release/moc_UfrmDialogInsert.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_UfrmDialogInsert.o release\moc_UfrmDialogInsert.cpp
