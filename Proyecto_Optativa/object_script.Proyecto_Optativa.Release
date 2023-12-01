@@ -12,6 +12,7 @@ INPUT(
 ./release\identitycard.o
 ./release\donationyearaux.o
 ./release\militancyaux.o
+./release\school.o
 ./release\moc_UfrmDialogInsert.o
 ./release\moc_UfrmMain.o
 ./release\moc_UfrmMilitancyUpdated.o

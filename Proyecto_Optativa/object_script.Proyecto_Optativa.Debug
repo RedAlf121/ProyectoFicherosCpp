@@ -12,6 +12,7 @@ INPUT(
 ./debug\identitycard.o
 ./debug\donationyearaux.o
 ./debug\militancyaux.o
+./debug\school.o
 ./debug\moc_UfrmDialogInsert.o
 ./debug\moc_UfrmMain.o
 ./debug\moc_UfrmMilitancyUpdated.o

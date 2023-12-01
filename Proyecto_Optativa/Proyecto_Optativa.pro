@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     logic/classes/referencestudent.cpp \
     logic/classes/identitycard.cpp \
     logic/auxClasses/donationyearaux.cpp \
-    logic/auxClasses/militancyaux.cpp
+    logic/auxClasses/militancyaux.cpp \
+    logic/classes/school.cpp
 
 HEADERS  += \
     gui/UfrmDialogInsert/UfrmDialogInsert.h \
@@ -39,7 +40,8 @@ HEADERS  += \
     logic/classes/referencestudent.h \
     logic/classes/identitycard.h \
     logic/auxClasses/donationyearaux.h \
-    logic/auxClasses/militancyaux.h
+    logic/auxClasses/militancyaux.h \
+    logic/classes/school.h
 
 FORMS    += \
     gui/UfrmDialogInsert/UfrmDialogInsert.ui \
