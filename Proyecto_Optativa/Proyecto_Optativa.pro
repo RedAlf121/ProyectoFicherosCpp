@@ -25,7 +25,11 @@ SOURCES += main.cpp\
     logic/classes/identitycard.cpp \
     logic/auxClasses/donationyearaux.cpp \
     logic/auxClasses/militancyaux.cpp \
-    logic/classes/school.cpp
+    logic/classes/school.cpp \
+    logic/fileManagement/filealgorithm.cpp \
+    logic/fileManagement/indexalgorithm.cpp \
+    logic/fileManagement/blockalgorithm.cpp \
+    logic/fileManagement/overflowalgorithm.cpp
 
 HEADERS  += \
     gui/UfrmDialogInsert/UfrmDialogInsert.h \
@@ -41,7 +45,11 @@ HEADERS  += \
     logic/classes/identitycard.h \
     logic/auxClasses/donationyearaux.h \
     logic/auxClasses/militancyaux.h \
-    logic/classes/school.h
+    logic/classes/school.h \
+    logic/fileManagement/filealgorithm.h \
+    logic/fileManagement/indexalgorithm.h \
+    logic/fileManagement/blockalgorithm.h \
+    logic/fileManagement/overflowalgorithm.h
 
 FORMS    += \
     gui/UfrmDialogInsert/UfrmDialogInsert.ui \
