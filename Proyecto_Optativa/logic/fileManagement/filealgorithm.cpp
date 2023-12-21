@@ -2,4 +2,5 @@
 
 FileAlgorithm::FileAlgorithm()
 {
+
 }

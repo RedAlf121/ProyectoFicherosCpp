@@ -1,7 +1,7 @@
 #ifndef OVERFLOWALGORITHM_H
 #define OVERFLOWALGORITHM_H
 
-class overflowAlgorithm
+class overflowAlgorithm : FileAlgorithm
 {
 public:
     overflowAlgorithm();
