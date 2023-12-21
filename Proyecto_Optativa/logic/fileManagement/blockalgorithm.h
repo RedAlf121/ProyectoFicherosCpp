@@ -1,10 +1,15 @@
 #ifndef BLOCKALGORITHM_H
 #define BLOCKALGORITHM_H
+#include "filealgorithm.h"
+#include<string>
 
-class blockAlgorithm : FileAlgorithm
+using namespace std;
+
+class BlockAlgorithm : FileAlgorithm
 {
 public:
-    blockAlgorithm();
-
+    BlockAlgorithm();
+    bool buscar(int key, string filename, int& index) override;
+};
 
 #endif // BLOCKALGORITHM_H
