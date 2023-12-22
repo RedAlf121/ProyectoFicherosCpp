@@ -2,6 +2,8 @@
 #define UFRMMILITANCYUPDATED_H
 
 #include <QMainWindow>
+#include <QTableWidget>
+#include <student.h>
 
 namespace Ui {
 class UfrmMilitancyUpdated;
@@ -18,6 +20,9 @@ public:
 
 private:
     Ui::UfrmMilitancyUpdated *ui;
+    QWidget *prevForm;
+    void build();
+    void fillTable(QTableWidget* tableWidget, const std::vector<Student>& students);
 };
 
 #endif // UFRMMILITANCYUPDATED_H

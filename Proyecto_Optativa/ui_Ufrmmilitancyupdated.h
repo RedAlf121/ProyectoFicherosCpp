@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmMilitancyUpdated.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -29,12 +29,9 @@ public:
     QWidget *centralwidget;
     QLabel *labelMinorYearsMilitancy;
     QLabel *labelSameYearMilitancy;
-    QLabel *labelElderYearsMilitancy;
     QTableWidget *tableStudentsMinorMilitancy;
     QTableWidget *tableStudentsSameMilitancy;
-    QTableWidget *tableStudentsElderMilitancy;
     QLabel *labelTotalMinorMilitancy;
-    QLabel *labelTotalSameMilitancy;
     QLabel *labelTotalElderMilitancy;
     QPushButton *pushAcceptMilitancy;
     QStatusBar *statusbar;
@@ -55,7 +52,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         labelMinorYearsMilitancy = new QLabel(centralwidget);
         labelMinorYearsMilitancy->setObjectName(QStringLiteral("labelMinorYearsMilitancy"));
-        labelMinorYearsMilitancy->setGeometry(QRect(30, 10, 401, 20));
+        labelMinorYearsMilitancy->setGeometry(QRect(130, 20, 401, 20));
         QFont font1;
         font1.setFamily(QStringLiteral("Verdana"));
         font1.setPointSize(10);
@@ -63,14 +60,9 @@ public:
         labelMinorYearsMilitancy->setAlignment(Qt::AlignCenter);
         labelSameYearMilitancy = new QLabel(centralwidget);
         labelSameYearMilitancy->setObjectName(QStringLiteral("labelSameYearMilitancy"));
-        labelSameYearMilitancy->setGeometry(QRect(464, 10, 391, 20));
+        labelSameYearMilitancy->setGeometry(QRect(750, 30, 391, 20));
         labelSameYearMilitancy->setFont(font1);
         labelSameYearMilitancy->setAlignment(Qt::AlignCenter);
-        labelElderYearsMilitancy = new QLabel(centralwidget);
-        labelElderYearsMilitancy->setObjectName(QStringLiteral("labelElderYearsMilitancy"));
-        labelElderYearsMilitancy->setGeometry(QRect(894, 10, 391, 20));
-        labelElderYearsMilitancy->setFont(font1);
-        labelElderYearsMilitancy->setAlignment(Qt::AlignCenter);
         tableStudentsMinorMilitancy = new QTableWidget(centralwidget);
         if (tableStudentsMinorMilitancy->columnCount() < 4)
             tableStudentsMinorMilitancy->setColumnCount(4);
@@ -87,7 +79,7 @@ public:
         __qtablewidgetitem3->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
         tableStudentsMinorMilitancy->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         tableStudentsMinorMilitancy->setObjectName(QStringLiteral("tableStudentsMinorMilitancy"));
-        tableStudentsMinorMilitancy->setGeometry(QRect(30, 50, 401, 501));
+        tableStudentsMinorMilitancy->setGeometry(QRect(120, 60, 401, 501));
         tableStudentsMinorMilitancy->setFont(font);
         tableStudentsSameMilitancy = new QTableWidget(centralwidget);
         if (tableStudentsSameMilitancy->columnCount() < 4)
@@ -105,38 +97,17 @@ public:
         __qtablewidgetitem7->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
         tableStudentsSameMilitancy->setHorizontalHeaderItem(3, __qtablewidgetitem7);
         tableStudentsSameMilitancy->setObjectName(QStringLiteral("tableStudentsSameMilitancy"));
-        tableStudentsSameMilitancy->setGeometry(QRect(460, 50, 401, 501));
+        tableStudentsSameMilitancy->setGeometry(QRect(740, 60, 401, 501));
         tableStudentsSameMilitancy->setFont(font);
-        tableStudentsElderMilitancy = new QTableWidget(centralwidget);
-        if (tableStudentsElderMilitancy->columnCount() < 4)
-            tableStudentsElderMilitancy->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
-        __qtablewidgetitem8->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(0, __qtablewidgetitem8);
-        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
-        __qtablewidgetitem9->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(1, __qtablewidgetitem9);
-        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
-        __qtablewidgetitem10->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(2, __qtablewidgetitem10);
-        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        __qtablewidgetitem11->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(3, __qtablewidgetitem11);
-        tableStudentsElderMilitancy->setObjectName(QStringLiteral("tableStudentsElderMilitancy"));
-        tableStudentsElderMilitancy->setGeometry(QRect(890, 50, 401, 501));
-        tableStudentsElderMilitancy->setFont(font);
         labelTotalMinorMilitancy = new QLabel(centralwidget);
         labelTotalMinorMilitancy->setObjectName(QStringLiteral("labelTotalMinorMilitancy"));
-        labelTotalMinorMilitancy->setGeometry(QRect(30, 570, 71, 21));
-        labelTotalSameMilitancy = new QLabel(centralwidget);
-        labelTotalSameMilitancy->setObjectName(QStringLiteral("labelTotalSameMilitancy"));
-        labelTotalSameMilitancy->setGeometry(QRect(460, 570, 71, 21));
+        labelTotalMinorMilitancy->setGeometry(QRect(200, 570, 71, 21));
         labelTotalElderMilitancy = new QLabel(centralwidget);
         labelTotalElderMilitancy->setObjectName(QStringLiteral("labelTotalElderMilitancy"));
         labelTotalElderMilitancy->setGeometry(QRect(890, 570, 71, 21));
         pushAcceptMilitancy = new QPushButton(centralwidget);
         pushAcceptMilitancy->setObjectName(QStringLiteral("pushAcceptMilitancy"));
-        pushAcceptMilitancy->setGeometry(QRect(610, 620, 121, 41));
+        pushAcceptMilitancy->setGeometry(QRect(570, 620, 121, 41));
         QIcon icon1;
         icon1.addFile(QStringLiteral("Resources/accept_32.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushAcceptMilitancy->setIcon(icon1);
@@ -154,9 +125,8 @@ public:
     void retranslateUi(QMainWindow *UfrmMilitancyUpdated)
     {
         UfrmMilitancyUpdated->setWindowTitle(QApplication::translate("UfrmMilitancyUpdated", "Ingreso militancia", 0));
-        labelMinorYearsMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es anterior al especificado", 0));
+        labelMinorYearsMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es distinto al especificado", 0));
         labelSameYearMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es igual al especificado", 0));
-        labelElderYearsMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Estudiantes cuyo a\303\261o de ingreso es posterior al especificado", 0));
         QTableWidgetItem *___qtablewidgetitem = tableStudentsMinorMilitancy->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("UfrmMilitancyUpdated", "CI", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableStudentsMinorMilitancy->horizontalHeaderItem(1);
@@ -175,17 +145,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem7 = tableStudentsSameMilitancy->horizontalHeaderItem(3);
         ___qtablewidgetitem7->setText(QApplication::translate("UfrmMilitancyUpdated", "Ingreso\n"
 "UJC", 0));
-        QTableWidgetItem *___qtablewidgetitem8 = tableStudentsElderMilitancy->horizontalHeaderItem(0);
-        ___qtablewidgetitem8->setText(QApplication::translate("UfrmMilitancyUpdated", "CI", 0));
-        QTableWidgetItem *___qtablewidgetitem9 = tableStudentsElderMilitancy->horizontalHeaderItem(1);
-        ___qtablewidgetitem9->setText(QApplication::translate("UfrmMilitancyUpdated", "Nombres ", 0));
-        QTableWidgetItem *___qtablewidgetitem10 = tableStudentsElderMilitancy->horizontalHeaderItem(2);
-        ___qtablewidgetitem10->setText(QApplication::translate("UfrmMilitancyUpdated", "Apellidos", 0));
-        QTableWidgetItem *___qtablewidgetitem11 = tableStudentsElderMilitancy->horizontalHeaderItem(3);
-        ___qtablewidgetitem11->setText(QApplication::translate("UfrmMilitancyUpdated", "Ingreso\n"
-"UJC", 0));
         labelTotalMinorMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
-        labelTotalSameMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
         labelTotalElderMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
         pushAcceptMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "&Aceptar", 0));
     } // retranslateUi

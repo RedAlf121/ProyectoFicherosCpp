@@ -2,6 +2,8 @@
 #define UFRMDONATIONUPDATED_H
 
 #include <QMainWindow>
+#include <QTableWidget>
+#include <student.h>
 
 namespace Ui {
 class UfrmDonationUpdated;
@@ -18,6 +20,9 @@ public:
 
 private:
     Ui::UfrmDonationUpdated *ui;
+    QWidget *prevForm;
+    void build();
+    void fillDonationYearTable(QTableWidget* tableWidget, const std::vector<Student>& students);
 };
 
 #endif // UFRMDONATIONUPDATED_H

@@ -5,10 +5,10 @@
 
 using namespace std;
 
-class BlockAlgorithm : FileAlgorithm
+class BlockAlgorithm : public FileAlgorithm
 {
 public:
-    BlockAlgorithm();
+    BlockAlgorithm(): FileAlgorithm(){}
     bool buscar(int key, string filename, int& index) override;
 };
 

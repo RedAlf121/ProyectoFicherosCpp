@@ -4,10 +4,10 @@
 #include<string>
 
 using namespace std;
-class IndexAlgorithm: FileAlgorithm
+class IndexAlgorithm: public FileAlgorithm
 {
 public:
-    IndexAlgorithm();
+    IndexAlgorithm(): FileAlgorithm(){}
     bool buscar(int key, string filename, int& index) override; // Método sobrescrito
 };
 

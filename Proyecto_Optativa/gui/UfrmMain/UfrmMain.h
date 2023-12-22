@@ -3,7 +3,7 @@
 
 #include "ui_UfrmMain.h"
 #include "../UfrmDialogInsert/UfrmDialogInsert.h"
-#include "../UfrmDialogYear/UfrmDialogYear.h"
+#include "../../gui/UfrmDialogYear/UfrmDialogYear.h"
 
 class UfrmMain : public QMainWindow
 {
@@ -12,16 +12,19 @@ class UfrmMain : public QMainWindow
 public:
     explicit UfrmMain(QWidget *parent = 0);
     void setStudentData();
+    Ui::ufrmMain getUI();
 private slots:
     void on_pshBtrInsertStudent_clicked();
     void on_pshBtrMilitancy_clicked();
     void on_pshBtrDonation_clicked();
+    void on_pshBtrDeleteStudent_clicked();
 private:
     Ui::ufrmMain ui;
     InsertDialog *dialoginsert;
     YearDialog *dialogyear;
 
     void createYearDialog(YearDialog *);
+
 };
 
 #endif // UFRMMAIN_H

@@ -6,10 +6,10 @@
 
 using namespace std;
 
-class overflowAlgorithm : FileAlgorithm
+class overflowAlgorithm : public FileAlgorithm
 {
 public:
-    overflowAlgorithm();
+    overflowAlgorithm(): FileAlgorithm(){}
     bool buscar(int key, string filename, int& index) override;
 };
 

@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     logic/fileManagement/indexalgorithm.cpp \
     logic/fileManagement/blockalgorithm.cpp \
     logic/fileManagement/overflowalgorithm.cpp \
-    AuxiliarData.cpp
+    AuxiliarData.cpp \
+    logic/fileManagement/filelocator.cpp
 
 HEADERS  += \
     gui/UfrmDialogInsert/UfrmDialogInsert.h \
@@ -51,7 +52,8 @@ HEADERS  += \
     logic/fileManagement/indexalgorithm.h \
     logic/fileManagement/blockalgorithm.h \
     logic/fileManagement/overflowalgorithm.h \
-    AuxiliarData.h
+    AuxiliarData.h \
+    logic/fileManagement/filelocator.h
 
 FORMS    += \
     gui/UfrmDialogInsert/UfrmDialogInsert.ui \
