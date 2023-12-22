@@ -259,7 +259,7 @@ public:
         pshBtrMilitancy->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         pshBtrDonation->setText(QApplication::translate("ufrmMain", "Actualizar primera donaci\303\263n", 0));
         pshBtrDonation->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Modificar", 0));
+        tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Modificar", 0));        
     } // retranslateUi
 
 };

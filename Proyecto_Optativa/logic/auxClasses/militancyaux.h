@@ -1,22 +1,23 @@
 #ifndef MILITANCYAUX_H
 #define MILITANCYAUX_H
 
+#include "logic/classes/student.h"
 #include <vector>
 
 class MilitancyAux {
 
 private:
 
-    std::vector<unsigned short> equalIncorporationYears;
-    std::vector<unsigned short> disntinctIncorporationYears;
+    std::vector<Student> equalIncorporationYears;
+    std::vector<Student> disntinctIncorporationYears;
 
 public:
-
-    MilitancyAux(std::vector<unsigned short> equalIncorporationYears, std::vector<unsigned short> disntinctIncorporationYears);
+    MilitancyAux(){}
+    MilitancyAux(std::vector<Student> equalIncorporationYears, std::vector<Student> disntinctIncorporationYears);
     int amountEqualYears();
     int amountDistinctYears();
-    std::vector<unsigned short> getEqualIncorporationYears();
-    std::vector<unsigned short> getDistinctIncorporationYears();
+    std::vector<Student> getEqualIncorporationYears();
+    std::vector<Student> getDistinctIncorporationYears();
 };
 
 #endif // MILITANCYAUX_H

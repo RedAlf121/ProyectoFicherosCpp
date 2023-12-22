@@ -1,6 +1,6 @@
 #include "militancyaux.h"
 
-MilitancyAux::MilitancyAux(std::vector<unsigned short> equalIncorporationYears, std::vector<unsigned short> disntinctIncorporationYears) {
+MilitancyAux::MilitancyAux(std::vector<Student> equalIncorporationYears, std::vector<Student> disntinctIncorporationYears) {
 
     this->equalIncorporationYears = equalIncorporationYears;
     this->disntinctIncorporationYears = disntinctIncorporationYears;
@@ -14,10 +14,10 @@ int MilitancyAux::amountDistinctYears() {
     return this->disntinctIncorporationYears.size();
 }
 
-std::vector<unsigned short> MilitancyAux::getEqualIncorporationYears() {
+std::vector<Student> MilitancyAux::getEqualIncorporationYears() {
     return this->equalIncorporationYears;
 }
 
-std::vector<unsigned short> MilitancyAux::getDistinctIncorporationYears() {
+std::vector<Student> MilitancyAux::getDistinctIncorporationYears() {
     return this->disntinctIncorporationYears;
 }

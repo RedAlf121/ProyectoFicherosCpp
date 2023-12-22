@@ -38,7 +38,6 @@ public:
     void setIncorporationYear(unsigned short incorporationYear);
     unsigned short getIncorporationYear();
 
-    unsigned int hash();
 };
 
 

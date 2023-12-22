@@ -17,6 +17,7 @@ INPUT(
 ./debug\indexalgorithm.o
 ./debug\blockalgorithm.o
 ./debug\overflowalgorithm.o
+./debug\AuxiliarData.o
 ./debug\moc_UfrmDialogInsert.o
 ./debug\moc_UfrmMain.o
 ./debug\moc_UfrmMilitancyUpdated.o

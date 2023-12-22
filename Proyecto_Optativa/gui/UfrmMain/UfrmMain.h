@@ -12,7 +12,7 @@ class UfrmMain : public QMainWindow
 
 public:
     explicit UfrmMain(QWidget *parent = 0);
-
+    void setStudentData();
 private slots:
     void on_pshBtrInsertStudent_clicked();
     void on_pshBtrMilitancy_clicked();

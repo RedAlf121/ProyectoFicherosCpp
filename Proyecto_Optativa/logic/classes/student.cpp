@@ -1,5 +1,6 @@
 #include "student.h"
 #include <cstring>
+#include <string>
 
 
 Student::Student(char firstName[25], char familyName[25], char identityCardNumber[11], char group[2], unsigned short firstBloodDonationYear, unsigned short incorporationYear) {
@@ -61,8 +62,6 @@ void Student::setIncorporationYear(unsigned short incorporationYear) {
     this->incorporationYear = incorporationYear;
 }
 
-unsigned int Student::hash() {
-    // Implementación
-}
+
 
 

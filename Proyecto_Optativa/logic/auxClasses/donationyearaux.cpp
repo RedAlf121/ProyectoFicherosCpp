@@ -1,15 +1,15 @@
 #include "donationyearaux.h"
 
-DonationYearAux::DonationYearAux(int amountPreviousDonationYear, int amountNextDonationYear) {
+DonationYearAux::DonationYearAux(std::vector<Student> amountPreviousDonationYear, std::vector<Student> amountNextDonationYear) {
     this->amountPreviousDonationYear = amountPreviousDonationYear;
     this->amountNextDonationYear = amountNextDonationYear;
 }
 
-int DonationYearAux::getAmountPreviousDonationYear() {
+std::vector<Student> DonationYearAux::getAmountPreviousDonationYear() {
     return this->amountPreviousDonationYear;
 }
 
-int DonationYearAux::getAmountNextDonationYear() {
+std::vector<Student> DonationYearAux::getAmountNextDonationYear() {
     return this->amountNextDonationYear;
 }
 

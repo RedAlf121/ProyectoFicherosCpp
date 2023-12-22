@@ -17,6 +17,7 @@ INPUT(
 ./release\indexalgorithm.o
 ./release\blockalgorithm.o
 ./release\overflowalgorithm.o
+./release\AuxiliarData.o
 ./release\moc_UfrmDialogInsert.o
 ./release\moc_UfrmMain.o
 ./release\moc_UfrmMilitancyUpdated.o

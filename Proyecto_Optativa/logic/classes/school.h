@@ -1,28 +1,25 @@
 #ifndef SCHOOL_H
 #define SCHOOL_H
 
-#include <vector>
-#include <string>
-#include "student.h"
+#include "Student.h"
 #include "logic\auxClasses\militancyaux.h"
 #include "logic\auxClasses\donationyearaux.h"
-
+#include <string>
 class School {
 private:
 
     static School* instance;
     std::vector<Student> students;
     School();
-    static School* getInstance();
 
 public:
+    std::vector<Student> getStudents();
+    static School* getInstance();
+    bool createStudent(char firstName[25], char lastName[25], char identityCardNumber[11], char group[2] , unsigned short firstBloodDonationYear, unsigned short incorporationYear);
 
-    bool createStudent(std::string, std::string, char[], char[], unsigned short, unsigned short);
-    bool storeStudent(Student& student);
     Student& deleteSunset(std::string);
     Student& findSunset(std::string);
-    MilitancyAux updateMilitancy(std::string[], unsigned short);
-    DonationYearAux updateDonationYear(std::string[], unsigned short);
+    MilitancyAux updateMilitancy(std::vector<std::string>, unsigned short);
+    DonationYearAux updateDonationYear(const std::vector<std::string> &StudentCarnets, unsigned short year);
 };
-
 #endif // SCHOOL_H

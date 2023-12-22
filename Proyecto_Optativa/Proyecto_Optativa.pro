@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Proyecto_Optativa
 TEMPLATE = app
-
+CONFIG += c++11
 
 SOURCES += main.cpp\
     gui/UfrmDialogInsert/UfrmDialogInsert.cpp \
@@ -29,7 +29,8 @@ SOURCES += main.cpp\
     logic/fileManagement/filealgorithm.cpp \
     logic/fileManagement/indexalgorithm.cpp \
     logic/fileManagement/blockalgorithm.cpp \
-    logic/fileManagement/overflowalgorithm.cpp
+    logic/fileManagement/overflowalgorithm.cpp \
+    AuxiliarData.cpp
 
 HEADERS  += \
     gui/UfrmDialogInsert/UfrmDialogInsert.h \
@@ -49,7 +50,8 @@ HEADERS  += \
     logic/fileManagement/filealgorithm.h \
     logic/fileManagement/indexalgorithm.h \
     logic/fileManagement/blockalgorithm.h \
-    logic/fileManagement/overflowalgorithm.h
+    logic/fileManagement/overflowalgorithm.h \
+    AuxiliarData.h
 
 FORMS    += \
     gui/UfrmDialogInsert/UfrmDialogInsert.ui \
