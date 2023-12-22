@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1322</width>
+    <width>899</width>
     <height>691</height>
    </rect>
   </property>
@@ -24,33 +24,11 @@
     <normaloff>Resources/militant_32.png</normaloff>Resources/militant_32.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="labelMinorYearsMilitancy">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>401</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Verdana</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Estudiantes cuyo año de ingreso es anterior al especificado</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelSameYearMilitancy">
     <property name="geometry">
      <rect>
-      <x>464</x>
-      <y>10</y>
+      <x>34</x>
+      <y>20</y>
       <width>391</width>
       <height>20</height>
      </rect>
@@ -71,8 +49,8 @@
    <widget class="QLabel" name="labelElderYearsMilitancy">
     <property name="geometry">
      <rect>
-      <x>894</x>
-      <y>10</y>
+      <x>464</x>
+      <y>20</y>
       <width>391</width>
       <height>20</height>
      </rect>
@@ -90,60 +68,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableStudentsMinorMilitancy">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>50</y>
-      <width>401</width>
-      <height>501</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Verdana</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <column>
-     <property name="text">
-      <string>CI</string>
-     </property>
-     <property name="textAlignment">
-      <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Nombres </string>
-     </property>
-     <property name="textAlignment">
-      <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Apellidos</string>
-     </property>
-     <property name="textAlignment">
-      <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Ingreso
-UJC</string>
-     </property>
-     <property name="textAlignment">
-      <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-     </property>
-    </column>
-   </widget>
    <widget class="QTableWidget" name="tableStudentsSameMilitancy">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>50</y>
+      <x>30</x>
+      <y>60</y>
       <width>401</width>
       <height>501</height>
      </rect>
@@ -191,8 +120,8 @@ UJC</string>
    <widget class="QTableWidget" name="tableStudentsElderMilitancy">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>50</y>
+      <x>460</x>
+      <y>60</y>
       <width>401</width>
       <height>501</height>
      </rect>
@@ -237,24 +166,11 @@ UJC</string>
      </property>
     </column>
    </widget>
-   <widget class="QLabel" name="labelTotalMinorMilitancy">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>570</y>
-      <width>71</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Total: </string>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelTotalSameMilitancy">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>570</y>
+      <x>30</x>
+      <y>580</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -266,8 +182,8 @@ UJC</string>
    <widget class="QLabel" name="labelTotalElderMilitancy">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>570</y>
+      <x>460</x>
+      <y>580</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -279,8 +195,8 @@ UJC</string>
    <widget class="QPushButton" name="pushAcceptMilitancy">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>620</y>
+      <x>390</x>
+      <y>610</y>
       <width>121</width>
       <height>41</height>
      </rect>

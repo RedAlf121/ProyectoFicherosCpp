@@ -8,6 +8,7 @@ protected:
 
 public: 
    UYearDonation(QWidget *parent);
+   void show_donation_updated();
 };
 
 #endif // UFMRDIALOGYEARDONATION_H
