@@ -2,9 +2,8 @@
 #define UFRMMAIN_H
 
 #include "ui_UfrmMain.h"
-#include "gui/UfrmDialogInsert/UfrmDialogInsert.h"
-#include "gui/UfrmDialogYear/UfrmDialogYear.h"
-
+#include "../UfrmDialogInsert/UfrmDialogInsert.h"
+#include "../UfrmDialogYear/UfrmDialogYear.h"
 
 class UfrmMain : public QMainWindow
 {

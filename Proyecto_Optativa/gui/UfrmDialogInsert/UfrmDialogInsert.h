@@ -11,10 +11,11 @@ public:
     explicit InsertDialog(QWidget *parent = 0);
 
 private slots:
-
+    void on_pshBtrAccept_clicked();
 
 private:
     Ui::insertDialog ui;
+    QWidget* mainPtr;
 };
 
 #endif // UFRMDIALOGINSERT_H

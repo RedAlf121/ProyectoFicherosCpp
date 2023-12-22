@@ -49,7 +49,7 @@ void UfrmMain::setStudentData(){
 
     // Elimina las filas anteriores de la tabla
     ui.tableStudents->clear();
-
+    ui.tableStudents->setRowCount(0);
     // Establece los encabezados de las columnas
     ui.tableStudents->setColumnCount(6);
     ui.tableStudents->setHorizontalHeaderLabels(QStringList() << "CI" << "Apellido" << "Nombre" << "Grupo" << "Año de la primera donación" << "Año de incorporación");
