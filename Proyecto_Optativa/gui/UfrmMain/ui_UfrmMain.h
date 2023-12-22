@@ -250,14 +250,14 @@ public:
         QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
         ___qtablewidgetitem5->setText(QApplication::translate("ufrmMain", "Donante", 0));
         lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt;\">Listado de Estudiantes</span></p></body></html>", 0));
-        pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar", 0));
+        pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar...", 0));
         pshBtrInsertStudent->setShortcut(QApplication::translate("ufrmMain", "Alt+I", 0));
         pshBtrDeleteStudent->setText(QApplication::translate("ufrmMain", "Eliminar", 0));
         pshBtrDeleteStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_students), QApplication::translate("ufrmMain", "&Estudiantes", 0));
-        pshBtrMilitancy->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia", 0));
+        pshBtrMilitancy->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia...", 0));
         pshBtrMilitancy->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        pshBtrDonation->setText(QApplication::translate("ufrmMain", "Actualizar primera donaci\303\263n", 0));
+        pshBtrDonation->setText(QApplication::translate("ufrmMain", "Actualizar primera donaci\303\263n...", 0));
         pshBtrDonation->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Modificar", 0));        
     } // retranslateUi

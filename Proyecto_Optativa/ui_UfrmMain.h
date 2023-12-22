@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'UfrmMain.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -175,7 +175,7 @@ public:
         tab_queries->setObjectName(QStringLiteral("tab_queries"));
         verticalLayoutWidget_2 = new QWidget(tab_queries);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(13, -1, 286, 521));
+        verticalLayoutWidget_2->setGeometry(QRect(13, -1, 304, 521));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -221,7 +221,7 @@ public:
 
         retranslateUi(ufrmMain);
 
-        tabMain->setCurrentIndex(1);
+        tabMain->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ufrmMain);
@@ -250,14 +250,14 @@ public:
         QTableWidgetItem *___qtablewidgetitem5 = tableStudents->horizontalHeaderItem(5);
         ___qtablewidgetitem5->setText(QApplication::translate("ufrmMain", "Donante", 0));
         lblTBoard->setText(QApplication::translate("ufrmMain", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt;\">Listado de Estudiantes</span></p></body></html>", 0));
-        pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar", 0));
+        pshBtrInsertStudent->setText(QApplication::translate("ufrmMain", "&Insertar...", 0));
         pshBtrInsertStudent->setShortcut(QApplication::translate("ufrmMain", "Alt+I", 0));
         pshBtrDeleteStudent->setText(QApplication::translate("ufrmMain", "Eliminar", 0));
         pshBtrDeleteStudent->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_students), QApplication::translate("ufrmMain", "&Estudiantes", 0));
-        pshBtrMilitancy->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia", 0));
+        pshBtrMilitancy->setText(QApplication::translate("ufrmMain", " Actualizar ingreso militancia...", 0));
         pshBtrMilitancy->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
-        pshBtrDonation->setText(QApplication::translate("ufrmMain", "Actualizar primera donaci\303\263n", 0));
+        pshBtrDonation->setText(QApplication::translate("ufrmMain", "Actualizar primera donaci\303\263n...", 0));
         pshBtrDonation->setShortcut(QApplication::translate("ufrmMain", "Ctrl+A", 0));
         tabMain->setTabText(tabMain->indexOf(tab_queries), QApplication::translate("ufrmMain", "&Modificar", 0));
     } // retranslateUi

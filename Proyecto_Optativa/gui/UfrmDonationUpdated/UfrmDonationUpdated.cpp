@@ -40,10 +40,6 @@ void UfrmDonationUpdated::build() {
 
     // Llenar la tabla de donantes menores
     fillDonationYearTable(ui->tableStudentsMinorMilitancy, studentsMinor);
-
-    // Actualizar las etiquetas de total
-    ui->labelElderYearsDonation->setText("Total: " + QString::number(studentsElder.size()));
-    ui->labelMinorYearsDonation->setText("Total: " + QString::number(studentsMinor.size()));
 }
 
 void UfrmDonationUpdated::fillDonationYearTable(QTableWidget* tableWidget, const std::vector<Student>& students) {
@@ -56,17 +52,22 @@ void UfrmDonationUpdated::fillDonationYearTable(QTableWidget* tableWidget, const
     QStringList headers;
     headers << "CI" << "Nombre" << "Apellidos" << "Donación";
     tableWidget->setHorizontalHeaderLabels(headers);
-
+    School& sc = *School::getInstance();
+    std::vector<Student> studentList = sc.getStudents();
     // Llenar la tabla con la información de los estudiantes
-    for (Student student : students) {
+    bool next = false;
+    // Llenar la tabla con la información de los estudiantes
+    for (int i = 0, j = 1 ; i < studentList.size()-1 && j < studentList.size(); i+=2,j+=2) {
         int rowPosition = tableWidget->rowCount();
         tableWidget->insertRow(rowPosition);
 
         // Añadir información del estudiante a cada celda de la fila
-        tableWidget->setItem(rowPosition, 0, new QTableWidgetItem(QString(student.getIdentityCardNumber())));
-        tableWidget->setItem(rowPosition, 1, new QTableWidgetItem(QString(student.getFirstName())));
-        tableWidget->setItem(rowPosition, 2, new QTableWidgetItem(QString(student.getFamilyName())));
-        tableWidget->setItem(rowPosition, 3, new QTableWidgetItem(QString::number(student.getFirstBloodDonationYear())));
-    }
+        tableWidget->setItem(rowPosition, 0, new QTableWidgetItem(QString(!next? studentList[i].getIdentityCardNumber() : studentList[j].getIdentityCardNumber())));
+        tableWidget->setItem(rowPosition, 1, new QTableWidgetItem(QString(!next? studentList[i].getFirstName() : studentList[j].getFirstName())));
+        tableWidget->setItem(rowPosition, 2, new QTableWidgetItem(QString(!next? studentList[i].getFamilyName() : studentList[j].getFamilyName())));
+        tableWidget->setItem(rowPosition, 3, new QTableWidgetItem(QString::number(!next? studentList[i].getIncorporationYear() : studentList[j].getIncorporationYear())));
+    }   
+    ui->labelTotalMinorDonation->setText(QString("Total: %1").arg(studentList.size()/2));
+    ui->labelTotalElderDonation->setText(QString("Total: %1").arg(studentList.size()/2));
 }
 

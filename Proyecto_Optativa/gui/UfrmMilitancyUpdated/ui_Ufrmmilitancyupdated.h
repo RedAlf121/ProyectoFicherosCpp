@@ -32,7 +32,6 @@ public:
     QLabel *labelElderYearsMilitancy;
     QTableWidget *tableStudentsMinorMilitancy;
     QTableWidget *tableStudentsSameMilitancy;
-    QTableWidget *tableStudentsElderMilitancy;
     QLabel *labelTotalMinorMilitancy;
     QLabel *labelTotalSameMilitancy;
     QLabel *labelTotalElderMilitancy;
@@ -107,24 +106,14 @@ public:
         tableStudentsSameMilitancy->setObjectName(QStringLiteral("tableStudentsSameMilitancy"));
         tableStudentsSameMilitancy->setGeometry(QRect(460, 50, 401, 501));
         tableStudentsSameMilitancy->setFont(font);
-        tableStudentsElderMilitancy = new QTableWidget(centralwidget);
-        if (tableStudentsElderMilitancy->columnCount() < 4)
-            tableStudentsElderMilitancy->setColumnCount(4);
         QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
         __qtablewidgetitem8->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(0, __qtablewidgetitem8);
         QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
         __qtablewidgetitem9->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(1, __qtablewidgetitem9);
         QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
         __qtablewidgetitem10->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(2, __qtablewidgetitem10);
         QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
         __qtablewidgetitem11->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
-        tableStudentsElderMilitancy->setHorizontalHeaderItem(3, __qtablewidgetitem11);
-        tableStudentsElderMilitancy->setObjectName(QStringLiteral("tableStudentsElderMilitancy"));
-        tableStudentsElderMilitancy->setGeometry(QRect(890, 50, 401, 501));
-        tableStudentsElderMilitancy->setFont(font);
         labelTotalMinorMilitancy = new QLabel(centralwidget);
         labelTotalMinorMilitancy->setObjectName(QStringLiteral("labelTotalMinorMilitancy"));
         labelTotalMinorMilitancy->setGeometry(QRect(30, 570, 71, 21));
@@ -136,7 +125,7 @@ public:
         labelTotalElderMilitancy->setGeometry(QRect(890, 570, 71, 21));
         pushAcceptMilitancy = new QPushButton(centralwidget);
         pushAcceptMilitancy->setObjectName(QStringLiteral("pushAcceptMilitancy"));
-        pushAcceptMilitancy->setGeometry(QRect(610, 620, 121, 41));
+        pushAcceptMilitancy->setGeometry(QRect(420, 620, 121, 41));
         QIcon icon1;
         icon1.addFile(QStringLiteral("Resources/accept_32.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushAcceptMilitancy->setIcon(icon1);
@@ -175,15 +164,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem7 = tableStudentsSameMilitancy->horizontalHeaderItem(3);
         ___qtablewidgetitem7->setText(QApplication::translate("UfrmMilitancyUpdated", "Ingreso\n"
 "UJC", 0));
-        QTableWidgetItem *___qtablewidgetitem8 = tableStudentsElderMilitancy->horizontalHeaderItem(0);
-        ___qtablewidgetitem8->setText(QApplication::translate("UfrmMilitancyUpdated", "CI", 0));
-        QTableWidgetItem *___qtablewidgetitem9 = tableStudentsElderMilitancy->horizontalHeaderItem(1);
-        ___qtablewidgetitem9->setText(QApplication::translate("UfrmMilitancyUpdated", "Nombres ", 0));
-        QTableWidgetItem *___qtablewidgetitem10 = tableStudentsElderMilitancy->horizontalHeaderItem(2);
-        ___qtablewidgetitem10->setText(QApplication::translate("UfrmMilitancyUpdated", "Apellidos", 0));
-        QTableWidgetItem *___qtablewidgetitem11 = tableStudentsElderMilitancy->horizontalHeaderItem(3);
-        ___qtablewidgetitem11->setText(QApplication::translate("UfrmMilitancyUpdated", "Ingreso\n"
-"UJC", 0));
+
         labelTotalMinorMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
         labelTotalSameMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));
         labelTotalElderMilitancy->setText(QApplication::translate("UfrmMilitancyUpdated", "Total: ", 0));

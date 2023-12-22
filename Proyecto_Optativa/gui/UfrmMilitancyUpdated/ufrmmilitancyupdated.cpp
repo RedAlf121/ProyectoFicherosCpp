@@ -12,7 +12,7 @@ UfrmMilitancyUpdated::UfrmMilitancyUpdated(QWidget *parent) :
 {
     prevForm = parent;
     ui->setupUi(this);
-    this->setFixedSize(QSize(1322, 691));
+    this->setFixedSize(QSize(870, 691));
     build();
 }
 
@@ -40,10 +40,6 @@ void UfrmMilitancyUpdated::build() {
 
     // Llenar la tabla de estudiantes iguales
     fillTable(ui->tableStudentsSameMilitancy, equalStudents);
-
-    // Actualizar los labels con el total de estudiantes en cada tabla
-    ui->labelMinorYearsMilitancy->setText("Total: " + QString::number(distinctStudents.size()));
-    ui->labelSameYearMilitancy->setText("Total: " + QString::number(equalStudents.size()));
 }
 
 void UfrmMilitancyUpdated::fillTable(QTableWidget* tableWidget, const std::vector<Student>& students) {
@@ -56,18 +52,23 @@ void UfrmMilitancyUpdated::fillTable(QTableWidget* tableWidget, const std::vecto
     QStringList headers;
     headers << "Carnet" << "Nombre" << "Apellidos" << "Año Militancia";
     tableWidget->setHorizontalHeaderLabels(headers);
-
+    School& sc = *School::getInstance();
+    std::vector<Student> studentList = sc.getStudents();
     // Llenar la tabla con la información de los estudiantes
-    for (Student student : students) {
+    bool next = false;
+    for (int i = 0, j = 1 ; i < studentList.size()-1 && j < studentList.size(); i+=2,j+=2) {
+
         int rowPosition = tableWidget->rowCount();
         tableWidget->insertRow(rowPosition);
 
         // Añadir información del estudiante a cada celda de la fila
-        tableWidget->setItem(rowPosition, 0, new QTableWidgetItem(QString(student.getIdentityCardNumber())));
-        tableWidget->setItem(rowPosition, 1, new QTableWidgetItem(QString(student.getFirstName())));
-        tableWidget->setItem(rowPosition, 2, new QTableWidgetItem(QString(student.getFamilyName())));
-        tableWidget->setItem(rowPosition, 3, new QTableWidgetItem(QString::number(student.getIncorporationYear())));
+        tableWidget->setItem(rowPosition, 0, new QTableWidgetItem(QString(next? studentList[i].getIdentityCardNumber() : studentList[j].getIdentityCardNumber())));
+        tableWidget->setItem(rowPosition, 1, new QTableWidgetItem(QString(next? studentList[i].getFirstName() : studentList[j].getFirstName())));
+        tableWidget->setItem(rowPosition, 2, new QTableWidgetItem(QString(next? studentList[i].getFamilyName() : studentList[j].getFamilyName())));
+        tableWidget->setItem(rowPosition, 3, new QTableWidgetItem(QString::number(next? studentList[i].getIncorporationYear() : studentList[j].getIncorporationYear())));
     }
+    ui->labelTotalMinorMilitancy->setText(QString("Total: %1").arg(studentList.size()/2));
+    ui->labelTotalSameMilitancy->setText(QString("Total: %1").arg(studentList.size()/2));
 }
 
 void UfrmMilitancyUpdated::on_pushAcceptMilitancy_clicked()

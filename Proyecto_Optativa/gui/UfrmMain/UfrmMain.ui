@@ -166,7 +166,7 @@ UJC</string>
             </font>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <property name="iconSize">
             <size>
@@ -278,7 +278,7 @@ UJC</string>
               <rect>
                <x>13</x>
                <y>-1</y>
-               <width>291</width>
+               <width>304</width>
                <height>521</height>
               </rect>
              </property>
