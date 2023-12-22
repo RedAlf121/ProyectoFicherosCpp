@@ -52,17 +52,18 @@ void UfrmMain::setStudentData(){
 
     // Establece los encabezados de las columnas
     ui.tableStudents->setColumnCount(6);
-    ui.tableStudents->setHorizontalHeaderLabels(QStringList() << "Nombre" << "Apellido" << "Cédula" << "Grupo" << "Año de la primera donación" << "Año de incorporación");
+    ui.tableStudents->setHorizontalHeaderLabels(QStringList() << "CI" << "Apellido" << "Nombre" << "Grupo" << "Año de la primera donación" << "Año de incorporación");
 
     // Itera sobre los estudiantes y añade sus datos a la tabla
     for(Student& student : students){
         int row = ui.tableStudents->rowCount();
         ui.tableStudents->insertRow(row);
-        ui.tableStudents->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(student.getFirstName())));
+        ui.tableStudents->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(student.getIdentityCardNumber())));
         ui.tableStudents->setItem(row, 1, new QTableWidgetItem(QString::fromStdString(student.getFamilyName())));
-        ui.tableStudents->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(student.getIdentityCardNumber())));
+        ui.tableStudents->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(student.getFirstName())));
         ui.tableStudents->setItem(row, 3, new QTableWidgetItem(QString::fromStdString(student.getGroup())));
         ui.tableStudents->setItem(row, 4, new QTableWidgetItem(QString::number(student.getFirstBloodDonationYear())));
         ui.tableStudents->setItem(row, 5, new QTableWidgetItem(QString::number(student.getIncorporationYear())));
     }
+    ui.tableStudents->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }

@@ -210,7 +210,7 @@ UJC</string>
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string>&amp;Insertar</string>
+                 <string>&amp;Insertar...</string>
                 </property>
                 <property name="icon">
                  <iconset>
@@ -278,7 +278,7 @@ UJC</string>
               <rect>
                <x>13</x>
                <y>-1</y>
-               <width>286</width>
+               <width>291</width>
                <height>521</height>
               </rect>
              </property>
@@ -301,7 +301,7 @@ UJC</string>
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string> Actualizar ingreso militancia</string>
+                 <string> Actualizar ingreso militancia...</string>
                 </property>
                 <property name="icon">
                  <iconset>
@@ -336,7 +336,7 @@ UJC</string>
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string>Actualizar primera donación</string>
+                 <string>Actualizar primera donación...</string>
                 </property>
                 <property name="icon">
                  <iconset>

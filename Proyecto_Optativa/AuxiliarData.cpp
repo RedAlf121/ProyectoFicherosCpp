@@ -27,7 +27,7 @@ std::string generar_grupo() {
 
 void data() {
     srand(time(0));
-    School school = *School::getInstance();
+    School& school = *School::getInstance();
 
     // Aquí puedes llenar el array con los datos de los estudiantes
     for(int i = 0; i < 30; i++) {
