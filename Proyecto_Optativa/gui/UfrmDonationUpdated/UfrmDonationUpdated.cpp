@@ -42,8 +42,8 @@ void UfrmDonationUpdated::build() {
     fillDonationYearTable(ui->tableStudentsMinorMilitancy, studentsMinor);
 
     // Actualizar las etiquetas de total
-    ui->labelTotalElderDonation->setText("Total: " + QString::number(studentsElder.size()));
-    ui->labelTotalMinorDonation->setText("Total: " + QString::number(studentsMinor.size()));
+    ui->labelElderYearsDonation->setText("Total: " + QString::number(studentsElder.size()));
+    ui->labelMinorYearsDonation->setText("Total: " + QString::number(studentsMinor.size()));
 }
 
 void UfrmDonationUpdated::fillDonationYearTable(QTableWidget* tableWidget, const std::vector<Student>& students) {

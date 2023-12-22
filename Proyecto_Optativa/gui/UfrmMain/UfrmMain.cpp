@@ -23,14 +23,14 @@ void UfrmMain::on_pshBtrInsertStudent_clicked()
 }
 void UfrmMain::on_pshBtrMilitancy_clicked()
 {
-    YearDialog *y = new UYearMilitancy(0);
+    YearDialog *y = new UYearMilitancy(this);
     createYearDialog(y);
     //createYearDialog(new UYearMilitancy(this));
 }
 
 void UfrmMain::on_pshBtrDonation_clicked()
 {
-    YearDialog *y = new UYearDonation(0);
+    YearDialog *y = new UYearDonation(this);
     createYearDialog(y);
 }
 
